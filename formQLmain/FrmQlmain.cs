@@ -304,6 +304,11 @@ namespace formQLmain
         {
 
         }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

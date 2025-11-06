@@ -63,8 +63,6 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.button13 = new System.Windows.Forms.Button();
-            this.panel5 = new ReaLTaiizor.Controls.Panel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -98,6 +96,9 @@
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -122,8 +123,6 @@
             this.flowLayoutPanel6.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -133,6 +132,9 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -143,8 +145,8 @@
             this.panelMenu.Controls.Add(this.dropdown2);
             this.panelMenu.Controls.Add(this.flowLayoutPanel5);
             this.panelMenu.Controls.Add(this.flowLayoutPanel6);
-            this.panelMenu.Controls.Add(this.panel5);
             this.panelMenu.Controls.Add(this.flowLayoutPanel1);
+            this.panelMenu.Controls.Add(this.panel11);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
@@ -556,34 +558,11 @@
             this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button13.UseVisualStyleBackColor = false;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.pictureBox12);
-            this.panel5.EdgeColor = System.Drawing.Color.White;
-            this.panel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel5.Location = new System.Drawing.Point(33, 683);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(5);
-            this.panel5.Size = new System.Drawing.Size(427, 729);
-            this.panel5.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel5.TabIndex = 10;
-            this.panel5.Text = "panel5";
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::formQLmain.Properties.Resources.hinhanhdep;
-            this.pictureBox12.Location = new System.Drawing.Point(28, 415);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(354, 312);
-            this.pictureBox12.TabIndex = 1;
-            this.pictureBox12.TabStop = false;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.panel9);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 1421);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 686);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(418, 390);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(418, 88);
@@ -639,6 +618,7 @@
             // 
             // pnlgrid
             // 
+            this.pnlgrid.Controls.Add(this.panelControl1);
             this.pnlgrid.Controls.Add(this.panel10);
             this.pnlgrid.Controls.Add(this.grdDoAn);
             this.pnlgrid.Location = new System.Drawing.Point(522, 296);
@@ -844,7 +824,7 @@
             this.grdDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdDoAn.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.grdDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDoAn.Location = new System.Drawing.Point(22, 41);
+            this.grdDoAn.Location = new System.Drawing.Point(0, 41);
             this.grdDoAn.Name = "grdDoAn";
             this.grdDoAn.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -858,7 +838,7 @@
             this.grdDoAn.RowHeadersWidth = 82;
             this.grdDoAn.RowTemplate.Height = 33;
             this.grdDoAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDoAn.Size = new System.Drawing.Size(1714, 1217);
+            this.grdDoAn.Size = new System.Drawing.Size(1736, 1217);
             this.grdDoAn.TabIndex = 0;
             // 
             // groupBox1
@@ -942,6 +922,31 @@
             this.label11.TabIndex = 39;
             this.label11.Text = "Danh sách đồ án ";
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::formQLmain.Properties.Resources.hinhanhdep;
+            this.pictureBox12.Location = new System.Drawing.Point(28, 381);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(354, 312);
+            this.pictureBox12.TabIndex = 1;
+            this.pictureBox12.TabStop = false;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(200, 100);
+            this.panelControl1.TabIndex = 11;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.pictureBox12);
+            this.panel11.Location = new System.Drawing.Point(33, 799);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(427, 729);
+            this.panel11.TabIndex = 16;
+            // 
             // frmDSDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -979,8 +984,6 @@
             this.flowLayoutPanel6.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -992,6 +995,9 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1030,14 +1036,12 @@
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button button13;
-        private ReaLTaiizor.Controls.Panel panel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Timer QLDAdrop;
         private System.Windows.Forms.Timer QLDLdrop;
-        private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Panel pnlgrid;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnSua;
@@ -1065,5 +1069,8 @@
         private System.Windows.Forms.TextBox textbox_TimKiem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

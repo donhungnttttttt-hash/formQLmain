@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -71,7 +71,6 @@
             this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
             this.menutimer = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel5 = new ReaLTaiizor.Controls.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -82,12 +81,16 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblTotalTaiKhoan = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblTotalTaiLieu = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblTotalSinhVien = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblTotalDoAn = new System.Windows.Forms.Label();
             this.chartByKhoa = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -95,10 +98,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnRefreshDash = new System.Windows.Forms.Button();
             this.grdRecent = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -123,7 +123,6 @@
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panelMenu.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -140,6 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartYearly)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdRecent)).BeginInit();
+            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -569,8 +569,8 @@
             this.panelMenu.Controls.Add(this.dropdown2);
             this.panelMenu.Controls.Add(this.flowLayoutPanel5);
             this.panelMenu.Controls.Add(this.flowLayoutPanel6);
-            this.panelMenu.Controls.Add(this.panel5);
             this.panelMenu.Controls.Add(this.flowLayoutPanel1);
+            this.panelMenu.Controls.Add(this.panel16);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
@@ -578,25 +578,11 @@
             this.panelMenu.Size = new System.Drawing.Size(483, 1600);
             this.panelMenu.TabIndex = 7;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.pictureBox12);
-            this.panel5.EdgeColor = System.Drawing.Color.White;
-            this.panel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel5.Location = new System.Drawing.Point(33, 690);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(5);
-            this.panel5.Size = new System.Drawing.Size(427, 729);
-            this.panel5.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel5.TabIndex = 10;
-            this.panel5.Text = "panel5";
-            // 
             // pictureBox12
             // 
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox12.Image = global::formQLmain.Properties.Resources.NEU__1_;
-            this.pictureBox12.Location = new System.Drawing.Point(8, 423);
+            this.pictureBox12.Location = new System.Drawing.Point(3, 414);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(411, 312);
             this.pictureBox12.TabIndex = 0;
@@ -606,7 +592,7 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.panel9);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 1428);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 693);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(418, 390);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(418, 88);
@@ -701,6 +687,17 @@
             this.panel13.Size = new System.Drawing.Size(456, 242);
             this.panel13.TabIndex = 3;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 16.125F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(44, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(399, 59);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Tổng số tài khoản ";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // lblTotalTaiKhoan
             // 
             this.lblTotalTaiKhoan.AutoSize = true;
@@ -719,6 +716,16 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(456, 242);
             this.panel12.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 16.125F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(64, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(347, 59);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Tổng số tài liệu ";
             // 
             // lblTotalTaiLieu
             // 
@@ -741,6 +748,16 @@
             this.panel11.TabIndex = 1;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.125F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(25, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(389, 59);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tổng số sinh viên ";
+            // 
             // lblTotalSinhVien
             // 
             this.lblTotalSinhVien.AutoSize = true;
@@ -760,6 +777,16 @@
             this.panel10.Size = new System.Drawing.Size(486, 242);
             this.panel10.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.125F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(75, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(324, 59);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tổng số đồ án ";
+            // 
             // lblTotalDoAn
             // 
             this.lblTotalDoAn.AutoSize = true;
@@ -772,19 +799,19 @@
             // 
             // chartByKhoa
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartByKhoa.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartByKhoa.Legends.Add(legend3);
+            chartArea5.Name = "ChartArea1";
+            this.chartByKhoa.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartByKhoa.Legends.Add(legend5);
             this.chartByKhoa.Location = new System.Drawing.Point(1001, 328);
             this.chartByKhoa.Name = "chartByKhoa";
             this.chartByKhoa.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series3.IsValueShownAsLabel = true;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartByKhoa.Series.Add(series3);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series5.IsValueShownAsLabel = true;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartByKhoa.Series.Add(series5);
             this.chartByKhoa.Size = new System.Drawing.Size(504, 456);
             this.chartByKhoa.TabIndex = 18;
             this.chartByKhoa.Text = "chart1";
@@ -793,25 +820,25 @@
             // 
             this.groupBox2.Controls.Add(this.chartYearly);
             this.groupBox2.Controls.Add(this.chartByKhoa);
-            this.groupBox2.Location = new System.Drawing.Point(505, 748);
+            this.groupBox2.Location = new System.Drawing.Point(505, 774);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1597, 814);
+            this.groupBox2.Size = new System.Drawing.Size(1592, 814);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             // 
             // chartYearly
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartYearly.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartYearly.Legends.Add(legend4);
+            chartArea6.Name = "ChartArea1";
+            this.chartYearly.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartYearly.Legends.Add(legend6);
             this.chartYearly.Location = new System.Drawing.Point(15, 27);
             this.chartYearly.Name = "chartYearly";
             this.chartYearly.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartYearly.Series.Add(series4);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartYearly.Series.Add(series6);
             this.chartYearly.Size = new System.Drawing.Size(953, 763);
             this.chartYearly.TabIndex = 18;
             this.chartYearly.Text = "chart1";
@@ -848,46 +875,13 @@
             this.grdRecent.Size = new System.Drawing.Size(703, 699);
             this.grdRecent.TabIndex = 0;
             // 
-            // label1
+            // panel16
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.125F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(75, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 59);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tổng số đồ án ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.125F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(25, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(389, 59);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tổng số sinh viên ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 16.125F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(64, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(347, 59);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tổng số tài liệu ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16.125F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(44, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(399, 59);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Tổng số tài khoản ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.panel16.Controls.Add(this.pictureBox12);
+            this.panel16.Location = new System.Drawing.Point(33, 806);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(427, 729);
+            this.panel16.TabIndex = 17;
             // 
             // FrmQLmain
             // 
@@ -933,7 +927,6 @@
             this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panelMenu.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -954,6 +947,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartYearly)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdRecent)).EndInit();
+            this.panel16.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -996,7 +990,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.FlowLayoutPanel panelMenu;
-        private ReaLTaiizor.Controls.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.TextBox textBox1;
@@ -1024,6 +1017,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel16;
     }
 }
 

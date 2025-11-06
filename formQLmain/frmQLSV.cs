@@ -14,10 +14,7 @@ namespace formQLmain
 {
     public partial class frmQLSV : Form
     {
-        //SqlConnection conn;// Yến linh 
-        //SqlDataAdapter da;
-        //DataTable dt;
-        //string str, sql; // Khai báo biến kết nối Yến Linh
+        
         public frmQLSV()
         {
             InitializeComponent();
@@ -34,7 +31,7 @@ namespace formQLmain
         Modify modify;
         SinhVien sinhVien;
         private string maSVCu = ""; //////////// cẩn thận lỗi 
-        private void frmQLDL_Load(object sender, EventArgs e) // đổi tên thành frmQLSV_Load
+        private void frmQLDL_Load(object sender, EventArgs e) // đổi tên thành frmQLSV_Load rồi 
         {
             modify = new Modify();
 
@@ -195,7 +192,7 @@ namespace formQLmain
             }
             // đang bị lỗi rất to là khi thêm sinh viên thì phải thêm mã TK ?? mà mã TK chưa có trong bảng tài khoản thì không thêm được nên bị xung đột
             // nên là phải thêm tài khoản trước rồi mới thêm sinh viên được
-            // rất là cấn 
+            // rất là kỳ kì , hoặc nên tạo dạng nhập khác để ko bị nhầm 
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -329,7 +326,7 @@ namespace formQLmain
 
 
         //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4 
-        // vừa thêm quả NapCT 
+        // vừa thêm quả NapCT giống thầy sau khi học ## giống ở dòng 246 về mục đích  
         public void NapCT()
         {
             int i = grdSinhVien.CurrentRow.Index;
@@ -409,6 +406,8 @@ namespace formQLmain
         }
         // Cách làm bây giờ là đẩy nút thêm cũ  sang phải và đổi tên thành cập nhật 
         // tạo một nút thêm giả: nút này chỉ để nó trắng xóa và nó nhảy về cuối 
+        //Xem hét việc thêm nút hủy thêm, kiểu nhắn vào thêm xong ko muốn thêm nữa thì bấm hủy
+
     }
 }
 
