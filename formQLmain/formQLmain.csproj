@@ -135,6 +135,24 @@
     <Compile Include="Connection.cs" />
     <Compile Include="DanhSachDoAn.cs" />
     <Compile Include="DashboardRepo.cs.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDSDA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +192,15 @@
     <Compile Include="SinhVien.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="TaiLieuKemTheo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDSDA.resx">
       <DependentUpon>frmDSDA.cs</DependentUpon>
     </EmbeddedResource>
