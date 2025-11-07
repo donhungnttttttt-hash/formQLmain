@@ -24,6 +24,7 @@ namespace formQLmain
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtEmail.Text) && string.IsNullOrWhiteSpace(txtPassword.Text))
+
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 txtEmail.Focus(); // Đưa con trỏ về ô trống
