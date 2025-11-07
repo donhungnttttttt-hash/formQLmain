@@ -135,6 +135,12 @@
     <Compile Include="Connection.cs" />
     <Compile Include="DanhSachDoAn.cs" />
     <Compile Include="DashboardRepo.cs.cs" />
+    <Compile Include="frmChitie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChitie.Designer.cs">
+      <DependentUpon>frmChitie.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDSDA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     <Compile Include="SinhVien.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="TaiLieuKemTheo.cs" />
+    <EmbeddedResource Include="frmChitie.resx">
+      <DependentUpon>frmChitie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDSDA.resx">
       <DependentUpon>frmDSDA.cs</DependentUpon>
     </EmbeddedResource>
