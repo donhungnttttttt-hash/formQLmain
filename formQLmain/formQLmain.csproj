@@ -135,17 +135,11 @@
     <Compile Include="Connection.cs" />
     <Compile Include="DanhSachDoAn.cs" />
     <Compile Include="DashboardRepo.cs.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="frmChitie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="frmChitie.Designer.cs">
+      <DependentUpon>frmChitie.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDSDA.cs">
       <SubType>Form</SubType>
@@ -186,11 +180,8 @@
     <Compile Include="SinhVien.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="TaiLieuKemTheo.cs" />
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="frmChitie.resx">
+      <DependentUpon>frmChitie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDSDA.resx">
       <DependentUpon>frmDSDA.cs</DependentUpon>
