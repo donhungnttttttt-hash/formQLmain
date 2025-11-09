@@ -136,31 +136,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="DanhSachDoAn.cs" />
+    <Compile Include="Danhsachdoan.cs" />
     <Compile Include="DashboardRepo.cs.cs" />
-    <Compile Include="frmChitiet.cs">
+    <Compile Include="Chitiet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChitiet.Designer.cs">
-      <DependentUpon>frmChitiet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDanhsachDA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDanhsachDA.Designer.cs">
-      <DependentUpon>frmDanhsachDA.cs</DependentUpon>
+    <Compile Include="Chitiet.Designer.cs">
+      <DependentUpon>Chitiet.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDAYT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDAYT.Designer.cs">
       <DependentUpon>frmDAYT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmChitie.Designer.cs">
-      <DependentUpon>frmChitie.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDSDA.cs">
       <SubType>Form</SubType>
@@ -192,6 +180,18 @@
     <Compile Include="frmTLKT.Designer.cs">
       <DependentUpon>frmTLKT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modify.cs" />
     <Compile Include="ModifyDanhSachDoAn.cs" />
     <Compile Include="ModifyTaiKhoan.cs" />
@@ -201,11 +201,14 @@
     <Compile Include="SinhVien.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="TaiLieuKemTheo.cs" />
-    <EmbeddedResource Include="frmChitiet.resx">
-      <DependentUpon>frmChitiet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDanhsachDA.resx">
-      <DependentUpon>frmDanhsachDA.cs</DependentUpon>
+    <Compile Include="TraCuuDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraCuuDA.Designer.cs">
+      <DependentUpon>TraCuuDA.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Chitiet.resx">
+      <DependentUpon>Chitiet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDAYT.resx">
       <DependentUpon>frmDAYT.cs</DependentUpon>
@@ -242,6 +245,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TraCuuDA.resx">
+      <DependentUpon>TraCuuDA.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -10,25 +10,25 @@ using System.Windows.Forms;
 
 namespace formQLmain
 {
-    public partial class FrmHome : Form
+    public partial class frmHome : Form
     {
-        public FrmHome()
+        public frmHome()
         {
             InitializeComponent();
-        }
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            // Open the login form
-            FrmLogin f = new FrmLogin("ADMIN");
-            f.Show();
-            this.Hide();
         }
 
         private void btnUser_Click(object sender, EventArgs e)
         {
             // Open the login form
             FrmLogin f = new FrmLogin("USER");
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            // Open the login form
+            FrmLogin f = new FrmLogin("ADMIN");
             f.Show();
             this.Hide();
         }

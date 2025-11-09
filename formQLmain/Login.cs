@@ -109,7 +109,7 @@ namespace formQLmain
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmHome f = new FrmHome();
+            frmHome f = new frmHome();
             f.Show();
             this.Hide(); // Đóng form hiện tại
         }

@@ -1,6 +1,6 @@
 ﻿namespace formQLmain
 {
-    partial class FrmHome
+    partial class frmHome
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.label8.Location = new System.Drawing.Point(1071, 1462);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(209, 47);
-            this.label8.TabIndex = 28;
+            this.label8.TabIndex = 39;
             this.label8.Text = "Lượt tra cứu";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -63,7 +63,7 @@
             this.label7.Location = new System.Drawing.Point(1064, 1316);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(241, 89);
-            this.label7.TabIndex = 27;
+            this.label7.TabIndex = 38;
             this.label7.Text = "2000+\r\n";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -75,7 +75,7 @@
             this.label6.Location = new System.Drawing.Point(594, 1452);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(345, 47);
-            this.label6.TabIndex = 26;
+            this.label6.TabIndex = 37;
             this.label6.Text = "Bài đồ án Tốt nghiệp";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -87,7 +87,7 @@
             this.label5.Location = new System.Drawing.Point(587, 1316);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(202, 89);
-            this.label5.TabIndex = 25;
+            this.label5.TabIndex = 36;
             this.label5.Text = "300+\r\n";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -99,7 +99,7 @@
             this.label4.Location = new System.Drawing.Point(201, 1452);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 47);
-            this.label4.TabIndex = 24;
+            this.label4.TabIndex = 35;
             this.label4.Text = "Tài khoản";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -111,7 +111,7 @@
             this.label3.Location = new System.Drawing.Point(183, 1316);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(241, 89);
-            this.label3.TabIndex = 23;
+            this.label3.TabIndex = 34;
             this.label3.Text = "1000+\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -130,7 +130,7 @@
             this.btnAdmin.Location = new System.Drawing.Point(741, 1097);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(420, 102);
-            this.btnAdmin.TabIndex = 22;
+            this.btnAdmin.TabIndex = 33;
             this.btnAdmin.Text = "Đăng nhập với tư cách admin";
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
@@ -147,7 +147,7 @@
             this.btnUser.Location = new System.Drawing.Point(183, 1097);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(420, 102);
-            this.btnUser.TabIndex = 21;
+            this.btnUser.TabIndex = 32;
             this.btnUser.Text = "Đăng nhập với tư cách người dùng";
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
@@ -159,7 +159,7 @@
             this.label2.Location = new System.Drawing.Point(227, 884);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(894, 65);
-            this.label2.TabIndex = 19;
+            this.label2.TabIndex = 30;
             this.label2.Text = "Cùng kết nối với nguồn tri thức vô tận";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -171,7 +171,7 @@
             this.label1.Location = new System.Drawing.Point(81, 390);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1268, 318);
-            this.label1.TabIndex = 18;
+            this.label1.TabIndex = 29;
             this.label1.Text = "Kho tài liệu Đồ án tốt nghiệp\r\nKhoa hệ thống thông tin quản lý\r\n\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -182,10 +182,10 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1435, 1739);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
             // 
-            // FrmHome
+            // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,10 +201,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
-            this.Name = "FrmHome";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmHome";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "frmHome";
+            this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
