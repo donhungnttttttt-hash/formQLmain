@@ -16,5 +16,10 @@ namespace formQLmain
         {
             InitializeComponent();
         }
+
+        private void frmChitiet_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
