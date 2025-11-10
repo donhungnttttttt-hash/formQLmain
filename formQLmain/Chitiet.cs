@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace formQLmain
 {
-    public partial class frmChitiet : Form
+    public partial class Chitiet : Form
     {
-        public frmChitiet()
+        public Chitiet()
         {
             InitializeComponent();
-        }
-
-        private void frmChitiet_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

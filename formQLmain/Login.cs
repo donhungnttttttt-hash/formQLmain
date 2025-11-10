@@ -80,13 +80,13 @@ namespace formQLmain
 
                 if (role == "SINHVIEN")
                 {
-                    //FrmQlmain f = new FrmQlmain();
-                    //f.Show();
+                    frmTracuu f = new frmTracuu();
+                    f.Show();
                 }
                 else if (role == "GIANGVIEN")
                 {
-                    //FrmQlmain f = new FrmQlmain();
-                    //f.Show();
+                    frmTracuu f = new frmTracuu();
+                    f.Show();
                 }
                 else if (role == "QUANLY")
                 {
@@ -109,7 +109,7 @@ namespace formQLmain
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmHome f = new FrmHome();
+            frmHome f = new frmHome();
             f.Show();
             this.Hide(); // Đóng form hiện tại
         }

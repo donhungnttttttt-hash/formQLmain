@@ -67,6 +67,8 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.QLDLdrop = new System.Windows.Forms.Timer(this.components);
             this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
             this.pnlgrid = new System.Windows.Forms.Panel();
@@ -94,8 +96,6 @@
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -123,14 +123,14 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.pnlgrid.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTaiKhoan)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -602,6 +602,23 @@
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.pictureBox12);
+            this.panel11.Location = new System.Drawing.Point(33, 799);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(427, 729);
+            this.panel11.TabIndex = 17;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::formQLmain.Properties.Resources.hinhanhdep;
+            this.pictureBox12.Location = new System.Drawing.Point(28, 381);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(354, 312);
+            this.pictureBox12.TabIndex = 1;
+            this.pictureBox12.TabStop = false;
+            // 
             // QLDLdrop
             // 
             this.QLDLdrop.Interval = 1;
@@ -896,23 +913,6 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Quản lý tài khoản ";
             // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.pictureBox12);
-            this.panel11.Location = new System.Drawing.Point(33, 799);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(427, 729);
-            this.panel11.TabIndex = 17;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::formQLmain.Properties.Resources.hinhanhdep;
-            this.pictureBox12.Location = new System.Drawing.Point(28, 381);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(354, 312);
-            this.pictureBox12.TabIndex = 1;
-            this.pictureBox12.TabStop = false;
-            // 
             // frmQLTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -954,6 +954,8 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.pnlgrid.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -962,8 +964,6 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
