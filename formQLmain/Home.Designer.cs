@@ -131,7 +131,7 @@
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(420, 102);
             this.btnAdmin.TabIndex = 33;
-            this.btnAdmin.Text = "Đăng nhập với tư cách admin";
+            this.btnAdmin.Text = "Đăng nhập với tư cách quản lý";
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnUser
@@ -189,6 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2884, 1759);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -202,6 +203,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "frmHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

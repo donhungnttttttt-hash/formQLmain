@@ -80,13 +80,13 @@ namespace formQLmain
 
                 if (role == "SINHVIEN")
                 {
-                    //FrmQlmain f = new FrmQlmain();
-                    //f.Show();
+                    frmTracuu f = new frmTracuu();
+                    f.Show();
                 }
                 else if (role == "GIANGVIEN")
                 {
-                    //FrmQlmain f = new FrmQlmain();
-                    //f.Show();
+                    frmTracuu f = new frmTracuu();
+                    f.Show();
                 }
                 else if (role == "QUANLY")
                 {
