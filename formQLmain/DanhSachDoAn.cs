@@ -12,7 +12,7 @@ namespace formQLmain
         private string _tenDeTai;
         private string _maSinhVien;
         private string _gvhd;
-        private DateTime? _namBaoVe;   // đổi sang DateTime?
+        private DateTime? _namBaoVe;   // đổi sang DateTime 
         private string _maTaiLieuBC;
         private string _tomTat;
 

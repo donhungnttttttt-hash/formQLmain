@@ -12,7 +12,7 @@ namespace formQLmain
         public Modify()
         {
         }
-        public DataTable getAllSinhVien()
+        public DataTable getAllSinhVien() 
         { 
             DataTable dataTable= new DataTable();
             string query = "SELECT * FROM SINHVIEN";

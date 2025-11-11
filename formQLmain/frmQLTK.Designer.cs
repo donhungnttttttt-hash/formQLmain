@@ -96,6 +96,8 @@
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox_Lop = new System.Windows.Forms.ComboBox();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -640,6 +642,8 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.comboBox_Lop);
+            this.panel10.Controls.Add(this.label8);
             this.panel10.Controls.Add(this.txtbox_VaiTro);
             this.panel10.Controls.Add(this.label2);
             this.panel10.Controls.Add(this.btnSua);
@@ -913,6 +917,30 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Quản lý tài khoản ";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label8.Location = new System.Drawing.Point(32, 710);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(109, 37);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Vai trò ";
+            // 
+            // comboBox_Lop
+            // 
+            this.comboBox_Lop.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Lop.FormattingEnabled = true;
+            this.comboBox_Lop.Items.AddRange(new object[] {
+            "SINHVIEN",
+            "GIANGVIEN",
+            "ADMIN"});
+            this.comboBox_Lop.Location = new System.Drawing.Point(40, 766);
+            this.comboBox_Lop.Name = "comboBox_Lop";
+            this.comboBox_Lop.Size = new System.Drawing.Size(536, 45);
+            this.comboBox_Lop.TabIndex = 44;
+            // 
             // frmQLTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1035,5 +1063,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox_Lop;
     }
 }

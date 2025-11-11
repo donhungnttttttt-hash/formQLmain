@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraScheduler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,7 +48,7 @@ namespace formQLmain
             }
 
             //Tạo một đối tượng chứa kết nối
-            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True"); //khởi tạo đối tượng kết nối
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-QQ88INT\SQLEXPRESS;Initial Catalog=DOANnew;Integrated Security=True;TrustServerCertificate=True;Encrypt=False"); //khởi tạo đối tượng kết nối
                                                                                                                                                                                //tạo chuỗi truy vấn 
             string sql = " ";
 

@@ -14,10 +14,10 @@ namespace formQLmain
         SqlCommand _cmd;
 
         // Đọc toàn bộ
-        public DataTable getAllDoAn()
+        public DataTable getAllDoAn() // thêm dữ liệu này
         {
             DataTable dt = new DataTable();
-            string sql = "SELECT * FROM DOAN";
+            string sql = "SELECT * FROM DOAN join TLBC";
             using (SqlConnection conn = Connection.getConnection())
             {
                 _da = new SqlDataAdapter(sql, conn);
@@ -26,7 +26,7 @@ namespace formQLmain
             return dt;
         }
 
-        // Thêm
+        // ================Thêm==========================
         public bool insert(DanhSachDoAn da, out string error)
         {
             error = "";

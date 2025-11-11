@@ -72,33 +72,8 @@ namespace formQLmain
 
         private void btnDrop2_Click(object sender, EventArgs e)
         {
-            QLDAdrop.Start();
-            Console.WriteLine(Expand2);
-            Console.ReadLine();
-        }
-
-        private void QLDAdrop_Tick(object sender, EventArgs e)
-        {
-            if (Expand2 == false)
-            {
-                dropdown2.Height += 15;
-                if (dropdown2.Height >= dropdown2.MaximumSize.Height)
-                {
-
-                    QLDAdrop.Stop();
-                    Expand2 = true;
-                }
-            }
-            else
-            {
-                dropdown2.Height -= 15;
-                if (dropdown2.Height <= dropdown2.MinimumSize.Height)
-                {
-
-                    QLDAdrop.Stop();
-                    Expand2 = false;
-                }
-            }
+            frmDSDA f = new frmDSDA();
+            f.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -111,7 +86,7 @@ namespace formQLmain
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // bỏ QLTK để gộp vô nhé 
         {
             frmQLTK f = new frmQLTK();
             f.Show();
@@ -164,8 +139,7 @@ namespace formQLmain
 
         private void button6_Click(object sender, EventArgs e)
         {
-            frmDSDA f = new frmDSDA();
-            f.Show();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)

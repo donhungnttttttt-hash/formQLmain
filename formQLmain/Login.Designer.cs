@@ -142,7 +142,7 @@
             this.txtEmail.PlaceholderText = "Nhập email của bạn";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(678, 129);
-            this.txtEmail.TabIndex = 12;
+            this.txtEmail.TabIndex = 10;
             // 
             // btnLogin
             // 
@@ -178,7 +178,7 @@
             this.txtPassword.PlaceholderText = "Nhập mật khẩu của bạn";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(678, 129);
-            this.txtPassword.TabIndex = 10;
+            this.txtPassword.TabIndex = 12;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label7
@@ -250,6 +250,7 @@
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogin";
+            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraPrinting;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -319,6 +319,11 @@ namespace formQLmain
                 e.SuppressKeyPress = true; // tránh tiếng 'ding'
                 btnTimKiem_Click(sender, e);
             }
+        }
+
+        private void grdDoAn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

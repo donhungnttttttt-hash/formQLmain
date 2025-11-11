@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -68,14 +68,14 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.button13 = new System.Windows.Forms.Button();
             this.QLDLdrop = new System.Windows.Forms.Timer(this.components);
-            this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
             this.menutimer = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
@@ -98,7 +98,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnRefreshDash = new System.Windows.Forms.Button();
             this.grdRecent = new System.Windows.Forms.DataGridView();
-            this.panel16 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -123,10 +122,11 @@
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -139,7 +139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartYearly)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdRecent)).BeginInit();
-            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -233,7 +232,7 @@
             this.btndropQLDL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndropQLDL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndropQLDL.ForeColor = System.Drawing.Color.DimGray;
-            this.btndropQLDL.Location = new System.Drawing.Point(-9, -13);
+            this.btndropQLDL.Location = new System.Drawing.Point(-15, -12);
             this.btndropQLDL.Margin = new System.Windows.Forms.Padding(6);
             this.btndropQLDL.Name = "btndropQLDL";
             this.btndropQLDL.Size = new System.Drawing.Size(451, 126);
@@ -333,7 +332,7 @@
             this.dropdown2.MaximumSize = new System.Drawing.Size(418, 330);
             this.dropdown2.MinimumSize = new System.Drawing.Size(418, 88);
             this.dropdown2.Name = "dropdown2";
-            this.dropdown2.Size = new System.Drawing.Size(418, 107);
+            this.dropdown2.Size = new System.Drawing.Size(418, 104);
             this.dropdown2.TabIndex = 2;
             // 
             // panel6
@@ -455,7 +454,7 @@
             // 
             this.flowLayoutPanel5.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel5.Controls.Add(this.panel14);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(36, 461);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(36, 458);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel5.MaximumSize = new System.Drawing.Size(418, 390);
             this.flowLayoutPanel5.MinimumSize = new System.Drawing.Size(418, 88);
@@ -503,7 +502,7 @@
             // 
             this.flowLayoutPanel6.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel6.Controls.Add(this.panel15);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(36, 577);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(36, 574);
             this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel6.MaximumSize = new System.Drawing.Size(418, 390);
             this.flowLayoutPanel6.MinimumSize = new System.Drawing.Size(418, 88);
@@ -552,11 +551,6 @@
             this.QLDLdrop.Interval = 1;
             this.QLDLdrop.Tick += new System.EventHandler(this.selectDrowdown_Tick_1);
             // 
-            // QLDAdrop
-            // 
-            this.QLDAdrop.Interval = 1;
-            this.QLDAdrop.Tick += new System.EventHandler(this.QLDAdrop_Tick);
-            // 
             // menutimer
             // 
             this.menutimer.Tick += new System.EventHandler(this.menutimer_Tick);
@@ -569,8 +563,8 @@
             this.panelMenu.Controls.Add(this.dropdown2);
             this.panelMenu.Controls.Add(this.flowLayoutPanel5);
             this.panelMenu.Controls.Add(this.flowLayoutPanel6);
-            this.panelMenu.Controls.Add(this.flowLayoutPanel1);
             this.panelMenu.Controls.Add(this.panel16);
+            this.panelMenu.Controls.Add(this.flowLayoutPanel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
@@ -578,21 +572,11 @@
             this.panelMenu.Size = new System.Drawing.Size(483, 1600);
             this.panelMenu.TabIndex = 7;
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox12.Image = global::formQLmain.Properties.Resources.NEU__1_;
-            this.pictureBox12.Location = new System.Drawing.Point(3, 414);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(411, 312);
-            this.pictureBox12.TabIndex = 0;
-            this.pictureBox12.TabStop = false;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.panel9);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 693);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 1425);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(418, 390);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(418, 88);
@@ -637,6 +621,24 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.pictureBox12);
+            this.panel16.Location = new System.Drawing.Point(33, 687);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(427, 729);
+            this.panel16.TabIndex = 17;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox12.Image = global::formQLmain.Properties.Resources.NEU__1_;
+            this.pictureBox12.Location = new System.Drawing.Point(3, 414);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(411, 312);
+            this.pictureBox12.TabIndex = 0;
+            this.pictureBox12.TabStop = false;
+            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -672,9 +674,9 @@
             this.groupBox1.Controls.Add(this.panel12);
             this.groupBox1.Controls.Add(this.panel11);
             this.groupBox1.Controls.Add(this.panel10);
-            this.groupBox1.Location = new System.Drawing.Point(505, 453);
+            this.groupBox1.Location = new System.Drawing.Point(1506, 453);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(2348, 289);
+            this.groupBox1.Size = new System.Drawing.Size(1347, 289);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             // 
@@ -799,19 +801,19 @@
             // 
             // chartByKhoa
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartByKhoa.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartByKhoa.Legends.Add(legend5);
+            chartArea11.Name = "ChartArea1";
+            this.chartByKhoa.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chartByKhoa.Legends.Add(legend11);
             this.chartByKhoa.Location = new System.Drawing.Point(1001, 328);
             this.chartByKhoa.Name = "chartByKhoa";
             this.chartByKhoa.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series5.IsValueShownAsLabel = true;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartByKhoa.Series.Add(series5);
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series11.IsValueShownAsLabel = true;
+            series11.Legend = "Legend1";
+            series11.Name = "Series1";
+            this.chartByKhoa.Series.Add(series11);
             this.chartByKhoa.Size = new System.Drawing.Size(504, 456);
             this.chartByKhoa.TabIndex = 18;
             this.chartByKhoa.Text = "chart1";
@@ -820,25 +822,25 @@
             // 
             this.groupBox2.Controls.Add(this.chartYearly);
             this.groupBox2.Controls.Add(this.chartByKhoa);
-            this.groupBox2.Location = new System.Drawing.Point(505, 774);
+            this.groupBox2.Location = new System.Drawing.Point(1506, 774);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1592, 814);
+            this.groupBox2.Size = new System.Drawing.Size(591, 814);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             // 
             // chartYearly
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartYearly.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartYearly.Legends.Add(legend6);
+            chartArea12.Name = "ChartArea1";
+            this.chartYearly.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chartYearly.Legends.Add(legend12);
             this.chartYearly.Location = new System.Drawing.Point(15, 27);
             this.chartYearly.Name = "chartYearly";
             this.chartYearly.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartYearly.Series.Add(series6);
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "Series1";
+            this.chartYearly.Series.Add(series12);
             this.chartYearly.Size = new System.Drawing.Size(953, 763);
             this.chartYearly.TabIndex = 18;
             this.chartYearly.Text = "chart1";
@@ -874,14 +876,6 @@
             this.grdRecent.RowTemplate.Height = 33;
             this.grdRecent.Size = new System.Drawing.Size(703, 699);
             this.grdRecent.TabIndex = 0;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.pictureBox12);
-            this.panel16.Location = new System.Drawing.Point(33, 806);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(427, 729);
-            this.panel16.TabIndex = 17;
             // 
             // FrmQLmain
             // 
@@ -927,10 +921,11 @@
             this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panelMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -947,7 +942,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartYearly)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdRecent)).EndInit();
-            this.panel16.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -969,7 +963,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnDrop2;
         private System.Windows.Forms.FlowLayoutPanel dropdown2;
-        private System.Windows.Forms.Timer QLDAdrop;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
