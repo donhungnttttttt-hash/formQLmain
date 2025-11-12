@@ -35,7 +35,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnDA = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btnTLKT = new System.Windows.Forms.Button();
+            this.btnDAYT = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -47,7 +47,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dropdown2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnDSDA = new System.Windows.Forms.Button();
+            this.btnTraCuu = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -73,7 +73,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtFileBC = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.QLDLdrop = new System.Windows.Forms.Timer(this.components);
+            this.DSDAdrop = new System.Windows.Forms.Timer(this.components);
             this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.dtpickNambaove = new System.Windows.Forms.DateTimePicker();
@@ -164,28 +164,29 @@
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
             // 
-            // btnTLKT
+            // btnDAYT
             // 
-            this.btnTLKT.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTLKT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTLKT.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnTLKT.ForeColor = System.Drawing.Color.DimGray;
-            this.btnTLKT.Location = new System.Drawing.Point(-8, -3);
-            this.btnTLKT.Margin = new System.Windows.Forms.Padding(6);
-            this.btnTLKT.Name = "btnTLKT";
-            this.btnTLKT.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
-            this.btnTLKT.Size = new System.Drawing.Size(442, 120);
-            this.btnTLKT.TabIndex = 0;
-            this.btnTLKT.Text = "      Tài liệu kèm theo";
-            this.btnTLKT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTLKT.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnTLKT.UseVisualStyleBackColor = false;
+            this.btnDAYT.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDAYT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDAYT.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDAYT.ForeColor = System.Drawing.Color.DimGray;
+            this.btnDAYT.Location = new System.Drawing.Point(-8, -3);
+            this.btnDAYT.Margin = new System.Windows.Forms.Padding(6);
+            this.btnDAYT.Name = "btnDAYT";
+            this.btnDAYT.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
+            this.btnDAYT.Size = new System.Drawing.Size(442, 120);
+            this.btnDAYT.TabIndex = 0;
+            this.btnDAYT.Text = "      Đồ án yêu thích";
+            this.btnDAYT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDAYT.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnDAYT.UseVisualStyleBackColor = false;
+            this.btnDAYT.Click += new System.EventHandler(this.btnDAYT_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.panel9);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 457);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 1175);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(418, 88);
@@ -236,8 +237,8 @@
             this.panelMenu.Controls.Add(this.flowLayoutPanel2);
             this.panelMenu.Controls.Add(this.dropdown2);
             this.panelMenu.Controls.Add(this.flowLayoutPanel6);
-            this.panelMenu.Controls.Add(this.flowLayoutPanel1);
             this.panelMenu.Controls.Add(this.panel11);
+            this.panelMenu.Controls.Add(this.flowLayoutPanel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
@@ -305,40 +306,41 @@
             this.dropdown2.MaximumSize = new System.Drawing.Size(418, 330);
             this.dropdown2.MinimumSize = new System.Drawing.Size(418, 88);
             this.dropdown2.Name = "dropdown2";
-            this.dropdown2.Size = new System.Drawing.Size(418, 105);
+            this.dropdown2.Size = new System.Drawing.Size(418, 104);
             this.dropdown2.TabIndex = 2;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Controls.Add(this.btnDSDA);
+            this.panel7.Controls.Add(this.btnTraCuu);
             this.panel7.Location = new System.Drawing.Point(0, 111);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(418, 109);
             this.panel7.TabIndex = 2;
             // 
-            // btnDSDA
+            // btnTraCuu
             // 
-            this.btnDSDA.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDSDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDSDA.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDSDA.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDSDA.Location = new System.Drawing.Point(-8, -14);
-            this.btnDSDA.Margin = new System.Windows.Forms.Padding(6);
-            this.btnDSDA.Name = "btnDSDA";
-            this.btnDSDA.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
-            this.btnDSDA.Size = new System.Drawing.Size(442, 134);
-            this.btnDSDA.TabIndex = 0;
-            this.btnDSDA.Text = "      Danh sách đồ án";
-            this.btnDSDA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSDA.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnDSDA.UseVisualStyleBackColor = false;
+            this.btnTraCuu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTraCuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTraCuu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnTraCuu.ForeColor = System.Drawing.Color.DimGray;
+            this.btnTraCuu.Location = new System.Drawing.Point(-8, -14);
+            this.btnTraCuu.Margin = new System.Windows.Forms.Padding(6);
+            this.btnTraCuu.Name = "btnTraCuu";
+            this.btnTraCuu.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
+            this.btnTraCuu.Size = new System.Drawing.Size(442, 134);
+            this.btnTraCuu.TabIndex = 0;
+            this.btnTraCuu.Text = "      Tra cứu đồ án";
+            this.btnTraCuu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTraCuu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnTraCuu.UseVisualStyleBackColor = false;
+            this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.pictureBox8);
-            this.panel8.Controls.Add(this.btnTLKT);
+            this.panel8.Controls.Add(this.btnDAYT);
             this.panel8.Location = new System.Drawing.Point(0, 220);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
@@ -349,12 +351,12 @@
             // 
             this.flowLayoutPanel6.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel6.Controls.Add(this.panel15);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(36, 340);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(36, 339);
             this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel6.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel6.MinimumSize = new System.Drawing.Size(418, 88);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(418, 105);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(418, 88);
             this.flowLayoutPanel6.TabIndex = 6;
             // 
             // panel15
@@ -396,7 +398,7 @@
             // panel11
             // 
             this.panel11.Controls.Add(this.pictureBox12);
-            this.panel11.Location = new System.Drawing.Point(33, 571);
+            this.panel11.Location = new System.Drawing.Point(33, 436);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(428, 730);
             this.panel11.TabIndex = 16;
@@ -427,7 +429,7 @@
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(804, 195);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(793, 223);
             this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(1446, 913);
@@ -633,7 +635,7 @@
             this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(804, 1158);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(802, 1155);
             this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.Size = new System.Drawing.Size(1446, 402);
@@ -715,9 +717,10 @@
             this.btnBack.Text = "Quay về";
             this.btnBack.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // QLDLdrop
+            // DSDAdrop
             // 
-            this.QLDLdrop.Interval = 1;
+            this.DSDAdrop.Interval = 1;
+            this.DSDAdrop.Tick += new System.EventHandler(this.DSDAdrop_Tick);
             // 
             // QLDAdrop
             // 
@@ -860,7 +863,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnDA;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button btnTLKT;
+        private System.Windows.Forms.Button btnDAYT;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox11;
@@ -872,7 +875,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel dropdown2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnDSDA;
+        private System.Windows.Forms.Button btnTraCuu;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Panel panel15;
@@ -896,7 +899,7 @@
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtFileBC;
         private Guna.UI2.WinForms.Guna2Button btnBack;
-        private System.Windows.Forms.Timer QLDLdrop;
+        private System.Windows.Forms.Timer DSDAdrop;
         private System.Windows.Forms.Timer QLDAdrop;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label6;
