@@ -150,6 +150,12 @@
     <Compile Include="Chitiet.Designer.cs">
       <DependentUpon>Chitiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCTDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCTDA.Designer.cs">
+      <DependentUpon>frmCTDA.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDAYT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </Compile>
     <EmbeddedResource Include="Chitiet.resx">
       <DependentUpon>Chitiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCTDA.resx">
+      <DependentUpon>frmCTDA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDAYT.resx">
       <DependentUpon>frmDAYT.cs</DependentUpon>
