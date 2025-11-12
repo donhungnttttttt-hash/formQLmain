@@ -141,6 +141,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietDoAn.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Danhsachdoan.cs" />
     <Compile Include="DashboardRepo.cs.cs" />
