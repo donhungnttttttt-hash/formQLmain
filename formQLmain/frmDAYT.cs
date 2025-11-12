@@ -16,5 +16,24 @@ namespace formQLmain
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnDrop2_Click(object sender, EventArgs e)
+        {
+            frmTracuu f = new frmTracuu();
+            f.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmHome f = new frmHome();
+            f.Show();
+            this.Hide();
+        }
     }
 }
