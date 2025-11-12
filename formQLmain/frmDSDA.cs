@@ -320,6 +320,11 @@ namespace formQLmain
                 btnTimKiem_Click(sender, e);
             }
         }
+
+        private void grdDoAn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 //ghi chú
