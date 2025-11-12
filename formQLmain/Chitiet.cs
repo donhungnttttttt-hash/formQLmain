@@ -11,11 +11,17 @@ using System.Windows.Forms;
 namespace formQLmain
 {
     public partial class frmChitiet : Form
+
+
     {
         public frmChitiet()
         {
             InitializeComponent();
         }
+
+        public bool Expand = false; // khai báo biến Expand 
+        public bool Expand2 = false; // khai báo biến Expand2 
+        public bool Expandmenu = false; // khai báo biến Expand2 
 
         // ✅ Constructor có 8 tham số – bắt buộc phải có để dòng bạn gọi chạy được
         public frmChitiet(
@@ -50,9 +56,9 @@ namespace formQLmain
 
         private void btnDrop2_Click(object sender, EventArgs e)
         {
-            frmTracuu f = new frmTracuu();
-            f.Show();
-            this.Hide();
+            DSDAdrop.Start();
+            Console.WriteLine(Expand);
+            Console.ReadLine();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -90,5 +96,43 @@ namespace formQLmain
             this.Hide();
         
     }
+
+        private void DSDAdrop_Tick(object sender, EventArgs e)
+        {
+            if (Expand == false)
+            {
+                dropdown2.Height += 15;
+                if (dropdown2.Height >= dropdown2.MaximumSize.Height)
+                {
+
+                    DSDAdrop.Stop();
+                    Expand = true;
+                }
+            }
+            else
+            {
+                dropdown2.Height -= 15;
+                if (dropdown2.Height <= dropdown2.MinimumSize.Height)
+                {
+
+                    DSDAdrop.Stop();
+                    Expand = false;
+                }
+            }
+        }
+
+        private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            frmTracuu f = new frmTracuu();
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnDAYT_Click(object sender, EventArgs e)
+        {
+            frmDAYT f = new frmDAYT();
+            f.Show();
+            this.Hide();
+        }
     }
 }

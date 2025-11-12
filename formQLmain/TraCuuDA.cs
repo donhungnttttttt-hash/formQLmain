@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 
 
 namespace formQLmain
@@ -19,8 +20,11 @@ namespace formQLmain
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
         string sql, constr;
+        public bool Expand = false; // khai báo biến Expand 
+        public bool Expand2 = false; // khai báo biến Expand2 
+        public bool Expandmenu = false; // khai báo biến Expand2 
 
-       
+
         public frmTracuu()
         {
             InitializeComponent();
@@ -185,9 +189,9 @@ namespace formQLmain
 
         private void btnDrop2_Click(object sender, EventArgs e)
         {
-            frmTracuu f = new frmTracuu();
-            f.Show();
-            this.Hide();
+                DSDAdrop.Start();
+            Console.WriteLine(Expand);
+            Console.ReadLine();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -347,6 +351,76 @@ namespace formQLmain
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDSDA_Click(object sender, EventArgs e)
+        {
+            frmTracuu f = new frmTracuu();
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnTLKT_Click(object sender, EventArgs e)
+        {
+            frmDAYT f = new frmDAYT();
+            f.Show();
+            this.Hide();
+        }
+
+        private void DSDAdrop_Tick(object sender, EventArgs e)
+        {
+            if (Expand == false)
+            {
+                dropdown2.Height += 15;
+                if (dropdown2.Height >= dropdown2.MaximumSize.Height)
+                {
+
+                    DSDAdrop.Stop();
+                    Expand = true;
+                }
+            }
+            else
+            {
+                dropdown2.Height -= 15;
+                if (dropdown2.Height <= dropdown2.MinimumSize.Height)
+                {
+
+                    DSDAdrop.Stop();
+                    Expand = false;
+                }
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            TroGiupdrop.Start();
+            Console.WriteLine(Expand2);
+            Console.ReadLine();
+        }
+
+        private void TroGiupdrop_Tick(object sender, EventArgs e)
+        {
+
+            if (Expand2 == false)
+            {
+                trogiup.Height += 15;
+                if (trogiup.Height >= trogiup.MaximumSize.Height)
+                {
+
+                    TroGiupdrop.Stop();
+                    Expand2 = true;
+                }
+            }
+            else
+            {
+                trogiup.Height -= 15;
+                if (trogiup.Height <= trogiup.MinimumSize.Height)
+                {
+
+                    TroGiupdrop.Stop();
+                    Expand2 = false;
+                }
+            }
         }
 
         private void label8_Click(object sender, EventArgs e)

@@ -35,5 +35,10 @@ namespace formQLmain
             f.Show();
             this.Hide();
         }
+
+        private void btndropQLDL_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
