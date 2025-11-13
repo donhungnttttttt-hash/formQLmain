@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChitiet));
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -56,6 +55,8 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpickNambaove = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.txtLop = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,6 +69,8 @@
             this.txtTenSV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenDA = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtliLich = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSlide = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -76,11 +79,6 @@
             this.DSDAdrop = new System.Windows.Forms.Timer(this.components);
             this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.dtpickNambaove = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtSlide = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtliLich = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -437,6 +435,25 @@
             this.guna2GroupBox1.Text = "3";
             this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label7.Location = new System.Drawing.Point(46, 631);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(178, 37);
+            this.label7.TabIndex = 63;
+            this.label7.Text = "Năm bảo vệ ";
+            // 
+            // dtpickNambaove
+            // 
+            this.dtpickNambaove.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.dtpickNambaove.Location = new System.Drawing.Point(344, 631);
+            this.dtpickNambaove.Name = "dtpickNambaove";
+            this.dtpickNambaove.Size = new System.Drawing.Size(524, 43);
+            this.dtpickNambaove.TabIndex = 64;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -602,6 +619,7 @@
             this.txtTenSV.SelectedText = "";
             this.txtTenSV.Size = new System.Drawing.Size(783, 70);
             this.txtTenSV.TabIndex = 0;
+            this.txtTenSV.TextChanged += new System.EventHandler(this.txtTenSV_TextChanged);
             // 
             // txtTenDA
             // 
@@ -625,7 +643,6 @@
             // 
             // guna2GroupBox2
             // 
-            this.guna2GroupBox2.Controls.Add(this.guna2ImageButton2);
             this.guna2GroupBox2.Controls.Add(this.txtliLich);
             this.guna2GroupBox2.Controls.Add(this.txtSlide);
             this.guna2GroupBox2.Controls.Add(this.label8);
@@ -641,6 +658,48 @@
             this.guna2GroupBox2.Size = new System.Drawing.Size(1446, 402);
             this.guna2GroupBox2.TabIndex = 60;
             this.guna2GroupBox2.Text = "Tài liệu báo cáo";
+            // 
+            // txtliLich
+            // 
+            this.txtliLich.BorderColor = System.Drawing.Color.Black;
+            this.txtliLich.BorderRadius = 5;
+            this.txtliLich.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtliLich.DefaultText = "";
+            this.txtliLich.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtliLich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtliLich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtliLich.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtliLich.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtliLich.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtliLich.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtliLich.Location = new System.Drawing.Point(344, 305);
+            this.txtliLich.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtliLich.Name = "txtliLich";
+            this.txtliLich.PlaceholderText = "";
+            this.txtliLich.SelectedText = "";
+            this.txtliLich.Size = new System.Drawing.Size(783, 55);
+            this.txtliLich.TabIndex = 51;
+            // 
+            // txtSlide
+            // 
+            this.txtSlide.BorderColor = System.Drawing.Color.Black;
+            this.txtSlide.BorderRadius = 5;
+            this.txtSlide.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSlide.DefaultText = "";
+            this.txtSlide.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSlide.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSlide.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSlide.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSlide.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSlide.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSlide.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSlide.Location = new System.Drawing.Point(344, 205);
+            this.txtSlide.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtSlide.Name = "txtSlide";
+            this.txtSlide.PlaceholderText = "";
+            this.txtSlide.SelectedText = "";
+            this.txtSlide.Size = new System.Drawing.Size(783, 55);
+            this.txtSlide.TabIndex = 50;
             // 
             // label8
             // 
@@ -735,81 +794,6 @@
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 61;
             this.pictureBox13.TabStop = false;
-            // 
-            // dtpickNambaove
-            // 
-            this.dtpickNambaove.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.dtpickNambaove.Location = new System.Drawing.Point(344, 631);
-            this.dtpickNambaove.Name = "dtpickNambaove";
-            this.dtpickNambaove.Size = new System.Drawing.Size(524, 43);
-            this.dtpickNambaove.TabIndex = 64;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(46, 631);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(178, 37);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "Năm bảo vệ ";
-            // 
-            // txtSlide
-            // 
-            this.txtSlide.BorderColor = System.Drawing.Color.Black;
-            this.txtSlide.BorderRadius = 5;
-            this.txtSlide.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSlide.DefaultText = "";
-            this.txtSlide.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSlide.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSlide.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSlide.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSlide.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSlide.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSlide.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSlide.Location = new System.Drawing.Point(344, 205);
-            this.txtSlide.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtSlide.Name = "txtSlide";
-            this.txtSlide.PlaceholderText = "";
-            this.txtSlide.SelectedText = "";
-            this.txtSlide.Size = new System.Drawing.Size(783, 55);
-            this.txtSlide.TabIndex = 50;
-            // 
-            // txtliLich
-            // 
-            this.txtliLich.BorderColor = System.Drawing.Color.Black;
-            this.txtliLich.BorderRadius = 5;
-            this.txtliLich.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtliLich.DefaultText = "";
-            this.txtliLich.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtliLich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtliLich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtliLich.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtliLich.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtliLich.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtliLich.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtliLich.Location = new System.Drawing.Point(344, 305);
-            this.txtliLich.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtliLich.Name = "txtliLich";
-            this.txtliLich.PlaceholderText = "";
-            this.txtliLich.SelectedText = "";
-            this.txtliLich.Size = new System.Drawing.Size(783, 55);
-            this.txtliLich.TabIndex = 51;
-            // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.Location = new System.Drawing.Point(1324, 305);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(101, 80);
-            this.guna2ImageButton2.TabIndex = 64;
             // 
             // frmChitiet
             // 
@@ -908,6 +892,5 @@
         private System.Windows.Forms.DateTimePicker dtpickNambaove;
         private Guna.UI2.WinForms.Guna2TextBox txtliLich;
         private Guna.UI2.WinForms.Guna2TextBox txtSlide;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
     }
 }
