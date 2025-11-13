@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtbox_MaTLBC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtbox_TomTat = new System.Windows.Forms.TextBox();
@@ -49,6 +49,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pnlgrid = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.txtbox_LyLich = new System.Windows.Forms.TextBox();
+            this.txtbox_Slide = new System.Windows.Forms.TextBox();
+            this.txtbox_FileBC = new System.Windows.Forms.TextBox();
+            this.txtbox_TuKhoa = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtbox_TenDeTai = new System.Windows.Forms.TextBox();
             this.txtbox_MaSV = new System.Windows.Forms.TextBox();
             this.txtbox_MaDoAn = new System.Windows.Forms.TextBox();
@@ -59,7 +67,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.grdDoAn = new System.Windows.Forms.DataGridView();
             this.QLDLdrop = new System.Windows.Forms.Timer(this.components);
-            this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
             this.button13 = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -68,8 +75,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.dropdown = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -81,31 +86,27 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dropdown2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnDrop2 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.btnDSDA = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btnTLKT = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtbox_LyLich = new System.Windows.Forms.TextBox();
-            this.txtbox_Slide = new System.Windows.Forms.TextBox();
-            this.txtbox_FileBC = new System.Windows.Forms.TextBox();
-            this.txtTuKhoa = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.menutimer = new System.Windows.Forms.Timer(this.components);
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.txtbox_TenSV = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.flowLayoutPanel5.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -127,28 +128,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.dropdown2.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panelMenu.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.flowLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbox_MaTLBC
             // 
             this.txtbox_MaTLBC.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_MaTLBC.Location = new System.Drawing.Point(38, 662);
+            this.txtbox_MaTLBC.Location = new System.Drawing.Point(2295, 72);
             this.txtbox_MaTLBC.Name = "txtbox_MaTLBC";
-            this.txtbox_MaTLBC.Size = new System.Drawing.Size(529, 43);
+            this.txtbox_MaTLBC.Size = new System.Drawing.Size(326, 43);
             this.txtbox_MaTLBC.TabIndex = 17;
             // 
             // label8
@@ -156,7 +156,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(28, 609);
+            this.label8.Location = new System.Drawing.Point(2076, 72);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(194, 37);
             this.label8.TabIndex = 16;
@@ -165,9 +165,10 @@
             // txtbox_TomTat
             // 
             this.txtbox_TomTat.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_TomTat.Location = new System.Drawing.Point(38, 788);
+            this.txtbox_TomTat.Location = new System.Drawing.Point(47, 313);
+            this.txtbox_TomTat.Multiline = true;
             this.txtbox_TomTat.Name = "txtbox_TomTat";
-            this.txtbox_TomTat.Size = new System.Drawing.Size(529, 43);
+            this.txtbox_TomTat.Size = new System.Drawing.Size(1118, 131);
             this.txtbox_TomTat.TabIndex = 15;
             // 
             // label4
@@ -175,17 +176,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(30, 734);
+            this.label4.Location = new System.Drawing.Point(40, 273);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 37);
             this.label4.TabIndex = 14;
             this.label4.Text = "Tóm tắt ";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(442, 1155);
+            this.btnSua.Location = new System.Drawing.Point(2528, 378);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(122, 59);
             this.btnSua.TabIndex = 13;
@@ -196,7 +198,7 @@
             // 
             this.btnXoa.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(256, 1155);
+            this.btnXoa.Location = new System.Drawing.Point(2333, 378);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(117, 59);
             this.btnXoa.TabIndex = 12;
@@ -207,7 +209,7 @@
             // 
             this.flowLayoutPanel5.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel5.Controls.Add(this.panel14);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(36, 456);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(16, 481);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel5.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel5.MinimumSize = new System.Drawing.Size(418, 88);
@@ -245,7 +247,7 @@
             this.button12.Location = new System.Drawing.Point(-15, -8);
             this.button12.Margin = new System.Windows.Forms.Padding(6);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(448, 114);
+            this.button12.Size = new System.Drawing.Size(448, 126);
             this.button12.TabIndex = 0;
             this.button12.Text = "Báo cáo";
             this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -254,35 +256,37 @@
             // dtpick_Nambaove
             // 
             this.dtpick_Nambaove.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.dtpick_Nambaove.Location = new System.Drawing.Point(38, 538);
+            this.dtpick_Nambaove.Location = new System.Drawing.Point(1404, 136);
             this.dtpick_Nambaove.Name = "dtpick_Nambaove";
-            this.dtpick_Nambaove.Size = new System.Drawing.Size(524, 43);
+            this.dtpick_Nambaove.Size = new System.Drawing.Size(622, 43);
             this.dtpick_Nambaove.TabIndex = 18;
             // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(46, 1152);
+            this.btnThem.Location = new System.Drawing.Point(2114, 375);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(122, 59);
             this.btnThem.TabIndex = 11;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtbox_GVHD
             // 
             this.txtbox_GVHD.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_GVHD.Location = new System.Drawing.Point(36, 412);
+            this.txtbox_GVHD.Location = new System.Drawing.Point(194, 159);
             this.txtbox_GVHD.Name = "txtbox_GVHD";
-            this.txtbox_GVHD.Size = new System.Drawing.Size(532, 43);
+            this.txtbox_GVHD.Size = new System.Drawing.Size(969, 43);
             this.txtbox_GVHD.TabIndex = 9;
+            this.txtbox_GVHD.TextChanged += new System.EventHandler(this.txtbox_GVHD_TextChanged);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.panel9);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 573);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 715);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(418, 88);
@@ -320,7 +324,7 @@
             this.button4.Location = new System.Drawing.Point(-10, -2);
             this.button4.Margin = new System.Windows.Forms.Padding(6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(441, 112);
+            this.button4.Size = new System.Drawing.Size(463, 112);
             this.button4.TabIndex = 0;
             this.button4.Text = "Đăng xuất";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -330,17 +334,20 @@
             // 
             this.pnlgrid.Controls.Add(this.panel10);
             this.pnlgrid.Controls.Add(this.grdDoAn);
-            this.pnlgrid.Location = new System.Drawing.Point(508, 288);
+            this.pnlgrid.Location = new System.Drawing.Point(141, 246);
             this.pnlgrid.Name = "pnlgrid";
-            this.pnlgrid.Size = new System.Drawing.Size(2379, 1261);
+            this.pnlgrid.Size = new System.Drawing.Size(2746, 1344);
             this.pnlgrid.TabIndex = 43;
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.txtbox_TenSV);
+            this.panel10.Controls.Add(this.label13);
+            this.panel10.Controls.Add(this.btnLuu);
             this.panel10.Controls.Add(this.txtbox_LyLich);
             this.panel10.Controls.Add(this.txtbox_Slide);
             this.panel10.Controls.Add(this.txtbox_FileBC);
-            this.panel10.Controls.Add(this.txtTuKhoa);
+            this.panel10.Controls.Add(this.txtbox_TuKhoa);
             this.panel10.Controls.Add(this.label1);
             this.panel10.Controls.Add(this.label9);
             this.panel10.Controls.Add(this.label10);
@@ -362,33 +369,118 @@
             this.panel10.Controls.Add(this.label5);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Controls.Add(this.label2);
-            this.panel10.Location = new System.Drawing.Point(1130, 41);
+            this.panel10.Location = new System.Drawing.Point(12, 39);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1220, 1217);
+            this.panel10.Size = new System.Drawing.Size(2719, 449);
             this.panel10.TabIndex = 1;
+            // 
+            // txtbox_LyLich
+            // 
+            this.txtbox_LyLich.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_LyLich.Location = new System.Drawing.Point(1404, 391);
+            this.txtbox_LyLich.Name = "txtbox_LyLich";
+            this.txtbox_LyLich.Size = new System.Drawing.Size(622, 43);
+            this.txtbox_LyLich.TabIndex = 26;
+            this.txtbox_LyLich.TextChanged += new System.EventHandler(this.txtbox_LyLich_TextChanged);
+            // 
+            // txtbox_Slide
+            // 
+            this.txtbox_Slide.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_Slide.Location = new System.Drawing.Point(1404, 331);
+            this.txtbox_Slide.Name = "txtbox_Slide";
+            this.txtbox_Slide.Size = new System.Drawing.Size(622, 43);
+            this.txtbox_Slide.TabIndex = 25;
+            this.txtbox_Slide.TextChanged += new System.EventHandler(this.txtbox_Slide_TextChanged);
+            // 
+            // txtbox_FileBC
+            // 
+            this.txtbox_FileBC.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_FileBC.Location = new System.Drawing.Point(1404, 262);
+            this.txtbox_FileBC.Name = "txtbox_FileBC";
+            this.txtbox_FileBC.Size = new System.Drawing.Size(622, 43);
+            this.txtbox_FileBC.TabIndex = 24;
+            this.txtbox_FileBC.TextChanged += new System.EventHandler(this.txtbox_FileBC_TextChanged);
+            // 
+            // txtbox_TuKhoa
+            // 
+            this.txtbox_TuKhoa.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_TuKhoa.Location = new System.Drawing.Point(2295, 130);
+            this.txtbox_TuKhoa.Name = "txtbox_TuKhoa";
+            this.txtbox_TuKhoa.Size = new System.Drawing.Size(326, 43);
+            this.txtbox_TuKhoa.TabIndex = 23;
+            this.txtbox_TuKhoa.TextChanged += new System.EventHandler(this.txtTuKhoa_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Location = new System.Drawing.Point(1220, 391);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 37);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Lý lịch ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label9.Location = new System.Drawing.Point(1220, 337);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 37);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Slide";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label10.Location = new System.Drawing.Point(1213, 268);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(103, 37);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "File BC";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label12.Location = new System.Drawing.Point(2076, 139);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(121, 37);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Từ khóa";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // txtbox_TenDeTai
             // 
             this.txtbox_TenDeTai.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_TenDeTai.Location = new System.Drawing.Point(33, 181);
+            this.txtbox_TenDeTai.Location = new System.Drawing.Point(194, 100);
             this.txtbox_TenDeTai.Name = "txtbox_TenDeTai";
-            this.txtbox_TenDeTai.Size = new System.Drawing.Size(536, 43);
+            this.txtbox_TenDeTai.Size = new System.Drawing.Size(969, 43);
             this.txtbox_TenDeTai.TabIndex = 8;
+            this.txtbox_TenDeTai.TextChanged += new System.EventHandler(this.txtbox_TenDeTai_TextChanged);
             // 
             // txtbox_MaSV
             // 
             this.txtbox_MaSV.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_MaSV.Location = new System.Drawing.Point(36, 300);
+            this.txtbox_MaSV.Location = new System.Drawing.Point(1404, 72);
             this.txtbox_MaSV.Name = "txtbox_MaSV";
-            this.txtbox_MaSV.Size = new System.Drawing.Size(532, 43);
+            this.txtbox_MaSV.Size = new System.Drawing.Size(622, 43);
             this.txtbox_MaSV.TabIndex = 7;
             // 
             // txtbox_MaDoAn
             // 
             this.txtbox_MaDoAn.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_MaDoAn.Location = new System.Drawing.Point(188, 45);
+            this.txtbox_MaDoAn.Location = new System.Drawing.Point(194, 37);
             this.txtbox_MaDoAn.Name = "txtbox_MaDoAn";
-            this.txtbox_MaDoAn.Size = new System.Drawing.Size(378, 43);
+            this.txtbox_MaDoAn.Size = new System.Drawing.Size(205, 43);
             this.txtbox_MaDoAn.TabIndex = 6;
             // 
             // label7
@@ -396,7 +488,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(28, 481);
+            this.label7.Location = new System.Drawing.Point(1213, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(178, 37);
             this.label7.TabIndex = 5;
@@ -407,18 +499,19 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(28, 359);
+            this.label6.Location = new System.Drawing.Point(40, 165);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(306, 37);
+            this.label6.Size = new System.Drawing.Size(95, 37);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Giảng viên hướng dẫn ";
+            this.label6.Text = "GVHD";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(28, 130);
+            this.label5.Location = new System.Drawing.Point(40, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 37);
             this.label5.TabIndex = 3;
@@ -429,7 +522,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(28, 244);
+            this.label3.Location = new System.Drawing.Point(1213, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 37);
             this.label3.TabIndex = 1;
@@ -440,7 +533,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(24, 42);
+            this.label2.Location = new System.Drawing.Point(40, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 37);
             this.label2.TabIndex = 0;
@@ -451,30 +544,29 @@
             this.grdDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdDoAn.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.grdDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDoAn.Location = new System.Drawing.Point(0, 41);
+            this.grdDoAn.Location = new System.Drawing.Point(12, 487);
             this.grdDoAn.Name = "grdDoAn";
             this.grdDoAn.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDoAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDoAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdDoAn.RowHeadersWidth = 82;
             this.grdDoAn.RowTemplate.Height = 33;
             this.grdDoAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDoAn.Size = new System.Drawing.Size(1098, 1217);
+            this.grdDoAn.Size = new System.Drawing.Size(2731, 812);
             this.grdDoAn.TabIndex = 0;
+            this.grdDoAn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDoAn_CellClick_1);
+            this.grdDoAn.SelectionChanged += new System.EventHandler(this.grdDoAn_SelectionChanged_1);
             // 
             // QLDLdrop
             // 
             this.QLDLdrop.Interval = 1;
-            // 
-            // QLDAdrop
-            // 
-            this.QLDAdrop.Interval = 1;
+            this.QLDLdrop.Tick += new System.EventHandler(this.QLDLdrop_Tick);
             // 
             // button13
             // 
@@ -527,7 +619,7 @@
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel2.Controls.Add(this.panel4);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(36, 106);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 132);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(418, 88);
@@ -550,9 +642,9 @@
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.BackgroundImage = global::formQLmain.Properties.Resources.home_dark;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(26, 27);
+            this.pictureBox4.Location = new System.Drawing.Point(28, 27);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(44, 31);
+            this.pictureBox4.Size = new System.Drawing.Size(42, 35);
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
@@ -571,31 +663,6 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = global::formQLmain.Properties.Resources.icons8_refreshdark;
-            this.btnRefresh.Location = new System.Drawing.Point(1288, 109);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(76, 70);
-            this.btnRefresh.TabIndex = 48;
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.White;
-            this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Image = global::formQLmain.Properties.Resources.icons8_search_dark;
-            this.btnTimKiem.Location = new System.Drawing.Point(1166, 122);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(45, 44);
-            this.btnTimKiem.TabIndex = 47;
-            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            // 
             // textbox_TimKiem
             // 
             this.textbox_TimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -611,12 +678,12 @@
             this.dropdown.Controls.Add(this.panel1);
             this.dropdown.Controls.Add(this.panel2);
             this.dropdown.Controls.Add(this.panel3);
-            this.dropdown.Location = new System.Drawing.Point(36, 223);
+            this.dropdown.Location = new System.Drawing.Point(16, 249);
             this.dropdown.Margin = new System.Windows.Forms.Padding(6);
             this.dropdown.MaximumSize = new System.Drawing.Size(418, 330);
             this.dropdown.MinimumSize = new System.Drawing.Size(418, 88);
             this.dropdown.Name = "dropdown";
-            this.dropdown.Size = new System.Drawing.Size(418, 105);
+            this.dropdown.Size = new System.Drawing.Size(418, 104);
             this.dropdown.TabIndex = 1;
             // 
             // panel1
@@ -655,6 +722,7 @@
             this.btndropQLDL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndropQLDL.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btndropQLDL.UseVisualStyleBackColor = false;
+            this.btndropQLDL.Click += new System.EventHandler(this.btndropQLDL_Click);
             // 
             // panel2
             // 
@@ -693,6 +761,7 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
@@ -731,16 +800,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::formQLmain.Properties.Resources.icons8_man_with_a_notebook_100;
-            this.pictureBox13.Location = new System.Drawing.Point(44, 44);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(216, 194);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 40;
-            this.pictureBox13.TabStop = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
@@ -752,9 +812,44 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Location = new System.Drawing.Point(825, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1714, 278);
+            this.groupBox1.Size = new System.Drawing.Size(1714, 216);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::formQLmain.Properties.Resources.icons8_man_with_a_notebook_100;
+            this.pictureBox13.Location = new System.Drawing.Point(44, 44);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(220, 172);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 40;
+            this.pictureBox13.TabStop = false;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = global::formQLmain.Properties.Resources.icons8_refreshdark;
+            this.btnRefresh.Location = new System.Drawing.Point(1288, 109);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(76, 70);
+            this.btnRefresh.TabIndex = 48;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI Semibold", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Image = global::formQLmain.Properties.Resources.icons8_search_dark;
+            this.btnTimKiem.Location = new System.Drawing.Point(1166, 122);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(45, 44);
+            this.btnTimKiem.TabIndex = 47;
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -765,136 +860,10 @@
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
-            // dropdown2
-            // 
-            this.dropdown2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dropdown2.Controls.Add(this.panel6);
-            this.dropdown2.Controls.Add(this.panel7);
-            this.dropdown2.Controls.Add(this.panel8);
-            this.dropdown2.Location = new System.Drawing.Point(36, 340);
-            this.dropdown2.Margin = new System.Windows.Forms.Padding(6);
-            this.dropdown2.MaximumSize = new System.Drawing.Size(418, 330);
-            this.dropdown2.MinimumSize = new System.Drawing.Size(418, 88);
-            this.dropdown2.Name = "dropdown2";
-            this.dropdown2.Size = new System.Drawing.Size(418, 104);
-            this.dropdown2.TabIndex = 2;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Controls.Add(this.btnDrop2);
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(435, 111);
-            this.panel6.TabIndex = 1;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::formQLmain.Properties.Resources.qlda_dark;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(26, 38);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 31);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnDrop2
-            // 
-            this.btnDrop2.BackColor = System.Drawing.Color.White;
-            this.btnDrop2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDrop2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDrop2.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDrop2.Location = new System.Drawing.Point(-8, -11);
-            this.btnDrop2.Margin = new System.Windows.Forms.Padding(6);
-            this.btnDrop2.Name = "btnDrop2";
-            this.btnDrop2.Size = new System.Drawing.Size(430, 131);
-            this.btnDrop2.TabIndex = 0;
-            this.btnDrop2.Text = "           Quản lý đồ án ";
-            this.btnDrop2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnDrop2.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Controls.Add(this.btnDSDA);
-            this.panel7.Location = new System.Drawing.Point(0, 111);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(418, 109);
-            this.panel7.TabIndex = 2;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox7.BackgroundImage = global::formQLmain.Properties.Resources.icons8_dropdown_16__1_1;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(70, 52);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(18, 17);
-            this.pictureBox7.TabIndex = 3;
-            this.pictureBox7.TabStop = false;
-            // 
-            // btnDSDA
-            // 
-            this.btnDSDA.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDSDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDSDA.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDSDA.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDSDA.Location = new System.Drawing.Point(-8, -14);
-            this.btnDSDA.Margin = new System.Windows.Forms.Padding(6);
-            this.btnDSDA.Name = "btnDSDA";
-            this.btnDSDA.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
-            this.btnDSDA.Size = new System.Drawing.Size(442, 134);
-            this.btnDSDA.TabIndex = 0;
-            this.btnDSDA.Text = "      Danh sách đồ án";
-            this.btnDSDA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSDA.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnDSDA.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.pictureBox8);
-            this.panel8.Controls.Add(this.btnTLKT);
-            this.panel8.Location = new System.Drawing.Point(0, 220);
-            this.panel8.Margin = new System.Windows.Forms.Padding(0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(418, 111);
-            this.panel8.TabIndex = 3;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox8.BackgroundImage = global::formQLmain.Properties.Resources.icons8_dropdown_16__1_1;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(70, 45);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(18, 17);
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            // 
-            // btnTLKT
-            // 
-            this.btnTLKT.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTLKT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTLKT.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnTLKT.ForeColor = System.Drawing.Color.DimGray;
-            this.btnTLKT.Location = new System.Drawing.Point(-8, -3);
-            this.btnTLKT.Margin = new System.Windows.Forms.Padding(6);
-            this.btnTLKT.Name = "btnTLKT";
-            this.btnTLKT.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
-            this.btnTLKT.Size = new System.Drawing.Size(442, 120);
-            this.btnTLKT.TabIndex = 0;
-            this.btnTLKT.Text = "      Tài liệu kèm theo";
-            this.btnTLKT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTLKT.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnTLKT.UseVisualStyleBackColor = false;
-            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.pictureBox12);
-            this.panel11.Location = new System.Drawing.Point(33, 687);
+            this.panel11.Location = new System.Drawing.Point(13, 829);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(428, 730);
             this.panel11.TabIndex = 16;
@@ -911,25 +880,126 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.White;
+            this.panelMenu.Controls.Add(this.flowLayoutPanel4);
             this.panelMenu.Controls.Add(this.flowLayoutPanel2);
             this.panelMenu.Controls.Add(this.dropdown);
-            this.panelMenu.Controls.Add(this.dropdown2);
+            this.panelMenu.Controls.Add(this.flowLayoutPanel3);
             this.panelMenu.Controls.Add(this.flowLayoutPanel5);
+            this.panelMenu.Controls.Add(this.flowLayoutPanel6);
             this.panelMenu.Controls.Add(this.flowLayoutPanel1);
             this.panelMenu.Controls.Add(this.panel11);
-            this.panelMenu.Controls.Add(this.flowLayoutPanel6);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.MaximumSize = new System.Drawing.Size(483, 1600);
+            this.panelMenu.MinimumSize = new System.Drawing.Size(135, 1600);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Padding = new System.Windows.Forms.Padding(30, 100, 0, 0);
-            this.panelMenu.Size = new System.Drawing.Size(483, 1602);
+            this.panelMenu.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.panelMenu.Size = new System.Drawing.Size(135, 1600);
             this.panelMenu.TabIndex = 42;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel4.Controls.Add(this.panel7);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(16, 16);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(6);
+            this.flowLayoutPanel4.MaximumSize = new System.Drawing.Size(418, 390);
+            this.flowLayoutPanel4.MinimumSize = new System.Drawing.Size(418, 88);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(418, 104);
+            this.flowLayoutPanel4.TabIndex = 5;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.pictureBox8);
+            this.panel7.Controls.Add(this.button6);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(418, 113);
+            this.panel7.TabIndex = 1;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
+            this.pictureBox8.BackgroundImage = global::formQLmain.Properties.Resources.menudark;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Location = new System.Drawing.Point(16, 29);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(62, 41);
+            this.pictureBox8.TabIndex = 2;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.DimGray;
+            this.button6.Location = new System.Drawing.Point(-66, -12);
+            this.button6.Margin = new System.Windows.Forms.Padding(6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(497, 125);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "   Menu";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flowLayoutPanel3.Controls.Add(this.panel5);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(16, 365);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(6);
+            this.flowLayoutPanel3.MaximumSize = new System.Drawing.Size(418, 330);
+            this.flowLayoutPanel3.MinimumSize = new System.Drawing.Size(418, 88);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(418, 104);
+            this.flowLayoutPanel3.TabIndex = 45;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pictureBox7);
+            this.panel5.Controls.Add(this.button5);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(435, 111);
+            this.panel5.TabIndex = 1;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImage = global::formQLmain.Properties.Resources.qlda_dark;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Location = new System.Drawing.Point(25, 37);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox7.TabIndex = 2;
+            this.pictureBox7.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.DimGray;
+            this.button5.Location = new System.Drawing.Point(-7, -11);
+            this.button5.Margin = new System.Windows.Forms.Padding(6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(431, 131);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "           Quản lý đồ án ";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel6.Controls.Add(this.panel15);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(36, 1426);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(16, 598);
             this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel6.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel6.MinimumSize = new System.Drawing.Size(418, 88);
@@ -937,81 +1007,43 @@
             this.flowLayoutPanel6.Size = new System.Drawing.Size(418, 105);
             this.flowLayoutPanel6.TabIndex = 6;
             // 
-            // txtbox_LyLich
+            // menutimer
             // 
-            this.txtbox_LyLich.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_LyLich.Location = new System.Drawing.Point(635, 394);
-            this.txtbox_LyLich.Name = "txtbox_LyLich";
-            this.txtbox_LyLich.Size = new System.Drawing.Size(532, 43);
-            this.txtbox_LyLich.TabIndex = 26;
+            this.menutimer.Interval = 1;
+            this.menutimer.Tick += new System.EventHandler(this.menutimer_Tick);
             // 
-            // txtbox_Slide
+            // btnLuu
             // 
-            this.txtbox_Slide.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_Slide.Location = new System.Drawing.Point(638, 289);
-            this.txtbox_Slide.Name = "txtbox_Slide";
-            this.txtbox_Slide.Size = new System.Drawing.Size(531, 43);
-            this.txtbox_Slide.TabIndex = 25;
+            this.btnLuu.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLuu.Location = new System.Drawing.Point(2411, 204);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(111, 47);
+            this.btnLuu.TabIndex = 27;
+            this.btnLuu.Text = "Lưu ";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Visible = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // txtbox_FileBC
+            // txtbox_TenSV
             // 
-            this.txtbox_FileBC.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_FileBC.Location = new System.Drawing.Point(637, 172);
-            this.txtbox_FileBC.Name = "txtbox_FileBC";
-            this.txtbox_FileBC.Size = new System.Drawing.Size(532, 43);
-            this.txtbox_FileBC.TabIndex = 24;
+            this.txtbox_TenSV.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_TenSV.Location = new System.Drawing.Point(194, 218);
+            this.txtbox_TenSV.Name = "txtbox_TenSV";
+            this.txtbox_TenSV.Size = new System.Drawing.Size(969, 43);
+            this.txtbox_TenSV.TabIndex = 29;
             // 
-            // txtTuKhoa
+            // label13
             // 
-            this.txtTuKhoa.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtTuKhoa.Location = new System.Drawing.Point(859, 46);
-            this.txtTuKhoa.Name = "txtTuKhoa";
-            this.txtTuKhoa.Size = new System.Drawing.Size(308, 43);
-            this.txtTuKhoa.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(628, 342);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 37);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Lý lịch ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(628, 237);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 37);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Slide";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(628, 116);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 37);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "File BC";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label12.Location = new System.Drawing.Point(626, 42);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(121, 37);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Từ khóa";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label13.Location = new System.Drawing.Point(40, 224);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(102, 37);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Tên SV";
             // 
             // frmCTDA
             // 
@@ -1023,6 +1055,8 @@
             this.Controls.Add(this.panelMenu);
             this.Name = "frmCTDA";
             this.Text = "frmCTDA";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmCTDA_Load);
             this.flowLayoutPanel5.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -1045,20 +1079,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.dropdown2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panelMenu.ResumeLayout(false);
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.flowLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1095,7 +1128,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView grdDoAn;
         private System.Windows.Forms.Timer QLDLdrop;
-        private System.Windows.Forms.Timer QLDAdrop;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -1120,16 +1152,6 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.FlowLayoutPanel dropdown2;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnDrop2;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button btnDSDA;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button btnTLKT;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.FlowLayoutPanel panelMenu;
@@ -1137,10 +1159,22 @@
         private System.Windows.Forms.TextBox txtbox_LyLich;
         private System.Windows.Forms.TextBox txtbox_Slide;
         private System.Windows.Forms.TextBox txtbox_FileBC;
-        private System.Windows.Forms.TextBox txtTuKhoa;
+        private System.Windows.Forms.TextBox txtbox_TuKhoa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Timer menutimer;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.TextBox txtbox_TenSV;
+        private System.Windows.Forms.Label label13;
     }
 }

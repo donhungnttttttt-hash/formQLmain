@@ -349,6 +349,11 @@ namespace formQLmain
 
         }
 
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void label8_Click(object sender, EventArgs e)
         {
 

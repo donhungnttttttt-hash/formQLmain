@@ -373,7 +373,7 @@ namespace formQLmain
         {
 
         }
-
+        // @@@@@@@@@@@@@@@@@@@@@@@@ CHUYỂN TAB THÀNH ENTER @@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void frmQLSV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTracuu));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -65,6 +65,7 @@
             this.btnFirst = new Guna.UI2.WinForms.Guna2Button();
             this.frmEnd = new Guna.UI2.WinForms.Guna2Button();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btnMyfavorite = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txtKhoa = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtChuyenNganh = new System.Windows.Forms.TextBox();
@@ -87,14 +88,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlgrid = new System.Windows.Forms.Panel();
-            this.QLDLdrop = new System.Windows.Forms.Timer(this.components);
-            this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtTukhoa = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grdTracuu = new System.Windows.Forms.DataGridView();
             this.TENDETAI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,7 +96,14 @@
             this.GVHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NAMBAOVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TOMTAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnMyfavorite = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.QLDLdrop = new System.Windows.Forms.Timer(this.components);
+            this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTukhoa = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolTipMyfavorite = new System.Windows.Forms.ToolTip(this.components);
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -126,10 +126,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel10.SuspendLayout();
             this.pnlgrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTracuu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdTracuu)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -195,6 +195,7 @@
             this.panelMenu.Padding = new System.Windows.Forms.Padding(30, 100, 0, 0);
             this.panelMenu.Size = new System.Drawing.Size(483, 1512);
             this.panelMenu.TabIndex = 45;
+            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // dropdown2
             // 
@@ -565,6 +566,25 @@
             this.panel10.Size = new System.Drawing.Size(608, 1060);
             this.panel10.TabIndex = 1;
             // 
+            // btnMyfavorite
+            // 
+            this.btnMyfavorite.BackColor = System.Drawing.Color.Transparent;
+            this.btnMyfavorite.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMyfavorite.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMyfavorite.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnMyfavorite.Image = ((System.Drawing.Image)(resources.GetObject("btnMyfavorite.Image")));
+            this.btnMyfavorite.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnMyfavorite.ImageRotate = 0F;
+            this.btnMyfavorite.ImageSize = new System.Drawing.Size(28, 28);
+            this.btnMyfavorite.Location = new System.Drawing.Point(493, 993);
+            this.btnMyfavorite.Name = "btnMyfavorite";
+            this.btnMyfavorite.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMyfavorite.Size = new System.Drawing.Size(68, 64);
+            this.btnMyfavorite.TabIndex = 64;
+            this.toolTipMyfavorite.SetToolTip(this.btnMyfavorite, "Yêu thích đồ án");
+            this.btnMyfavorite.UseTransparentBackground = true;
+            this.btnMyfavorite.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
             // txtKhoa
             // 
             this.txtKhoa.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
@@ -810,6 +830,109 @@
             this.pnlgrid.TabIndex = 46;
             this.pnlgrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlgrid_Paint);
             // 
+            // grdTracuu
+            // 
+            this.grdTracuu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdTracuu.BackgroundColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdTracuu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdTracuu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdTracuu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TENDETAI,
+            this.HOTEN,
+            this.CHUYENNGANH,
+            this.KHOA,
+            this.GVHD,
+            this.NAMBAOVE,
+            this.TOMTAT});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdTracuu.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grdTracuu.Location = new System.Drawing.Point(0, 41);
+            this.grdTracuu.Name = "grdTracuu";
+            this.grdTracuu.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdTracuu.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.grdTracuu.RowHeadersWidth = 82;
+            this.grdTracuu.RowTemplate.Height = 33;
+            this.grdTracuu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdTracuu.Size = new System.Drawing.Size(1736, 1003);
+            this.grdTracuu.TabIndex = 0;
+            this.grdTracuu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDoAn_CellContentClick);
+            // 
+            // TENDETAI
+            // 
+            this.TENDETAI.DataPropertyName = "TENDETAI";
+            this.TENDETAI.HeaderText = "Tên đề tài";
+            this.TENDETAI.MinimumWidth = 10;
+            this.TENDETAI.Name = "TENDETAI";
+            this.TENDETAI.ReadOnly = true;
+            // 
+            // HOTEN
+            // 
+            this.HOTEN.DataPropertyName = "HOTEN";
+            this.HOTEN.HeaderText = "Tên sinh viên";
+            this.HOTEN.MinimumWidth = 10;
+            this.HOTEN.Name = "HOTEN";
+            this.HOTEN.ReadOnly = true;
+            // 
+            // CHUYENNGANH
+            // 
+            this.CHUYENNGANH.DataPropertyName = "CHUYENNGANH";
+            this.CHUYENNGANH.HeaderText = "Chuyên ngành";
+            this.CHUYENNGANH.MinimumWidth = 10;
+            this.CHUYENNGANH.Name = "CHUYENNGANH";
+            this.CHUYENNGANH.ReadOnly = true;
+            // 
+            // KHOA
+            // 
+            this.KHOA.DataPropertyName = "KHOA";
+            this.KHOA.HeaderText = "Khóa";
+            this.KHOA.MinimumWidth = 10;
+            this.KHOA.Name = "KHOA";
+            this.KHOA.ReadOnly = true;
+            // 
+            // GVHD
+            // 
+            this.GVHD.DataPropertyName = "GVHD";
+            this.GVHD.HeaderText = "Giảng viên hướng dẫn";
+            this.GVHD.MinimumWidth = 10;
+            this.GVHD.Name = "GVHD";
+            this.GVHD.ReadOnly = true;
+            // 
+            // NAMBAOVE
+            // 
+            this.NAMBAOVE.DataPropertyName = "NAMBAOVE";
+            this.NAMBAOVE.HeaderText = "Năm bảo vệ";
+            this.NAMBAOVE.MinimumWidth = 10;
+            this.NAMBAOVE.Name = "NAMBAOVE";
+            this.NAMBAOVE.ReadOnly = true;
+            // 
+            // TOMTAT
+            // 
+            this.TOMTAT.DataPropertyName = "TOMTAT";
+            this.TOMTAT.HeaderText = "Tóm tắt";
+            this.TOMTAT.MinimumWidth = 10;
+            this.TOMTAT.Name = "TOMTAT";
+            this.TOMTAT.ReadOnly = true;
+            // 
             // QLDLdrop
             // 
             this.QLDLdrop.Interval = 1;
@@ -888,128 +1011,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // grdTracuu
-            // 
-            this.grdTracuu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdTracuu.BackgroundColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdTracuu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.grdTracuu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdTracuu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TENDETAI,
-            this.HOTEN,
-            this.CHUYENNGANH,
-            this.KHOA,
-            this.GVHD,
-            this.NAMBAOVE,
-            this.TOMTAT});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdTracuu.DefaultCellStyle = dataGridViewCellStyle11;
-            this.grdTracuu.Location = new System.Drawing.Point(0, 41);
-            this.grdTracuu.Name = "grdTracuu";
-            this.grdTracuu.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdTracuu.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.grdTracuu.RowHeadersWidth = 82;
-            this.grdTracuu.RowTemplate.Height = 33;
-            this.grdTracuu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdTracuu.Size = new System.Drawing.Size(1736, 1003);
-            this.grdTracuu.TabIndex = 0;
-            this.grdTracuu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDoAn_CellContentClick);
-            // 
-            // TENDETAI
-            // 
-            this.TENDETAI.DataPropertyName = "TENDETAI";
-            this.TENDETAI.HeaderText = "Tên đề tài";
-            this.TENDETAI.MinimumWidth = 10;
-            this.TENDETAI.Name = "TENDETAI";
-            this.TENDETAI.ReadOnly = true;
-            // 
-            // HOTEN
-            // 
-            this.HOTEN.DataPropertyName = "HOTEN";
-            this.HOTEN.HeaderText = "Tên sinh viên";
-            this.HOTEN.MinimumWidth = 10;
-            this.HOTEN.Name = "HOTEN";
-            this.HOTEN.ReadOnly = true;
-            // 
-            // CHUYENNGANH
-            // 
-            this.CHUYENNGANH.DataPropertyName = "CHUYENNGANH";
-            this.CHUYENNGANH.HeaderText = "Chuyên ngành";
-            this.CHUYENNGANH.MinimumWidth = 10;
-            this.CHUYENNGANH.Name = "CHUYENNGANH";
-            this.CHUYENNGANH.ReadOnly = true;
-            // 
-            // KHOA
-            // 
-            this.KHOA.DataPropertyName = "KHOA";
-            this.KHOA.HeaderText = "Khóa";
-            this.KHOA.MinimumWidth = 10;
-            this.KHOA.Name = "KHOA";
-            this.KHOA.ReadOnly = true;
-            // 
-            // GVHD
-            // 
-            this.GVHD.DataPropertyName = "GVHD";
-            this.GVHD.HeaderText = "Giảng viên hướng dẫn";
-            this.GVHD.MinimumWidth = 10;
-            this.GVHD.Name = "GVHD";
-            this.GVHD.ReadOnly = true;
-            // 
-            // NAMBAOVE
-            // 
-            this.NAMBAOVE.DataPropertyName = "NAMBAOVE";
-            this.NAMBAOVE.HeaderText = "Năm bảo vệ";
-            this.NAMBAOVE.MinimumWidth = 10;
-            this.NAMBAOVE.Name = "NAMBAOVE";
-            this.NAMBAOVE.ReadOnly = true;
-            // 
-            // TOMTAT
-            // 
-            this.TOMTAT.DataPropertyName = "TOMTAT";
-            this.TOMTAT.HeaderText = "Tóm tắt";
-            this.TOMTAT.MinimumWidth = 10;
-            this.TOMTAT.Name = "TOMTAT";
-            this.TOMTAT.ReadOnly = true;
-            // 
-            // btnMyfavorite
-            // 
-            this.btnMyfavorite.BackColor = System.Drawing.Color.Transparent;
-            this.btnMyfavorite.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnMyfavorite.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMyfavorite.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnMyfavorite.Image = ((System.Drawing.Image)(resources.GetObject("btnMyfavorite.Image")));
-            this.btnMyfavorite.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnMyfavorite.ImageRotate = 0F;
-            this.btnMyfavorite.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnMyfavorite.Location = new System.Drawing.Point(493, 993);
-            this.btnMyfavorite.Name = "btnMyfavorite";
-            this.btnMyfavorite.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnMyfavorite.Size = new System.Drawing.Size(68, 64);
-            this.btnMyfavorite.TabIndex = 64;
-            this.toolTipMyfavorite.SetToolTip(this.btnMyfavorite, "Yêu thích đồ án");
-            this.btnMyfavorite.UseTransparentBackground = true;
-            this.btnMyfavorite.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
             // frmTracuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1045,11 +1046,11 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.pnlgrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdTracuu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdTracuu)).EndInit();
             this.ResumeLayout(false);
 
         }

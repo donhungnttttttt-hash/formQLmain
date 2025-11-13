@@ -206,6 +206,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Modify.cs" />
+    <Compile Include="ModifyChiTietDoAn.cs" />
     <Compile Include="ModifyDanhSachDoAn.cs" />
     <Compile Include="ModifyTaiKhoan.cs" />
     <Compile Include="ModifyTaiLieuKemTheo.cs" />
@@ -419,5 +420,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Analyzer Include="D:\NEU\PTUD2025\Components\Offline Packages\devexpress.data\25.1.6\analyzers\dotnet\DevExpress.Generator.dll" Visible="false" Condition="Exists('D:\NEU\PTUD2025\Components\Offline Packages\devexpress.data\25.1.6\analyzers\dotnet\DevExpress.Generator.dll')" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menudark.png" />
   </ItemGroup>
 </Project>

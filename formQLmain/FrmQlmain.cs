@@ -72,33 +72,9 @@ namespace formQLmain
 
         private void btnDrop2_Click(object sender, EventArgs e)
         {
-            QLDAdrop.Start();
-            Console.WriteLine(Expand2);
-            Console.ReadLine();
-        }
-
-        private void QLDAdrop_Tick(object sender, EventArgs e)
-        {
-            if (Expand2 == false)
-            {
-                dropdown2.Height += 15;
-                if (dropdown2.Height >= dropdown2.MaximumSize.Height)
-                {
-
-                    QLDAdrop.Stop();
-                    Expand2 = true;
-                }
-            }
-            else
-            {
-                dropdown2.Height -= 15;
-                if (dropdown2.Height <= dropdown2.MinimumSize.Height)
-                {
-
-                    QLDAdrop.Stop();
-                    Expand2 = false;
-                }
-            }
+            
+            frmCTDA f = new frmCTDA();
+            f.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -119,8 +95,7 @@ namespace formQLmain
 
         private void button7_Click(object sender, EventArgs e)
         {
-            frmTLKT f = new frmTLKT();
-            f.Show();
+            ;
         }
 
         private void pictureBox11_Click(object sender, EventArgs e) // đồng hồ của trượt dọc 
@@ -130,7 +105,29 @@ namespace formQLmain
 
         private void menutimer_Tick(object sender, EventArgs e)
         {
-            /// trượt dọc chưa có làm được
+            // đã làm được 
+            if (Expandmenu == false)
+            {
+                panelMenu.Width += 25;
+                if (panelMenu.Width >= panelMenu.MaximumSize.Width)
+                {
+
+                    menutimer.Stop();
+                    Expandmenu = true;
+                    panel16.Visible = true;
+                }
+            }
+            else
+            {
+                panelMenu.Width -= 25;
+                if (panelMenu.Width <= panelMenu.MinimumSize.Width)
+                {
+                    menutimer.Stop();
+                    Expandmenu = false;
+                    panel16.Visible = false;
+                }
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -164,8 +161,7 @@ namespace formQLmain
 
         private void button6_Click(object sender, EventArgs e)
         {
-            frmDSDA f = new frmDSDA();
-            f.Show();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -308,6 +304,27 @@ namespace formQLmain
         private void panel5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dropdown2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            Console.ReadLine();
+            panel16.Visible = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            Console.ReadLine();
+            panel16.Visible = true;
         }
     }
     }
