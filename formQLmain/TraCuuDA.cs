@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraRichEdit.Import.Html;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 
 namespace formQLmain
 {
+
     public partial class frmTracuu : Form
     {
         SqlConnection conn=new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True");
@@ -24,6 +26,7 @@ namespace formQLmain
         public bool Expand2 = false; // khai báo biến Expand2 
         public bool Expandmenu = false; // khai báo biến Expand2 
 
+        //private frmDAYT _frmDayt;
 
         public frmTracuu()
         {
@@ -50,53 +53,86 @@ namespace formQLmain
 
         private void TimKiemTheoTuKhoa(string keyword)
         {
-           
-          //  string baseSql = @"
-          //SELECT  DA.TENDETAI, 
-          //SV.HOTEN, 
-          //SV.CHUYENNGANH, 
-          //SV.KHOA, 
-          //DA.GVHD, 
-          //DA.NAMBAOVE, 
-          //DA.TOMTAT,
-          //TLBC.FILEBC,
-          //TLBC.SLIDE,
-          //TLBC.LY_LICH,
-          //SV.LOP AS LOP
-          //FROM DOAN DA 
-          // JOIN SINHVIEN SV ON DA.MASINHVIEN = SV.MASINHVIEN
-          //  JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC = TLBC.MATAILIEUBC";
-          string baseSql = @" SELECT DA.TENDETAI, SV.HOTEN, SV.CHUYENNGANH, SV.KHOA, DA.GVHD, DA.NAMBAOVE, DA.TOMTAT,TLBC.FILEBC, TLBC.SLIDE,TLBC.LY_LICH,SV.LOP, TK.TUKHOA  FROM DOAN DA 
-                  JOIN SINHVIEN SV ON DA.MASINHVIEN = SV.MASINHVIEN JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC=TLBC.MATAILIEUBC JOIN  TUKHOA_DOAN TKDA ON TKDA.MADOAN=DA.MADOAN JOIN TUKHOA TK ON TK.MATUKHOA=TKDA.MATUKHOA  ";
 
+            // SELECT + JOIN (không có GROUP BY)
+            string selectSql = @"
+SELECT 
+    DA.TENDETAI,
+    SV.HOTEN,
+    SV.CHUYENNGANH,
+    SV.KHOA,
+    DA.GVHD,
+    DA.NAMBAOVE,
+    DA.TOMTAT,
+    TLBC.FILEBC,
+    TLBC.SLIDE,
+    TLBC.LY_LICH,
+    SV.LOP,
+    STRING_AGG(TK.TUKHOA, ', ') AS TUKHOA,
+    SV.MASINHVIEN,
+    DA.MADOAN
+FROM DOAN DA
+JOIN SINHVIEN SV   ON DA.MASINHVIEN = SV.MASINHVIEN
+JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC = TLBC.MATAILIEUBC
+JOIN TUKHOA_DOAN TKDA ON TKDA.MADOAN = DA.MADOAN
+JOIN TUKHOA TK ON TK.MATUKHOA = TKDA.MATUKHOA
+";
+
+            // GROUP BY (cuối cùng) - giữ nguyên các cột không aggregate
+            string groupBy = @"
+GROUP BY 
+    DA.TENDETAI,
+    SV.HOTEN,
+    SV.CHUYENNGANH,
+    SV.KHOA,
+    DA.GVHD,
+    DA.NAMBAOVE,
+    DA.TOMTAT,
+    TLBC.FILEBC,
+    TLBC.SLIDE,
+    TLBC.LY_LICH,
+    SV.LOP,
+    SV.MASINHVIEN,
+    DA.MADOAN
+";
+
+            DataTable dtLocal = new DataTable();
 
             if (string.IsNullOrWhiteSpace(keyword))
             {
-                // Không có từ khóa -> trả về toàn bộ
-                sql = baseSql;
+                // không filter: SELECT + GROUP BY
+                sql = selectSql + groupBy;
                 da = new SqlDataAdapter(sql, conn);
             }
             else
             {
-                sql = baseSql + @"
-            WHERE DA.TENDETAI    LIKE @kw
-               OR SV.HOTEN       LIKE @kw
-               OR SV.CHUYENNGANH LIKE @kw
-               OR SV.KHOA        LIKE @kw
-               OR DA.GVHD        LIKE @kw";
+                // có filter: thêm WHERE trước GROUP BY (và dùng parameter)
+                sql = selectSql + @"
+WHERE DA.TENDETAI    LIKE @kw
+   OR SV.HOTEN       LIKE @kw
+   OR SV.CHUYENNGANH LIKE @kw
+   OR SV.KHOA        LIKE @kw
+   OR DA.GVHD        LIKE @kw
+";
+                sql += groupBy;
 
                 da = new SqlDataAdapter(sql, conn);
-                da.SelectCommand.Parameters.AddWithValue("@kw", "%" + keyword.Trim() + "%"); //keyword.Trim() cắt bỏ khoảng trắng ở đầu và cuối.
+                da.SelectCommand.Parameters.Clear();
+                da.SelectCommand.Parameters.AddWithValue("@kw", "%" + keyword.Trim() + "%");
             }
 
+            // Fill DataTable an toàn (không dùng conn.Open() toàn cục ở đây)
             dt = new DataTable();
             da.Fill(dt);
+
             grdTracuu.DataSource = dt;
             grdTracuu.Refresh();
 
             if (dt.Rows.Count > 0)
-                NapCT();
+                NapCT();   // nhớ NapCT đã an toàn với currentRow null
         }
+
+        
 
 
 
@@ -107,8 +143,40 @@ namespace formQLmain
 
         private void frmTracuu_Load(object sender, EventArgs e)
         {
-            sql = @" SELECT DA.TENDETAI, SV.HOTEN, SV.CHUYENNGANH, SV.KHOA, DA.GVHD, DA.NAMBAOVE, DA.TOMTAT,TLBC.FILEBC, TLBC.SLIDE,TLBC.LY_LICH,SV.LOP, TK.TUKHOA  FROM DOAN DA 
-                  JOIN SINHVIEN SV ON DA.MASINHVIEN = SV.MASINHVIEN JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC=TLBC.MATAILIEUBC JOIN  TUKHOA_DOAN TKDA ON TKDA.MADOAN=DA.MADOAN JOIN TUKHOA TK ON TK.MATUKHOA=TKDA.MATUKHOA  ";
+            sql = @"SELECT 
+    DA.TENDETAI,
+    SV.HOTEN,
+    SV.CHUYENNGANH,
+    SV.KHOA,
+    DA.GVHD,
+    DA.NAMBAOVE,
+    DA.TOMTAT,
+    TLBC.FILEBC,
+    TLBC.SLIDE,
+    TLBC.LY_LICH,
+    SV.LOP,
+    STRING_AGG(TK.TUKHOA, ', ') AS TUKHOA,
+    SV.MASINHVIEN,
+    DA.MADOAN
+FROM DOAN DA
+JOIN SINHVIEN SV   ON DA.MASINHVIEN = SV.MASINHVIEN
+JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC = TLBC.MATAILIEUBC
+JOIN TUKHOA_DOAN TKDA ON TKDA.MADOAN = DA.MADOAN
+JOIN TUKHOA TK ON TK.MATUKHOA = TKDA.MATUKHOA
+GROUP BY 
+    DA.TENDETAI,
+    SV.HOTEN,
+    SV.CHUYENNGANH,
+    SV.KHOA,
+    DA.GVHD,
+    DA.NAMBAOVE,
+    DA.TOMTAT,
+    TLBC.FILEBC,
+    TLBC.SLIDE,
+    TLBC.LY_LICH,
+    SV.LOP,
+    SV.MASINHVIEN,
+    DA.MADOAN ";
             conn.Open();
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
@@ -119,9 +187,7 @@ namespace formQLmain
 
             
 
-            
-
-         
+           
             if (grdTracuu.Columns.Contains("FILEBC"))
                 grdTracuu.Columns["FILEBC"].Visible = false;
             if (grdTracuu.Columns.Contains("SLIDE"))
@@ -132,6 +198,11 @@ namespace formQLmain
                 grdTracuu.Columns["LOP"].Visible = false;
             if (grdTracuu.Columns.Contains("TUKHOA"))
                 grdTracuu.Columns["TUKHOA"].Visible = false;
+            if (grdTracuu.Columns.Contains("MASINHVIEN"))
+                grdTracuu.Columns["MASINHVIEN"].Visible = false;
+            if (grdTracuu.Columns.Contains("MADOAN"))
+                grdTracuu.Columns["MADOAN"].Visible = false;
+
 
 
         }
@@ -152,9 +223,41 @@ namespace formQLmain
         {
             try
             {
-                //sql = "  SELECT DA.TENDETAI, SV.HOTEN, SV.CHUYENNGANH, SV.KHOA, DA.GVHD, DA.NAMBAOVE, DA.TOMTAT, ,SV.LOP, TLBC.FILEBC, TLBC.SLIDE,TLBC.LY_LICH FROM DOAN DA JOIN SINHVIEN SV ON DA.MASINHVIEN = SV.MASINHVIEN JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC=TLBC.MATAILIEUBC ";
-                sql = @" SELECT DA.TENDETAI, SV.HOTEN, SV.CHUYENNGANH, SV.KHOA, DA.GVHD, DA.NAMBAOVE, DA.TOMTAT,TLBC.FILEBC, TLBC.SLIDE,TLBC.LY_LICH,SV.LOP, TK.TUKHOA  FROM DOAN DA 
-                  JOIN SINHVIEN SV ON DA.MASINHVIEN = SV.MASINHVIEN JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC=TLBC.MATAILIEUBC JOIN  TUKHOA_DOAN TKDA ON TKDA.MADOAN=DA.MADOAN JOIN TUKHOA TK ON TK.MATUKHOA=TKDA.MATUKHOA  ";
+                
+                sql = @" SELECT 
+    DA.TENDETAI,
+    SV.HOTEN,
+    SV.CHUYENNGANH,
+    SV.KHOA,
+    DA.GVHD,
+    DA.NAMBAOVE,
+    DA.TOMTAT,
+    TLBC.FILEBC,
+    TLBC.SLIDE,
+    TLBC.LY_LICH,
+    SV.LOP,
+    STRING_AGG(TK.TUKHOA, ', ') AS TUKHOA,
+    SV.MASINHVIEN,
+    DA.MADOAN
+FROM DOAN DA
+JOIN SINHVIEN SV   ON DA.MASINHVIEN = SV.MASINHVIEN
+JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC = TLBC.MATAILIEUBC
+JOIN TUKHOA_DOAN TKDA ON TKDA.MADOAN = DA.MADOAN
+JOIN TUKHOA TK ON TK.MATUKHOA = TKDA.MATUKHOA
+GROUP BY 
+    DA.TENDETAI,
+    SV.HOTEN,
+    SV.CHUYENNGANH,
+    SV.KHOA,
+    DA.GVHD,
+    DA.NAMBAOVE,
+    DA.TOMTAT,
+    TLBC.FILEBC,
+    TLBC.SLIDE,
+    TLBC.LY_LICH,
+    SV.LOP,
+    SV.MASINHVIEN,
+    DA.MADOAN";
                 da = new SqlDataAdapter(sql, conn);
             dt = new DataTable();
             dt.Clear();
@@ -294,7 +397,7 @@ namespace formQLmain
         private void btnEnd_Click(object sender, EventArgs e)
         {
             int i = grdTracuu.Rows.Count - 1;
-            grdTracuu.CurrentCell = grdTracuu[0, i];
+            grdTracuu.CurrentCell = grdTracuu[0, i-1];
             NapCT();
         }
 
@@ -351,7 +454,56 @@ namespace formQLmain
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
 
+
+
+
+            if (grdTracuu.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn một đồ án!");
+                return;
+            }
+
+            int i = grdTracuu.CurrentRow.Index;
+            string maSinhVien = "SV001"; // có thể truyền từ form đăng nhập
+            string maDoAn = grdTracuu.Rows[i].Cells["MADOAN"].Value.ToString();
+
+            using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True"))
+            {
+                conn.Open();
+
+                // Kiểm tra trùng
+                string sqlCheck = "SELECT COUNT(*) FROM DOAN_YEUTHICH WHERE MASINHVIEN=@masv AND MADOAN=@madoan";
+                SqlCommand cmdCheck = new SqlCommand(sqlCheck, conn);
+                cmdCheck.Parameters.AddWithValue("@masv", maSinhVien);
+                cmdCheck.Parameters.AddWithValue("@madoan", maDoAn);
+
+                int count = (int)cmdCheck.ExecuteScalar();
+                if (count > 0)
+                {
+                    MessageBox.Show("Đồ án này đã có trong danh sách yêu thích!");
+                    return;
+                }
+
+                // Thêm mới
+                string sqlInsert = "INSERT INTO DOAN_YEUTHICH (MASINHVIEN, MADOAN) VALUES (@masv, @madoan)";
+                SqlCommand cmd = new SqlCommand(sqlInsert, conn);
+                cmd.Parameters.AddWithValue("@masv", maSinhVien);
+                cmd.Parameters.AddWithValue("@madoan", maDoAn);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Đã thêm vào danh sách yêu thích!");
+            }
         }
+
+
+
+
+
+
+
+
+        
+        
 
         private void btnDSDA_Click(object sender, EventArgs e)
         {

@@ -134,5 +134,10 @@ namespace formQLmain
             f.Show();
             this.Hide();
         }
+
+        private void txtTenSV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
