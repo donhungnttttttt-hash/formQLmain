@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -98,6 +98,14 @@
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtbox_LyLich = new System.Windows.Forms.TextBox();
+            this.txtbox_Slide = new System.Windows.Forms.TextBox();
+            this.txtbox_FileBC = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -157,7 +165,7 @@
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel2.Controls.Add(this.panel4);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(36, 106);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(418, 88);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -192,7 +200,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DimGray;
             this.button1.Location = new System.Drawing.Point(-9, -12);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(440, 125);
             this.button1.TabIndex = 0;
@@ -208,7 +216,7 @@
             this.dropdown.Controls.Add(this.panel2);
             this.dropdown.Controls.Add(this.panel3);
             this.dropdown.Location = new System.Drawing.Point(36, 223);
-            this.dropdown.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dropdown.Margin = new System.Windows.Forms.Padding(6);
             this.dropdown.MaximumSize = new System.Drawing.Size(418, 330);
             this.dropdown.MinimumSize = new System.Drawing.Size(418, 88);
             this.dropdown.Name = "dropdown";
@@ -243,7 +251,7 @@
             this.btndropQLDL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndropQLDL.ForeColor = System.Drawing.Color.DimGray;
             this.btndropQLDL.Location = new System.Drawing.Point(-9, -12);
-            this.btndropQLDL.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btndropQLDL.Margin = new System.Windows.Forms.Padding(6);
             this.btndropQLDL.Name = "btndropQLDL";
             this.btndropQLDL.Size = new System.Drawing.Size(452, 127);
             this.btndropQLDL.TabIndex = 0;
@@ -281,7 +289,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DimGray;
             this.button2.Location = new System.Drawing.Point(-18, -9);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(442, 120);
@@ -320,7 +328,7 @@
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.DimGray;
             this.button3.Location = new System.Drawing.Point(-9, -3);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(442, 120);
@@ -338,7 +346,7 @@
             this.dropdown2.Controls.Add(this.panel7);
             this.dropdown2.Controls.Add(this.panel8);
             this.dropdown2.Location = new System.Drawing.Point(36, 340);
-            this.dropdown2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dropdown2.Margin = new System.Windows.Forms.Padding(6);
             this.dropdown2.MaximumSize = new System.Drawing.Size(418, 330);
             this.dropdown2.MinimumSize = new System.Drawing.Size(418, 88);
             this.dropdown2.Name = "dropdown2";
@@ -373,7 +381,7 @@
             this.btnDrop2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDrop2.ForeColor = System.Drawing.Color.DimGray;
             this.btnDrop2.Location = new System.Drawing.Point(-8, -11);
-            this.btnDrop2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDrop2.Margin = new System.Windows.Forms.Padding(6);
             this.btnDrop2.Name = "btnDrop2";
             this.btnDrop2.Size = new System.Drawing.Size(430, 131);
             this.btnDrop2.TabIndex = 0;
@@ -410,7 +418,7 @@
             this.btnDSDA.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.btnDSDA.ForeColor = System.Drawing.Color.DimGray;
             this.btnDSDA.Location = new System.Drawing.Point(-8, -14);
-            this.btnDSDA.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDSDA.Margin = new System.Windows.Forms.Padding(6);
             this.btnDSDA.Name = "btnDSDA";
             this.btnDSDA.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.btnDSDA.Size = new System.Drawing.Size(442, 134);
@@ -449,7 +457,7 @@
             this.btnTLKT.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.btnTLKT.ForeColor = System.Drawing.Color.DimGray;
             this.btnTLKT.Location = new System.Drawing.Point(-8, -3);
-            this.btnTLKT.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnTLKT.Margin = new System.Windows.Forms.Padding(6);
             this.btnTLKT.Name = "btnTLKT";
             this.btnTLKT.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.btnTLKT.Size = new System.Drawing.Size(442, 120);
@@ -465,7 +473,7 @@
             this.flowLayoutPanel5.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel5.Controls.Add(this.panel14);
             this.flowLayoutPanel5.Location = new System.Drawing.Point(36, 457);
-            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel5.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel5.MinimumSize = new System.Drawing.Size(418, 88);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
@@ -500,7 +508,7 @@
             this.button12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.DimGray;
             this.button12.Location = new System.Drawing.Point(-15, -8);
-            this.button12.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button12.Margin = new System.Windows.Forms.Padding(6);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(448, 114);
             this.button12.TabIndex = 0;
@@ -513,7 +521,7 @@
             this.flowLayoutPanel6.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel6.Controls.Add(this.panel15);
             this.flowLayoutPanel6.Location = new System.Drawing.Point(36, 574);
-            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel6.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel6.MinimumSize = new System.Drawing.Size(418, 88);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
@@ -548,7 +556,7 @@
             this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.DimGray;
             this.button13.Location = new System.Drawing.Point(-10, -2);
-            this.button13.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button13.Margin = new System.Windows.Forms.Padding(6);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(441, 112);
             this.button13.TabIndex = 0;
@@ -561,7 +569,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.panel9);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 691);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(418, 391);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(418, 88);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -596,7 +604,7 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.DimGray;
             this.button4.Location = new System.Drawing.Point(-10, -2);
-            this.button4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button4.Margin = new System.Windows.Forms.Padding(6);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(441, 112);
             this.button4.TabIndex = 0;
@@ -642,6 +650,14 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.txtbox_LyLich);
+            this.panel10.Controls.Add(this.txtbox_Slide);
+            this.panel10.Controls.Add(this.txtbox_FileBC);
+            this.panel10.Controls.Add(this.textBox1);
+            this.panel10.Controls.Add(this.label1);
+            this.panel10.Controls.Add(this.label9);
+            this.panel10.Controls.Add(this.label10);
+            this.panel10.Controls.Add(this.label12);
             this.panel10.Controls.Add(this.dtpick_Nambaove);
             this.panel10.Controls.Add(this.txtbox_MaTLBC);
             this.panel10.Controls.Add(this.label8);
@@ -659,9 +675,9 @@
             this.panel10.Controls.Add(this.label5);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Controls.Add(this.label2);
-            this.panel10.Location = new System.Drawing.Point(1742, 41);
+            this.panel10.Location = new System.Drawing.Point(1185, 41);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(608, 1217);
+            this.panel10.Size = new System.Drawing.Size(1165, 1217);
             this.panel10.TabIndex = 1;
             // 
             // dtpick_Nambaove
@@ -838,21 +854,21 @@
             this.grdDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdDoAn.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.grdDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDoAn.Location = new System.Drawing.Point(0, 41);
+            this.grdDoAn.Location = new System.Drawing.Point(-496, 52);
             this.grdDoAn.Name = "grdDoAn";
             this.grdDoAn.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDoAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDoAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdDoAn.RowHeadersWidth = 82;
             this.grdDoAn.RowTemplate.Height = 33;
             this.grdDoAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDoAn.Size = new System.Drawing.Size(1736, 1217);
+            this.grdDoAn.Size = new System.Drawing.Size(1493, 1217);
             this.grdDoAn.TabIndex = 0;
             this.grdDoAn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDoAn_CellContentClick);
             // 
@@ -936,6 +952,82 @@
             this.label11.Size = new System.Drawing.Size(371, 59);
             this.label11.TabIndex = 39;
             this.label11.Text = "Danh sách đồ án ";
+            // 
+            // txtbox_LyLich
+            // 
+            this.txtbox_LyLich.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_LyLich.Location = new System.Drawing.Point(621, 400);
+            this.txtbox_LyLich.Name = "txtbox_LyLich";
+            this.txtbox_LyLich.Size = new System.Drawing.Size(532, 43);
+            this.txtbox_LyLich.TabIndex = 26;
+            // 
+            // txtbox_Slide
+            // 
+            this.txtbox_Slide.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_Slide.Location = new System.Drawing.Point(624, 295);
+            this.txtbox_Slide.Name = "txtbox_Slide";
+            this.txtbox_Slide.Size = new System.Drawing.Size(531, 43);
+            this.txtbox_Slide.TabIndex = 25;
+            // 
+            // txtbox_FileBC
+            // 
+            this.txtbox_FileBC.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_FileBC.Location = new System.Drawing.Point(623, 178);
+            this.txtbox_FileBC.Name = "txtbox_FileBC";
+            this.txtbox_FileBC.Size = new System.Drawing.Size(532, 43);
+            this.txtbox_FileBC.TabIndex = 24;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(845, 52);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(308, 43);
+            this.textBox1.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Location = new System.Drawing.Point(614, 348);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 37);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Lý lịch ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label9.Location = new System.Drawing.Point(614, 243);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 37);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Slide";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label10.Location = new System.Drawing.Point(614, 122);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(103, 37);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "File BC";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label12.Location = new System.Drawing.Point(612, 48);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(194, 37);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Mã tài liệu BC";
             // 
             // frmDSDA
             // 
@@ -1060,5 +1152,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.TextBox txtbox_LyLich;
+        private System.Windows.Forms.TextBox txtbox_Slide;
+        private System.Windows.Forms.TextBox txtbox_FileBC;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
     }
 }
