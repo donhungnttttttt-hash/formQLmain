@@ -409,7 +409,7 @@ namespace formQLmain
 
         private void button6_Click(object sender, EventArgs e)
         {
-            rptDoann rpt = new rptDoann();
+           /* rptDoann rpt = new rptDoann();
             string sql = "SELECT DA.TENDETAI, SV.HOTEN, SV.LOP, DA.GVHD, YEAR(DA.NAMBAOVE) AS N'NĂM' FROM DOAN DA JOIN SINHVIEN SV ON DA.MASINHVIEN = SV.MASINHVIEN" +
                 "where " + comboBox_ChuyenNganh.Text + " = N'" + comboBox_Khoa.Text + " '";
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
@@ -417,7 +417,7 @@ namespace formQLmain
             da.Fill(rdt);
             rpt.rptNgayIn.Text = string.Format("MIS, ngày {0} tháng {1} năm {2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
             rpt.DataSource = rdt;
-            rpt.ShowPreview();
+            rpt.ShowPreview();*/
         }
 
         private void comboBox_ChuyenNganh_SelectedIndexChanged(object sender, EventArgs e)

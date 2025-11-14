@@ -154,6 +154,12 @@
     <Compile Include="Chitiet.Designer.cs">
       <DependentUpon>Chitiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBaocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaocao.Designer.cs">
+      <DependentUpon>frmBaocao.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDAYT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </Compile>
     <EmbeddedResource Include="Chitiet.resx">
       <DependentUpon>Chitiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaocao.resx">
+      <DependentUpon>frmBaocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDAYT.resx">
       <DependentUpon>frmDAYT.cs</DependentUpon>

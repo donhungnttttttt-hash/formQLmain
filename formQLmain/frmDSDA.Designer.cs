@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -111,6 +111,12 @@
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comTruong = new System.Windows.Forms.ComboBox();
+            this.comGT = new System.Windows.Forms.ComboBox();
+            this.btnFilter = new System.Windows.Forms.Button();
+            this.btnNaplai = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -652,9 +658,16 @@
             this.pnlgrid.Name = "pnlgrid";
             this.pnlgrid.Size = new System.Drawing.Size(2366, 1261);
             this.pnlgrid.TabIndex = 40;
+            this.pnlgrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlgrid_Paint);
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.btnNaplai);
+            this.panel10.Controls.Add(this.btnFilter);
+            this.panel10.Controls.Add(this.comGT);
+            this.panel10.Controls.Add(this.comTruong);
+            this.panel10.Controls.Add(this.label16);
+            this.panel10.Controls.Add(this.label15);
             this.panel10.Controls.Add(this.btnThem);
             this.panel10.Controls.Add(this.txtbox_TK);
             this.panel10.Controls.Add(this.txtbox_MaTK);
@@ -997,14 +1010,14 @@
             this.grdDoAn.Location = new System.Drawing.Point(0, 627);
             this.grdDoAn.Name = "grdDoAn";
             this.grdDoAn.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDoAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDoAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdDoAn.RowHeadersWidth = 82;
             this.grdDoAn.RowTemplate.Height = 33;
             this.grdDoAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1092,6 +1105,70 @@
             this.label11.Size = new System.Drawing.Size(371, 59);
             this.label11.TabIndex = 39;
             this.label11.Text = "Danh sách đồ án ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label15.Location = new System.Drawing.Point(1827, 41);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(159, 37);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Tên trường";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label16.Location = new System.Drawing.Point(1827, 203);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 37);
+            this.label16.TabIndex = 36;
+            this.label16.Text = "Gía trị";
+            // 
+            // comTruong
+            // 
+            this.comTruong.FormattingEnabled = true;
+            this.comTruong.Items.AddRange(new object[] {
+            "GVHD",
+            "TUKHOA"});
+            this.comTruong.Location = new System.Drawing.Point(1844, 85);
+            this.comTruong.Name = "comTruong";
+            this.comTruong.Size = new System.Drawing.Size(325, 33);
+            this.comTruong.TabIndex = 37;
+            this.comTruong.SelectedIndexChanged += new System.EventHandler(this.comTruong_SelectedIndexChanged);
+            // 
+            // comGT
+            // 
+            this.comGT.FormattingEnabled = true;
+            this.comGT.Location = new System.Drawing.Point(1834, 256);
+            this.comGT.Name = "comGT";
+            this.comGT.Size = new System.Drawing.Size(325, 33);
+            this.comGT.TabIndex = 38;
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.Location = new System.Drawing.Point(1834, 318);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(160, 60);
+            this.btnFilter.TabIndex = 39;
+            this.btnFilter.Text = "Lọc";
+            this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // btnNaplai
+            // 
+            this.btnNaplai.Image = global::formQLmain.Properties.Resources.icons8_refreshdark;
+            this.btnNaplai.Location = new System.Drawing.Point(2116, 309);
+            this.btnNaplai.Name = "btnNaplai";
+            this.btnNaplai.Size = new System.Drawing.Size(76, 70);
+            this.btnNaplai.TabIndex = 49;
+            this.btnNaplai.UseVisualStyleBackColor = true;
+            this.btnNaplai.Click += new System.EventHandler(this.button6_Click);
             // 
             // frmDSDA
             // 
@@ -1229,5 +1306,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comGT;
+        private System.Windows.Forms.ComboBox comTruong;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnNaplai;
+        private System.Windows.Forms.Button btnFilter;
     }
 }
