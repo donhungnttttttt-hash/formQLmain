@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -96,6 +96,8 @@
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -640,6 +642,8 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.button6);
+            this.panel10.Controls.Add(this.button5);
             this.panel10.Controls.Add(this.txtbox_VaiTro);
             this.panel10.Controls.Add(this.label2);
             this.panel10.Controls.Add(this.btnSua);
@@ -683,12 +687,13 @@
             // 
             this.btnSua.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(447, 1154);
+            this.btnSua.Location = new System.Drawing.Point(449, 721);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(122, 60);
             this.btnSua.TabIndex = 13;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Visible = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
@@ -707,12 +712,13 @@
             // 
             this.btnThem.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(50, 1151);
+            this.btnThem.Location = new System.Drawing.Point(310, 721);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(121, 60);
             this.btnThem.TabIndex = 11;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Visible = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtbox_NgayCapNhat
@@ -818,14 +824,14 @@
             this.grdTaiKhoan.Location = new System.Drawing.Point(22, 41);
             this.grdTaiKhoan.Name = "grdTaiKhoan";
             this.grdTaiKhoan.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdTaiKhoan.RowHeadersWidth = 82;
             this.grdTaiKhoan.RowTemplate.Height = 33;
             this.grdTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -912,6 +918,29 @@
             this.label1.Size = new System.Drawing.Size(393, 59);
             this.label1.TabIndex = 39;
             this.label1.Text = "Quản lý tài khoản ";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(99, 1154);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(121, 60);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Thêm";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(447, 1154);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(122, 60);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "Sửa";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // frmQLTK
             // 
@@ -1035,5 +1064,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

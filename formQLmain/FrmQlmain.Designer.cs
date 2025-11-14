@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -71,11 +71,12 @@
             this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
             this.menutimer = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
@@ -98,7 +99,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnRefreshDash = new System.Windows.Forms.Button();
             this.grdRecent = new System.Windows.Forms.DataGridView();
-            this.panel16 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -123,10 +123,11 @@
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -139,7 +140,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartYearly)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdRecent)).BeginInit();
-            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -578,16 +578,6 @@
             this.panelMenu.Size = new System.Drawing.Size(483, 1600);
             this.panelMenu.TabIndex = 7;
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox12.Image = global::formQLmain.Properties.Resources.NEU__1_;
-            this.pictureBox12.Location = new System.Drawing.Point(3, 414);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(411, 312);
-            this.pictureBox12.TabIndex = 0;
-            this.pictureBox12.TabStop = false;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
@@ -636,6 +626,24 @@
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.pictureBox12);
+            this.panel16.Location = new System.Drawing.Point(33, 806);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(427, 729);
+            this.panel16.TabIndex = 17;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox12.Image = global::formQLmain.Properties.Resources.NEU__1_;
+            this.pictureBox12.Location = new System.Drawing.Point(3, 414);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(411, 312);
+            this.pictureBox12.TabIndex = 0;
+            this.pictureBox12.TabStop = false;
             // 
             // textBox1
             // 
@@ -799,19 +807,19 @@
             // 
             // chartByKhoa
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartByKhoa.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartByKhoa.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chartByKhoa.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartByKhoa.Legends.Add(legend1);
             this.chartByKhoa.Location = new System.Drawing.Point(1001, 328);
             this.chartByKhoa.Name = "chartByKhoa";
             this.chartByKhoa.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series5.IsValueShownAsLabel = true;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartByKhoa.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartByKhoa.Series.Add(series1);
             this.chartByKhoa.Size = new System.Drawing.Size(504, 456);
             this.chartByKhoa.TabIndex = 18;
             this.chartByKhoa.Text = "chart1";
@@ -828,17 +836,17 @@
             // 
             // chartYearly
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartYearly.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartYearly.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chartYearly.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartYearly.Legends.Add(legend2);
             this.chartYearly.Location = new System.Drawing.Point(15, 27);
             this.chartYearly.Name = "chartYearly";
             this.chartYearly.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartYearly.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartYearly.Series.Add(series2);
             this.chartYearly.Size = new System.Drawing.Size(953, 763);
             this.chartYearly.TabIndex = 18;
             this.chartYearly.Text = "chart1";
@@ -874,14 +882,6 @@
             this.grdRecent.RowTemplate.Height = 33;
             this.grdRecent.Size = new System.Drawing.Size(703, 699);
             this.grdRecent.TabIndex = 0;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.pictureBox12);
-            this.panel16.Location = new System.Drawing.Point(33, 806);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(427, 729);
-            this.panel16.TabIndex = 17;
             // 
             // FrmQLmain
             // 
@@ -927,10 +927,11 @@
             this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panelMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -947,7 +948,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartYearly)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdRecent)).EndInit();
-            this.panel16.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

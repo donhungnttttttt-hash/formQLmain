@@ -317,5 +317,18 @@ namespace formQLmain
             textbox_TimKiem.Clear();
             grdTaiKhoan.DataSource = tkRepo.getAllTaiKhoan();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int i = grdTaiKhoan.Rows.Count - 1; //#########
+            grdTaiKhoan.CurrentCell = grdTaiKhoan[0, i]; // nhảy đến dòng i (tức là dòng cuối  dòng cuối 
+            MessageBox.Show("Bạn hãy nhập thông tin  vào các ô thông tin, sau đó nhấn nút Lưu");
+            txtbox_Email.Focus();    // chuyển con trỏ đến textbox mã nhóm 
+            ClearInputs();
+            //#########################################################3
+            btnThem.Visible = true; // hiện nút Lưu lên 
+            // nút lưu ở đây là nút thêm thật 
+            // thêm mới là thêm giả 
+        }
     }
 }

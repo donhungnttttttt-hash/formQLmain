@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -73,6 +73,19 @@
             this.QLDLdrop = new System.Windows.Forms.Timer(this.components);
             this.pnlgrid = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.txtbox_TK = new System.Windows.Forms.TextBox();
+            this.txtbox_MaTK = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtbox_LyLich = new System.Windows.Forms.TextBox();
+            this.txtbox_Slide = new System.Windows.Forms.TextBox();
+            this.txtbox_FileBC = new System.Windows.Forms.TextBox();
+            this.txtbox_MaTLBC2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.dtpick_Nambaove = new System.Windows.Forms.DateTimePicker();
             this.txtbox_MaTLBC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -80,7 +93,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.txtbox_GVHD = new System.Windows.Forms.TextBox();
             this.txtbox_TenDeTai = new System.Windows.Forms.TextBox();
             this.txtbox_MaSV = new System.Windows.Forms.TextBox();
@@ -98,14 +111,6 @@
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtbox_LyLich = new System.Windows.Forms.TextBox();
-            this.txtbox_Slide = new System.Windows.Forms.TextBox();
-            this.txtbox_FileBC = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -157,7 +162,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Padding = new System.Windows.Forms.Padding(30, 100, 0, 0);
-            this.panelMenu.Size = new System.Drawing.Size(483, 1055);
+            this.panelMenu.Size = new System.Drawing.Size(483, 1732);
             this.panelMenu.TabIndex = 37;
             // 
             // flowLayoutPanel2
@@ -650,10 +655,15 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.btnThem);
+            this.panel10.Controls.Add(this.txtbox_TK);
+            this.panel10.Controls.Add(this.txtbox_MaTK);
+            this.panel10.Controls.Add(this.label13);
+            this.panel10.Controls.Add(this.label14);
             this.panel10.Controls.Add(this.txtbox_LyLich);
             this.panel10.Controls.Add(this.txtbox_Slide);
             this.panel10.Controls.Add(this.txtbox_FileBC);
-            this.panel10.Controls.Add(this.textBox1);
+            this.panel10.Controls.Add(this.txtbox_MaTLBC2);
             this.panel10.Controls.Add(this.label1);
             this.panel10.Controls.Add(this.label9);
             this.panel10.Controls.Add(this.label10);
@@ -665,7 +675,7 @@
             this.panel10.Controls.Add(this.label4);
             this.panel10.Controls.Add(this.btnSua);
             this.panel10.Controls.Add(this.btnXoa);
-            this.panel10.Controls.Add(this.btnThem);
+            this.panel10.Controls.Add(this.btnLuu);
             this.panel10.Controls.Add(this.txtbox_GVHD);
             this.panel10.Controls.Add(this.txtbox_TenDeTai);
             this.panel10.Controls.Add(this.txtbox_MaSV);
@@ -675,25 +685,154 @@
             this.panel10.Controls.Add(this.label5);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Controls.Add(this.label2);
-            this.panel10.Location = new System.Drawing.Point(1185, 41);
+            this.panel10.Location = new System.Drawing.Point(62, 87);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1165, 1217);
-            this.panel10.TabIndex = 1;
+            this.panel10.Size = new System.Drawing.Size(2325, 512);
+            this.panel10.TabIndex = 2;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(1263, 321);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(231, 60);
+            this.btnThem.TabIndex = 32;
+            this.btnThem.Text = "Thêm giả ";
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // txtbox_TK
+            // 
+            this.txtbox_TK.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_TK.Location = new System.Drawing.Point(1227, 164);
+            this.txtbox_TK.Name = "txtbox_TK";
+            this.txtbox_TK.Size = new System.Drawing.Size(532, 43);
+            this.txtbox_TK.TabIndex = 30;
+            // 
+            // txtbox_MaTK
+            // 
+            this.txtbox_MaTK.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_MaTK.Location = new System.Drawing.Point(1449, 38);
+            this.txtbox_MaTK.Name = "txtbox_MaTK";
+            this.txtbox_MaTK.ReadOnly = true;
+            this.txtbox_MaTK.Size = new System.Drawing.Size(308, 43);
+            this.txtbox_MaTK.TabIndex = 29;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label13.Location = new System.Drawing.Point(1218, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(123, 37);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "từ khóa ";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label14.Location = new System.Drawing.Point(1216, 34);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(164, 37);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Mã từ khóa";
+            // 
+            // txtbox_LyLich
+            // 
+            this.txtbox_LyLich.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_LyLich.Location = new System.Drawing.Point(648, 382);
+            this.txtbox_LyLich.Name = "txtbox_LyLich";
+            this.txtbox_LyLich.Size = new System.Drawing.Size(532, 43);
+            this.txtbox_LyLich.TabIndex = 26;
+            // 
+            // txtbox_Slide
+            // 
+            this.txtbox_Slide.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_Slide.Location = new System.Drawing.Point(651, 277);
+            this.txtbox_Slide.Name = "txtbox_Slide";
+            this.txtbox_Slide.Size = new System.Drawing.Size(531, 43);
+            this.txtbox_Slide.TabIndex = 25;
+            // 
+            // txtbox_FileBC
+            // 
+            this.txtbox_FileBC.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_FileBC.Location = new System.Drawing.Point(650, 160);
+            this.txtbox_FileBC.Name = "txtbox_FileBC";
+            this.txtbox_FileBC.Size = new System.Drawing.Size(532, 43);
+            this.txtbox_FileBC.TabIndex = 24;
+            // 
+            // txtbox_MaTLBC2
+            // 
+            this.txtbox_MaTLBC2.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.txtbox_MaTLBC2.Location = new System.Drawing.Point(872, 34);
+            this.txtbox_MaTLBC2.Name = "txtbox_MaTLBC2";
+            this.txtbox_MaTLBC2.ReadOnly = true;
+            this.txtbox_MaTLBC2.Size = new System.Drawing.Size(308, 43);
+            this.txtbox_MaTLBC2.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Location = new System.Drawing.Point(641, 330);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 37);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Lý lịch ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label9.Location = new System.Drawing.Point(641, 225);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 37);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Slide";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label10.Location = new System.Drawing.Point(641, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(103, 37);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "File BC";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label12.Location = new System.Drawing.Point(639, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(194, 37);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Mã tài liệu BC";
             // 
             // dtpick_Nambaove
             // 
             this.dtpick_Nambaove.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.dtpick_Nambaove.Location = new System.Drawing.Point(38, 538);
+            this.dtpick_Nambaove.Location = new System.Drawing.Point(207, 296);
             this.dtpick_Nambaove.Name = "dtpick_Nambaove";
-            this.dtpick_Nambaove.Size = new System.Drawing.Size(524, 43);
+            this.dtpick_Nambaove.Size = new System.Drawing.Size(360, 43);
             this.dtpick_Nambaove.TabIndex = 18;
             // 
             // txtbox_MaTLBC
             // 
             this.txtbox_MaTLBC.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_MaTLBC.Location = new System.Drawing.Point(38, 662);
+            this.txtbox_MaTLBC.Location = new System.Drawing.Point(242, 358);
             this.txtbox_MaTLBC.Name = "txtbox_MaTLBC";
-            this.txtbox_MaTLBC.Size = new System.Drawing.Size(529, 43);
+            this.txtbox_MaTLBC.ReadOnly = true;
+            this.txtbox_MaTLBC.Size = new System.Drawing.Size(320, 43);
             this.txtbox_MaTLBC.TabIndex = 17;
             // 
             // label8
@@ -701,7 +840,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(28, 609);
+            this.label8.Location = new System.Drawing.Point(30, 364);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(194, 37);
             this.label8.TabIndex = 16;
@@ -710,9 +849,9 @@
             // txtbox_TomTat
             // 
             this.txtbox_TomTat.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_TomTat.Location = new System.Drawing.Point(38, 788);
+            this.txtbox_TomTat.Location = new System.Drawing.Point(167, 422);
             this.txtbox_TomTat.Name = "txtbox_TomTat";
-            this.txtbox_TomTat.Size = new System.Drawing.Size(529, 43);
+            this.txtbox_TomTat.Size = new System.Drawing.Size(395, 43);
             this.txtbox_TomTat.TabIndex = 15;
             // 
             // label4
@@ -720,7 +859,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(30, 734);
+            this.label4.Location = new System.Drawing.Point(31, 422);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 37);
             this.label4.TabIndex = 14;
@@ -730,42 +869,42 @@
             // 
             this.btnSua.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(442, 1155);
+            this.btnSua.Location = new System.Drawing.Point(1675, 413);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(122, 59);
+            this.btnSua.Size = new System.Drawing.Size(122, 60);
             this.btnSua.TabIndex = 13;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(256, 1155);
+            this.btnXoa.Location = new System.Drawing.Point(1489, 413);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(117, 59);
+            this.btnXoa.Size = new System.Drawing.Size(117, 60);
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnThem
+            // btnLuu
             // 
-            this.btnThem.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(46, 1152);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(122, 59);
-            this.btnThem.TabIndex = 11;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
+            this.btnLuu.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(1278, 410);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(201, 60);
+            this.btnLuu.TabIndex = 11;
+            this.btnLuu.Text = "Thêm";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // txtbox_GVHD
             // 
             this.txtbox_GVHD.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_GVHD.Location = new System.Drawing.Point(36, 412);
+            this.txtbox_GVHD.Location = new System.Drawing.Point(30, 241);
             this.txtbox_GVHD.Name = "txtbox_GVHD";
             this.txtbox_GVHD.Size = new System.Drawing.Size(532, 43);
             this.txtbox_GVHD.TabIndex = 9;
@@ -773,25 +912,26 @@
             // txtbox_TenDeTai
             // 
             this.txtbox_TenDeTai.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_TenDeTai.Location = new System.Drawing.Point(33, 181);
+            this.txtbox_TenDeTai.Location = new System.Drawing.Point(167, 81);
             this.txtbox_TenDeTai.Name = "txtbox_TenDeTai";
-            this.txtbox_TenDeTai.Size = new System.Drawing.Size(536, 43);
+            this.txtbox_TenDeTai.Size = new System.Drawing.Size(377, 43);
             this.txtbox_TenDeTai.TabIndex = 8;
             // 
             // txtbox_MaSV
             // 
             this.txtbox_MaSV.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_MaSV.Location = new System.Drawing.Point(36, 300);
+            this.txtbox_MaSV.Location = new System.Drawing.Point(199, 139);
             this.txtbox_MaSV.Name = "txtbox_MaSV";
-            this.txtbox_MaSV.Size = new System.Drawing.Size(532, 43);
+            this.txtbox_MaSV.Size = new System.Drawing.Size(345, 43);
             this.txtbox_MaSV.TabIndex = 7;
             // 
             // txtbox_MaDoAn
             // 
             this.txtbox_MaDoAn.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_MaDoAn.Location = new System.Drawing.Point(188, 45);
+            this.txtbox_MaDoAn.Location = new System.Drawing.Point(167, 24);
             this.txtbox_MaDoAn.Name = "txtbox_MaDoAn";
-            this.txtbox_MaDoAn.Size = new System.Drawing.Size(378, 43);
+            this.txtbox_MaDoAn.ReadOnly = true;
+            this.txtbox_MaDoAn.Size = new System.Drawing.Size(377, 43);
             this.txtbox_MaDoAn.TabIndex = 6;
             // 
             // label7
@@ -799,7 +939,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(28, 481);
+            this.label7.Location = new System.Drawing.Point(23, 295);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(178, 37);
             this.label7.TabIndex = 5;
@@ -810,7 +950,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(28, 359);
+            this.label6.Location = new System.Drawing.Point(18, 196);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(306, 37);
             this.label6.TabIndex = 4;
@@ -821,7 +961,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(28, 130);
+            this.label5.Location = new System.Drawing.Point(18, 84);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 37);
             this.label5.TabIndex = 3;
@@ -832,7 +972,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(28, 244);
+            this.label3.Location = new System.Drawing.Point(18, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 37);
             this.label3.TabIndex = 1;
@@ -843,7 +983,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(24, 42);
+            this.label2.Location = new System.Drawing.Point(17, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 37);
             this.label2.TabIndex = 0;
@@ -854,21 +994,21 @@
             this.grdDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdDoAn.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.grdDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDoAn.Location = new System.Drawing.Point(-496, 52);
+            this.grdDoAn.Location = new System.Drawing.Point(0, 627);
             this.grdDoAn.Name = "grdDoAn";
             this.grdDoAn.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDoAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDoAn.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdDoAn.RowHeadersWidth = 82;
             this.grdDoAn.RowTemplate.Height = 33;
             this.grdDoAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDoAn.Size = new System.Drawing.Size(1493, 1217);
+            this.grdDoAn.Size = new System.Drawing.Size(2317, 642);
             this.grdDoAn.TabIndex = 0;
             this.grdDoAn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDoAn_CellContentClick);
             // 
@@ -953,88 +1093,12 @@
             this.label11.TabIndex = 39;
             this.label11.Text = "Danh sách đồ án ";
             // 
-            // txtbox_LyLich
-            // 
-            this.txtbox_LyLich.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_LyLich.Location = new System.Drawing.Point(621, 400);
-            this.txtbox_LyLich.Name = "txtbox_LyLich";
-            this.txtbox_LyLich.Size = new System.Drawing.Size(532, 43);
-            this.txtbox_LyLich.TabIndex = 26;
-            // 
-            // txtbox_Slide
-            // 
-            this.txtbox_Slide.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_Slide.Location = new System.Drawing.Point(624, 295);
-            this.txtbox_Slide.Name = "txtbox_Slide";
-            this.txtbox_Slide.Size = new System.Drawing.Size(531, 43);
-            this.txtbox_Slide.TabIndex = 25;
-            // 
-            // txtbox_FileBC
-            // 
-            this.txtbox_FileBC.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_FileBC.Location = new System.Drawing.Point(623, 178);
-            this.txtbox_FileBC.Name = "txtbox_FileBC";
-            this.txtbox_FileBC.Size = new System.Drawing.Size(532, 43);
-            this.txtbox_FileBC.TabIndex = 24;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(845, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 43);
-            this.textBox1.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(614, 348);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 37);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Lý lịch ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(614, 243);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 37);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Slide";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(614, 122);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 37);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "File BC";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label12.Location = new System.Drawing.Point(612, 48);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(194, 37);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Mã tài liệu BC";
-            // 
             // frmDSDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(2884, 1055);
+            this.ClientSize = new System.Drawing.Size(2884, 1732);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlgrid);
             this.Controls.Add(this.panelMenu);
@@ -1124,25 +1188,7 @@
         private System.Windows.Forms.Timer QLDAdrop;
         private System.Windows.Forms.Timer QLDLdrop;
         private System.Windows.Forms.Panel pnlgrid;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.TextBox txtbox_GVHD;
-        private System.Windows.Forms.TextBox txtbox_TenDeTai;
-        private System.Windows.Forms.TextBox txtbox_MaSV;
-        private System.Windows.Forms.TextBox txtbox_MaDoAn;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView grdDoAn;
-        private System.Windows.Forms.TextBox txtbox_MaTLBC;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtbox_TomTat;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpick_Nambaove;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Button btnRefresh;
@@ -1152,13 +1198,36 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox txtbox_TK;
+        private System.Windows.Forms.TextBox txtbox_MaTK;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtbox_LyLich;
         private System.Windows.Forms.TextBox txtbox_Slide;
         private System.Windows.Forms.TextBox txtbox_FileBC;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbox_MaTLBC2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dtpick_Nambaove;
+        private System.Windows.Forms.TextBox txtbox_MaTLBC;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtbox_TomTat;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.TextBox txtbox_GVHD;
+        private System.Windows.Forms.TextBox txtbox_TenDeTai;
+        private System.Windows.Forms.TextBox txtbox_MaSV;
+        private System.Windows.Forms.TextBox txtbox_MaDoAn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnThem;
     }
 }
