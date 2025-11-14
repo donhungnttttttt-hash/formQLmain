@@ -162,7 +162,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Padding = new System.Windows.Forms.Padding(30, 100, 0, 0);
-            this.panelMenu.Size = new System.Drawing.Size(483, 1732);
+            this.panelMenu.Size = new System.Drawing.Size(483, 1325);
             this.panelMenu.TabIndex = 37;
             // 
             // flowLayoutPanel2
@@ -1098,7 +1098,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(2884, 1732);
+            this.ClientSize = new System.Drawing.Size(2884, 1325);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlgrid);
             this.Controls.Add(this.panelMenu);
