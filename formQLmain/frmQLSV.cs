@@ -48,6 +48,7 @@ namespace formQLmain
             comboBox_Lop.SelectedIndexChanged += ComboBox_FilterChanged;
             comboBox_Khoa.SelectedIndexChanged += ComboBox_FilterChanged;
         }
+        // 
         private void ComboBox_FilterChanged(object sender, EventArgs e)
         {
             if (modify == null) return; // tránh null khi form chưa khởi xong
@@ -58,7 +59,7 @@ namespace formQLmain
 
             grdSinhVien.DataSource = modify.filterSinhVien(chuyenNganh, lop, khoa);
         }
-
+        //
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -182,7 +183,8 @@ namespace formQLmain
             {
                 MessageBox.Show("Thêm sinh viên thành công", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                btnLuu.Visible = false; // ẩn nút Lưu lên 
+                label_Thongbao.Visible = false;
                 grdSinhVien.DataSource = modify.getAllSinhVien();
             }
             else
@@ -221,9 +223,13 @@ namespace formQLmain
                     "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 grdSinhVien.DataSource = modify.getAllSinhVien();
+                
+
+                btnCapNhat.Visible = false; // hiện nút cập nhật lên
+                label_CapNhat.Visible = false;
 
                 // Cập nhật lại mã cũ thành mã mới (phục vụ cho lần sửa kế tiếp)
-                maSVCu = sv.MaSV;
+                //maSVCu = sv.MaSV;
             }
             else
             {
@@ -373,7 +379,7 @@ namespace formQLmain
         {
 
         }
-
+    // lệnh đổi tab sang enter 
         private void frmQLSV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -392,6 +398,7 @@ namespace formQLmain
             ClearInputs();
             //#########################################################3
             btnLuu.Visible = true; // hiện nút Lưu lên 
+            label_Thongbao.Visible = true;
             // nút lưu ở đây là nút thêm thật 
             // thêm mới là thêm giả 
 
@@ -401,8 +408,15 @@ namespace formQLmain
         {
             SyncFromGrid();
             MessageBox.Show("Bạn hãy nhập thông tin cần thay đổi vào các ô thông tin, sau đó nhấn nút Cập nhật");
-            txtbox_MaSV.Focus();    // chuyển con trỏ đến textbox mã nhóm 
+            //txtbox_MaSV.Focus();    // chuyển con trỏ đến textbox mã nhóm 
             btnCapNhat.Visible = true; // hiện nút cập nhật lên
+            label_CapNhat.Visible = true;
+
+        }
+
+        private void comboBox_ChuyenNganh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
         // Cách làm bây giờ là đẩy nút thêm cũ  sang phải và đổi tên thành cập nhật 
         // tạo một nút thêm giả: nút này chỉ để nó trắng xóa và nó nhảy về cuối 

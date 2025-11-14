@@ -30,7 +30,7 @@ namespace formQLmain
         // ==============hàm check mã tk đã tồn tại chưa =============
         private bool CheckMaTK(string maTK, SqlConnection conn)
         {
-            string sql = "SELECT COUNT(*) FROM TAIKHOAN WHERE MATAIKHOAN = @maTK AND VAITRO = 'SinhVien'";
+            string sql = "SELECT COUNT(*) FROM TAIKHOAN WHERE MATK = @maTK AND VAITRO = 'SinhVien'";
             using (SqlCommand cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@maTK", maTK);
@@ -53,10 +53,10 @@ namespace formQLmain
                 sqlConnection.Open();
                 conn.Open();
 
-                // == gọi quả hàm check mã vào đây 
+                // == gọi quả hàm check mã vào đây  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                 if (!CheckMaTK(sinhVien.MaTK, conn))
                 {
-                    error = "Mã sinh viên này không tồn tại.";
+                    error = "Mã tài khoản này không tồn tại";
                     return false;
                 }
 
