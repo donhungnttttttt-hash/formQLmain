@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -104,6 +104,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlgrid = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -254,6 +255,7 @@
             this.comboBox_ChuyenNganh.Name = "comboBox_ChuyenNganh";
             this.comboBox_ChuyenNganh.Size = new System.Drawing.Size(422, 45);
             this.comboBox_ChuyenNganh.TabIndex = 44;
+            this.comboBox_ChuyenNganh.SelectedIndexChanged += new System.EventHandler(this.comboBox_ChuyenNganh_SelectedIndexChanged);
             // 
             // comboBox_Lop
             // 
@@ -805,14 +807,14 @@
             this.grdSinhVien.Location = new System.Drawing.Point(22, 41);
             this.grdSinhVien.Name = "grdSinhVien";
             this.grdSinhVien.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdSinhVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdSinhVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdSinhVien.RowHeadersWidth = 82;
             this.grdSinhVien.RowTemplate.Height = 33;
             this.grdSinhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -822,6 +824,7 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.button6);
             this.panel10.Controls.Add(this.button5);
             this.panel10.Controls.Add(this.btnThemMoi);
             this.panel10.Controls.Add(this.btnCapNhat);
@@ -1034,6 +1037,18 @@
             this.pnlgrid.TabIndex = 38;
             this.pnlgrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlgrid_Paint);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(330, 741);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(235, 60);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "In báo cáo";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // frmQLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1163,5 +1178,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Button button6;
     }
 }
