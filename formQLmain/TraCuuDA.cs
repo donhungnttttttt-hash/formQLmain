@@ -575,6 +575,256 @@ GROUP BY
             }
         }
 
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dropdown2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void trogiup_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comGT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmEnd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtChuyenNganh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTomTat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpickNambaove_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGVHD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTenDeTai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTukhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTipMyfavorite_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void toolTipRefresh_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void toolTipResearch_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void label8_Click(object sender, EventArgs e)
         {
 

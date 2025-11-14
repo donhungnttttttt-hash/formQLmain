@@ -1,7 +1,11 @@
-﻿using System;
+﻿using DevExpress.CodeParser;
+using DevExpress.XtraCharts.Native;
+using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +16,128 @@ namespace formQLmain
 {
     public partial class frmBaocao : Form
     {
+        SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True");
+        SqlDataAdapter da = new SqlDataAdapter();
+        SqlCommand cmd = new SqlCommand();
+        DataTable dt = new DataTable();
+        string sql, constr;
+        public bool Expand = false; // khai báo biến Expand 
+        public bool Expand2 = false; // khai báo biến Expand2 
+        public bool Expandmenu = false; // khai báo biến Expand2 
+
         public frmBaocao()
         {
             InitializeComponent();
+        }
+
+        private void grdBaocao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlgrid_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comTruong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sql = "Select distinct " + comTruong.Text + " FROM DOAN DA JOIN SINHVIEN SV ON DA.MASINHVIEN = SV.MASINHVIEN ";
+            da = new SqlDataAdapter(sql, conn);
+            DataTable dt1 = new DataTable();
+            da.Fill(dt1);
+            //comGT.Items.Clear();
+            comGT.DataSource = dt1;
+            comGT.DisplayMember = comTruong.Text; //trường hiện ra
+            comGT.ValueMember = comTruong.Text;// trường để lấy 
+
+        }
+
+        private void btnFillter_Click(object sender, EventArgs e)
+        {
+            sql = @"SELECT 
+    DA.TENDETAI,
+    SV.HOTEN,
+    SV.CHUYENNGANH,
+    SV.KHOA,
+    DA.GVHD,
+    YEAR(DA.NAMBAOVE) AS N'NĂM'
+FROM DOAN DA
+JOIN SINHVIEN SV   ON DA.MASINHVIEN = SV.MASINHVIEN WHERE " + comTruong.Text + "= N'" + comGT.Text + "'";// Đảm bảo mọi dữ liệu có tiếng việt vẫn lọc được
+            da = new SqlDataAdapter(sql, conn);
+            dt = new DataTable();
+            da.Fill(dt);
+            grdBaocao.DataSource = dt;
+            grdBaocao.Refresh();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                sql = @"SELECT 
+    DA.TENDETAI,
+    SV.HOTEN,
+    SV.CHUYENNGANH,
+    SV.KHOA,
+    DA.GVHD,
+    YEAR(DA.NAMBAOVE) AS N'NĂM'
+FROM DOAN DA
+JOIN SINHVIEN SV   ON DA.MASINHVIEN = SV.MASINHVIEN"; 
+                da = new SqlDataAdapter(sql, conn);
+                dt = new DataTable();
+                dt.Clear();
+                da.Fill(dt);
+                grdBaocao.DataSource = dt;
+                grdBaocao.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi làm mới dữ liệu: " + ex.Message);
+            }
+           
+
+
+        }
+
+        private void btnInBC_Click(object sender, EventArgs e)
+        {
+            rptDoann rpt = new rptDoann();
+            sql = "SELECT DA.TENDETAI, SV.HOTEN, SV.CHUYENNGANH, SV.KHOA, DA.GVHD, YEAR(DA.NAMBAOVE) AS N'NĂM' FROM DOAN DA JOIN SINHVIEN SV ON DA.MASINHVIEN = SV.MASINHVIEN" +
+                " where " + comTruong.Text + " = N'" + comGT.Text + " '";
+
+            da = new SqlDataAdapter(sql, conn);
+            DataTable rdt = new DataTable();
+            da.Fill(rdt);
+            rpt.rptNgayIn.Text = string.Format("MIS, ngày {0} tháng {1} năm {2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
+            rpt.xrgroupby.Text = "Điều kiện lọc dữ liệu: " + comTruong.Text + ": " + comGT.Text;
+            rpt.DataSource = rdt;
+            rpt.ShowPreview();
+        }
+
+        private void frmBaocao_Load(object sender, EventArgs e)
+        {
+
+            sql = @"SELECT 
+    DA.TENDETAI,
+    SV.HOTEN,
+    SV.CHUYENNGANH,
+    SV.KHOA,
+    DA.GVHD,
+    YEAR(DA.NAMBAOVE) AS N'NĂM'
+   FROM DOAN DA
+JOIN SINHVIEN SV   ON DA.MASINHVIEN = SV.MASINHVIEN";
+            conn.Open();
+            da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt);
+            grdBaocao.DataSource = dt;
+            grdBaocao.Refresh();
         }
     }
 }
