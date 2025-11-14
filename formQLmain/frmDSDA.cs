@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraPrinting;
+﻿using DevExpress.XtraCharts.Native;
+using DevExpress.XtraPrinting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +16,54 @@ namespace formQLmain
 {
     public partial class frmDSDA : Form
     {
-       
+        SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True");
+        SqlDataAdapter da = new SqlDataAdapter();
+        SqlCommand cmd = new SqlCommand();
+        DataTable dt = new DataTable();
+        string sql, constr;
         public frmDSDA()
         {
             InitializeComponent();
         }
+
+        public void NapCT()
+        {
+            int i = grdDoAn.CurrentRow.Index;
+            txtbox_MaDoAn.Text = grdDoAn.Rows[i].Cells[0].Value.ToString();
+            txtbox_TenDeTai.Text = grdDoAn.Rows[i].Cells[1].Value.ToString();
+            txtbox_MaSV.Text = grdDoAn.Rows[i].Cells[2].Value.ToString();
+            txtbox_GVHD.Text = grdDoAn.Rows[i].Cells[3].Value.ToString();
+            dtpick_Nambaove.Text = grdDoAn.Rows[i].Cells[4].Value.ToString();
+            txtbox_MaTLBC.Text = grdDoAn.Rows[i].Cells[5].Value.ToString();
+            txtbox_TomTat.Text = grdDoAn.Rows[i].Cells[6].Value.ToString();
+            txtbox_MaTLBC2.Text = grdDoAn.Rows[i].Cells[7].Value.ToString();
+            txtbox_FileBC.Text = grdDoAn.Rows[i].Cells[8].Value.ToString();
+            txtbox_Slide.Text = grdDoAn.Rows[i].Cells[9].Value.ToString();
+            txtbox_LyLich.Text = grdDoAn.Rows[i].Cells[10].Value.ToString();
+            txtbox_MaTK.Text = grdDoAn.Rows[i].Cells[11].Value.ToString();
+            txtbox_TK.Text = grdDoAn.Rows[i].Cells[12].Value.ToString();
+        }
+
+
+
+
+
+
+            //txtbox_MaDoAn.Text = row.Cells["MADOAN"].Value?.ToString() ?? "";
+            //txtbox_TenDeTai.Text = row.Cells["TENDETAI"].Value?.ToString() ?? "";
+            //txtbox_MaSV.Text = row.Cells["MASINHVIEN"].Value?.ToString() ?? "";
+            //txtbox_GVHD.Text = row.Cells["GVHD"].Value?.ToString() ?? "";
+            //txtbox_MaTLBC.Text = row.Cells["MATAILIEUBC"].Value?.ToString() ?? "";
+            //txtbox_TomTat.Text = row.Cells["TOMTAT"].Value?.ToString() ?? "";
+            ////
+            //txtbox_MaTLBC2.Text = row.Cells["MATAILIEUBC"].Value?.ToString() ?? "";
+            //txtbox_FileBC.Text = row.Cells["FILEBC"].Value?.ToString() ?? "";
+            //txtbox_Slide.Text = row.Cells["SLIDE"].Value?.ToString() ?? "";
+            //txtbox_LyLich.Text = row.Cells["LY_LICH"].Value?.ToString() ?? "";
+            //txtbox_MaTK.Text = row.Cells["MATUKHOA"].Value?.ToString() ?? "";
+            //txtbox_TK.Text = row.Cells["TUKHOA"].Value?.ToString() ?? "";
+            //}
+
         public bool Expand = false; // khai báo biến Expand 
         public bool Expand2 = false; // khai báo biến Expand2 
         public bool Expandmenu = false; // khai báo biến Expand2 
@@ -203,28 +247,63 @@ namespace formQLmain
             SyncFromGrid();
         }
 
-        private void SyncFromGrid()
+
+
+
+      private void SyncFromGrid()
         {
-            if (grdDoAn.CurrentRow == null || grdDoAn.CurrentRow.IsNewRow) return;
+            //    if (grdDoAn.CurrentRow == null || grdDoAn.CurrentRow.IsNewRow) return;
 
-            var row = grdDoAn.CurrentRow;
+            //    var row = grdDoAn.CurrentRow;
 
-            txtbox_MaDoAn.Text = row.Cells["MADOAN"].Value?.ToString() ?? "";
-            txtbox_TenDeTai.Text = row.Cells["TENDETAI"].Value?.ToString() ?? "";
-            txtbox_MaSV.Text = row.Cells["MASINHVIEN"].Value?.ToString() ?? "";
-            txtbox_GVHD.Text = row.Cells["GVHD"].Value?.ToString() ?? "";
-            txtbox_MaTLBC.Text = row.Cells["MATAILIEUBC"].Value?.ToString() ?? "";
-            txtbox_TomTat.Text = row.Cells["TOMTAT"].Value?.ToString() ?? "";
-            //
-            txtbox_MaTLBC2.Text = row.Cells["MATAILIEUBC"].Value?.ToString() ?? "";
-            txtbox_FileBC.Text = row.Cells["FILEBC"].Value?.ToString() ?? "";
-            txtbox_Slide.Text = row.Cells["SLIDE"].Value?.ToString() ?? "";
-            txtbox_LyLich.Text = row.Cells["LY_LICH"].Value?.ToString() ?? "";
-            txtbox_MaTK.Text = row.Cells["MATUKHOA"].Value?.ToString() ?? "";
-            txtbox_TK.Text = row.Cells["TUKHOA"].Value?.ToString() ?? "";
+            //    txtbox_MaDoAn.Text = row.Cells["MADOAN"].Value?.ToString() ?? "";
+            //    txtbox_TenDeTai.Text = row.Cells["TENDETAI"].Value?.ToString() ?? "";
+            //    txtbox_MaSV.Text = row.Cells["MASINHVIEN"].Value?.ToString() ?? "";
+            //    txtbox_GVHD.Text = row.Cells["GVHD"].Value?.ToString() ?? "";
+            //    txtbox_MaTLBC.Text = row.Cells["MATAILIEUBC"].Value?.ToString() ?? "";
+            //    txtbox_TomTat.Text = row.Cells["TOMTAT"].Value?.ToString() ?? "";
+            //    //
+            //    txtbox_MaTLBC2.Text = row.Cells["MATAILIEUBC"].Value?.ToString() ?? "";
+            //    txtbox_FileBC.Text = row.Cells["FILEBC"].Value?.ToString() ?? "";
+            //    txtbox_Slide.Text = row.Cells["SLIDE"].Value?.ToString() ?? "";
+            //    txtbox_LyLich.Text = row.Cells["LY_LICH"].Value?.ToString() ?? "";
+            //    txtbox_MaTK.Text = row.Cells["MATUKHOA"].Value?.ToString() ?? "";
+            //    txtbox_TK.Text = row.Cells["TUKHOA"].Value?.ToString() ?? "";
+
+            //// DateTimePicker: set null/giá trị
+            //var cell = row.Cells["NAMBAOVE"].Value;
+            //if (cell == null || cell == DBNull.Value)
+            //{
+            //    dtpick_Nambaove.Checked = false;
+            //}
+            //else
+            //{
+            //    dtpick_Nambaove.Checked = true;
+            //    dtpick_Nambaove.Value = Convert.ToDateTime(cell);
+            //}
+
+            //maDoAnCu = txtbox_MaDoAn.Text;
+
+
+
+            int i = grdDoAn.CurrentRow.Index;
+            txtbox_MaDoAn.Text = grdDoAn.Rows[i].Cells[0].Value.ToString();
+            txtbox_TenDeTai.Text = grdDoAn.Rows[i].Cells[1].Value.ToString();
+            txtbox_MaSV.Text = grdDoAn.Rows[i].Cells[2].Value.ToString();
+            txtbox_GVHD.Text = grdDoAn.Rows[i].Cells[3].Value.ToString();
+            dtpick_Nambaove.Text = grdDoAn.Rows[i].Cells[4].Value.ToString();
+            txtbox_MaTLBC.Text = grdDoAn.Rows[i].Cells[5].Value.ToString();
+            txtbox_TomTat.Text = grdDoAn.Rows[i].Cells[6].Value.ToString();
+            txtbox_MaTLBC2.Text = grdDoAn.Rows[i].Cells[7].Value.ToString();
+            txtbox_FileBC.Text = grdDoAn.Rows[i].Cells[8].Value.ToString();
+            txtbox_Slide.Text = grdDoAn.Rows[i].Cells[9].Value.ToString();
+            txtbox_LyLich.Text = grdDoAn.Rows[i].Cells[10].Value.ToString();
+            txtbox_MaTK.Text = grdDoAn.Rows[i].Cells[11].Value.ToString();
+            txtbox_TK.Text = grdDoAn.Rows[i].Cells[12].Value.ToString();
+
 
             // DateTimePicker: set null/giá trị
-            var cell = row.Cells["NAMBAOVE"].Value;
+            var cell = grdDoAn.Rows[i].Cells["NAMBAOVE"].Value;
             if (cell == null || cell == DBNull.Value)
             {
                 dtpick_Nambaove.Checked = false;
@@ -236,6 +315,22 @@ namespace formQLmain
             }
 
             maDoAnCu = txtbox_MaDoAn.Text;
+
+
+            //int i = grdDoAn.CurrentRow.Index;
+            //txtbox_MaDoAn.Text = grdDoAn.Rows[i].Cells[0].Value.ToString();
+            //txtbox_TenDeTai.Text = grdDoAn.Rows[i].Cells[1].Value.ToString();
+            //txtbox_MaSV.Text = grdDoAn.Rows[i].Cells[2].Value.ToString();
+            //txtbox_GVHD.Text = grdDoAn.Rows[i].Cells[3].Value.ToString();
+            //txtbox_MaTLBC.Text = grdDoAn.Rows[i].Cells[4].Value.ToString();
+            //txtbox_TomTat.Text = grdDoAn.Rows[i].Cells[5].Value.ToString();
+            //txtbox_MaTLBC2.Text = grdDoAn.Rows[i].Cells[6].Value.ToString();
+            //txtbox_FileBC.Text = grdDoAn.Rows[i].Cells[7].Value.ToString();
+            //txtbox_Slide.Text = grdDoAn.Rows[i].Cells[8].Value.ToString();
+            //txtbox_LyLich.Text = grdDoAn.Rows[i].Cells[9].Value.ToString();
+            //txtbox_MaTK.Text = grdDoAn.Rows[i].Cells[10].Value.ToString();
+            //txtbox_TK.Text = grdDoAn.Rows[i].Cells[11].Value.ToString();
+
         }
 
         // ================== TIỆN ÍCH ==================
@@ -438,6 +533,56 @@ namespace formQLmain
                 MessageBox.Show("Xóa thất bại.\nLỗi: " + err,
                                 "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            sql = @"SELECT DA.MADOAN,DA.TENDETAI,DA.MASINHVIEN, DA.GVHD, DA.NAMBAOVE, DA.TOMTAT,DA.MATAILIEUBC,TLBC.MATAILIEUBC,TLBC.FILEBC,
+TLBC.SLIDE,TLBC.LY_LICH,TK.MATUKHOA,TK.TUKHOA FROM DOAN DA 
+JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC=TLBC.MATAILIEUBC JOIN  TUKHOA_DOAN TKDA ON TKDA.MADOAN=DA.MADOAN JOIN TUKHOA TK ON TK.MATUKHOA=TKDA.MATUKHOA   
+WHERE " + comTruong.Text + "= N'" + comGT.Text + "'";// Đảm bảo mọi dữ liệu có tiếng việt vẫn lọc được
+            da = new SqlDataAdapter(sql, conn);
+            dt = new DataTable();
+            da.Fill(dt);
+            grdDoAn.DataSource = dt;
+            grdDoAn.Refresh();
+            //SyncFromGrid();
+            NapCT();
+        }
+
+        private void pnlgrid_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            sql = @" SELECT DA.MADOAN,DA.TENDETAI,DA.MASINHVIEN, DA.GVHD, DA.NAMBAOVE, DA.TOMTAT,DA.MATAILIEUBC,TLBC.MATAILIEUBC,TLBC.FILEBC,
+TLBC.SLIDE,TLBC.LY_LICH,TK.MATUKHOA,TK.TUKHOA FROM DOAN DA 
+JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC=TLBC.MATAILIEUBC JOIN  TUKHOA_DOAN TKDA ON TKDA.MADOAN=DA.MADOAN JOIN TUKHOA TK ON TK.MATUKHOA=TKDA.MATUKHOA   ";
+            da = new SqlDataAdapter(sql, conn);
+            dt = new DataTable();
+            dt.Clear();
+            da.Fill(dt);
+            grdDoAn.DataSource = dt;
+            grdDoAn.Refresh();
+            NapCT();
+            
+            
+
+        }
+
+
+        private void comTruong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sql = "Select distinct " + comTruong.Text + " FROM DOAN DA JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC=TLBC.MATAILIEUBC JOIN  TUKHOA_DOAN TKDA ON TKDA.MADOAN=DA.MADOAN JOIN TUKHOA TK ON TK.MATUKHOA=TKDA.MATUKHOA  ";
+            da = new SqlDataAdapter(sql, conn);
+            DataTable dt1 = new DataTable();
+            da.Fill(dt1);
+            //comGT.Items.Clear();
+            comGT.DataSource = dt1;
+            comGT.DisplayMember = comTruong.Text; //trường hiện ra
+            comGT.ValueMember = comTruong.Text;// trường để lấy 
         }
     }
 }

@@ -104,8 +104,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlgrid = new System.Windows.Forms.Panel();
-            this.label_Thongbao = new System.Windows.Forms.Label();
-            this.label_CapNhat = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -825,8 +824,7 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.label_CapNhat);
-            this.panel10.Controls.Add(this.label_Thongbao);
+            this.panel10.Controls.Add(this.button6);
             this.panel10.Controls.Add(this.button5);
             this.panel10.Controls.Add(this.btnThemMoi);
             this.panel10.Controls.Add(this.btnCapNhat);
@@ -1039,29 +1037,17 @@
             this.pnlgrid.TabIndex = 38;
             this.pnlgrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlgrid_Paint);
             // 
-            // label_Thongbao
+            // button6
             // 
-            this.label_Thongbao.AutoSize = true;
-            this.label_Thongbao.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Thongbao.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.label_Thongbao.Location = new System.Drawing.Point(18, 49);
-            this.label_Thongbao.Name = "label_Thongbao";
-            this.label_Thongbao.Size = new System.Drawing.Size(607, 37);
-            this.label_Thongbao.TabIndex = 16;
-            this.label_Thongbao.Text = "Bạn đang trong quá trình thêm mới sinh viên !";
-            this.label_Thongbao.Visible = false;
-            // 
-            // label_CapNhat
-            // 
-            this.label_CapNhat.AutoSize = true;
-            this.label_CapNhat.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CapNhat.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.label_CapNhat.Location = new System.Drawing.Point(18, 48);
-            this.label_CapNhat.Name = "label_CapNhat";
-            this.label_CapNhat.Size = new System.Drawing.Size(599, 37);
-            this.label_CapNhat.TabIndex = 17;
-            this.label_CapNhat.Text = "Bạn đang trong quá trình cập nhật thông tin !";
-            this.label_CapNhat.Visible = false;
+            this.button6.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(330, 741);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(235, 60);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "In báo cáo";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // frmQLSV
             // 
@@ -1192,7 +1178,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Label label_Thongbao;
-        private System.Windows.Forms.Label label_CapNhat;
+        private System.Windows.Forms.Button button6;
     }
 }
