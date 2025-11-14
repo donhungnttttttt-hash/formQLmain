@@ -26,20 +26,44 @@ namespace formQLmain
             return dataTable;
         }
         //-------------------------------------------------------------------------------------------------------------
-        // hàm để thêm sửa xóa dữ liệu 
+        
+        // ==============hàm check mã tk đã tồn tại chưa =============
+        private bool CheckMaTK(string maTK, SqlConnection conn)
+        {
+            string sql = "SELECT COUNT(*) FROM TAIKHOAN WHERE MATAIKHOAN = @maTK AND VAITRO = 'SinhVien'";
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@maTK", maTK);
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+        }
+        
+        // ================== hàm insert sinh viên ========================
         public bool insert(SinhVien sinhVien, out string error) // insert dữ liệu vàp 
         {
             error = "";
             SqlConnection sqlConnection = Connection.getConnection();
-            string query = "INSERT INTO SINHVIEN (MASINHVIEN, MATK, HOTEN, CHUYENNGANH, LOP, KHOA) " +
-               "VALUES (@maSV, @maTK, @hoTen, @chuyenNganh, @lop, @khoa)";
+            SqlConnection conn = Connection.getConnection();
+            string query = "INSERT INTO SINHVIEN ( MATK, HOTEN, CHUYENNGANH, LOP, KHOA) " +
+               "VALUES (@maTK, @hoTen, @chuyenNganh, @lop, @khoa)";
 
             try
             {
                 sqlConnection.Open();
+                conn.Open();
+
+                // == gọi quả hàm check mã vào đây 
+                if (!CheckMaTK(sinhVien.MaTK, conn))
+                {
+                    error = "Mã sinh viên này không tồn tại.";
+                    return false;
+                }
+
+                // ------------------------------------------------------
                 sqlCommand = new SqlCommand(query, sqlConnection);
 
-                sqlCommand.Parameters.Add("@maSV", SqlDbType.VarChar).Value = sinhVien.MaSV;
+                //sqlCommand.Parameters.Add("@maSV", SqlDbType.VarChar).Value = sinhVien.MaSV;
                 sqlCommand.Parameters.Add("@maTK", SqlDbType.VarChar).Value = sinhVien.MaTK;
                 sqlCommand.Parameters.Add("@hoTen", SqlDbType.NVarChar).Value = sinhVien.HoTen;
                 sqlCommand.Parameters.Add("@chuyenNganh", SqlDbType.NVarChar).Value = sinhVien.ChuyenNganh;

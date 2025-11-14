@@ -115,6 +115,8 @@ namespace formQLmain
         }
         private ModifyDanhSachDoAn repo;
         private string maDoAnCu = "";   // lưu MADOAN gốc để cho phép đổi khóa khi sửa
+        private string maTLCu = ""; // lưu mã TLBC gốc để cho phép đổi khóa khi sửa
+        // ================ LOAD FORM ================
         // ================ LOAD FORM ================
         private void frmDSDA_Load(object sender, EventArgs e) /// from load 
         {
@@ -156,7 +158,14 @@ namespace formQLmain
                 txtbox_GVHD.Text.Trim(),
                 dtpick_Nambaove.Checked ? dtpick_Nambaove.Value.Date : (DateTime?)null,
                 txtbox_MaTLBC.Text.Trim(),
-                txtbox_TomTat.Text.Trim()
+                txtbox_TomTat.Text.Trim(),
+                txtbox_MaTLBC2.Text.Trim(),
+                txtbox_FileBC.Text.Trim(),
+                txtbox_Slide.Text.Trim(),
+                txtbox_LyLich.Text.Trim(),
+                txtbox_MaTK.Text.Trim(),
+                txtbox_TK.Text.Trim()
+
             );
 
             string err;
@@ -176,72 +185,12 @@ namespace formQLmain
         // ================ XÓA ================
         private void btnXoa_Click_1(object sender, EventArgs e)
         {
-            string maDA = txtbox_MaDoAn.Text.Trim();
-            if (string.IsNullOrWhiteSpace(maDA) && grdDoAn.CurrentRow != null)
-                maDA = grdDoAn.CurrentRow.Cells["MADOAN"].Value?.ToString();
-
-            if (string.IsNullOrWhiteSpace(maDA))
-            {
-                MessageBox.Show("Vui lòng chọn đồ án để xóa.",
-                                "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var confirm = MessageBox.Show($"Bạn có chắc muốn xóa đồ án: {maDA}?",
-                                          "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confirm != DialogResult.Yes) return;
-
-            string err;
-            if (repo.delete(maDA, out err))
-            {
-                MessageBox.Show("Xóa thành công.", "Thông báo",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                grdDoAn.DataSource = repo.getAllDoAn();
-                ClearInputs();
-            }
-            else
-            {
-                MessageBox.Show("Xóa thất bại.\nLỗi: " + err,
-                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         // ================ SỬA (có thể đổi MADOAN) ================
-        private void btnSua_Click_1(object sender, EventArgs e)
+        private void btnSua_Click_1(object sender, EventArgs e) // Sửa cũ 
         {
-            if (string.IsNullOrWhiteSpace(maDoAnCu) && grdDoAn.CurrentRow != null)
-                maDoAnCu = grdDoAn.CurrentRow.Cells["MADOAN"].Value?.ToString();
-
-            if (string.IsNullOrWhiteSpace(maDoAnCu))
-            {
-                MessageBox.Show("Vui lòng chọn đồ án cần sửa từ bảng.",
-                                "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var da = new DanhSachDoAn(
-                txtbox_MaDoAn.Text.Trim(),
-                txtbox_TenDeTai.Text.Trim(),
-                txtbox_MaSV.Text.Trim(),
-                txtbox_GVHD.Text.Trim(),
-                dtpick_Nambaove.Checked ? dtpick_Nambaove.Value.Date : (DateTime?)null,
-                txtbox_MaTLBC.Text.Trim(),
-                txtbox_TomTat.Text.Trim()
-            );
-
-            string err;
-            if (repo.update(da, maDoAnCu, out err))
-            {
-                MessageBox.Show("Cập nhật đồ án thành công.", "Thông báo",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                grdDoAn.DataSource = repo.getAllDoAn();
-                maDoAnCu = da.MaDoAn; // cập nhật lại mã gốc nếu tiếp tục sửa
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật thất bại.\n" + err,
-                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
         // ================== ĐỒNG BỘ GRID → CONTROL ==================
         private void grdDoAn_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -266,6 +215,13 @@ namespace formQLmain
             txtbox_GVHD.Text = row.Cells["GVHD"].Value?.ToString() ?? "";
             txtbox_MaTLBC.Text = row.Cells["MATAILIEUBC"].Value?.ToString() ?? "";
             txtbox_TomTat.Text = row.Cells["TOMTAT"].Value?.ToString() ?? "";
+            //
+            txtbox_MaTLBC2.Text = row.Cells["MATAILIEUBC"].Value?.ToString() ?? "";
+            txtbox_FileBC.Text = row.Cells["FILEBC"].Value?.ToString() ?? "";
+            txtbox_Slide.Text = row.Cells["SLIDE"].Value?.ToString() ?? "";
+            txtbox_LyLich.Text = row.Cells["LY_LICH"].Value?.ToString() ?? "";
+            txtbox_MaTK.Text = row.Cells["MATUKHOA"].Value?.ToString() ?? "";
+            txtbox_TK.Text = row.Cells["TUKHOA"].Value?.ToString() ?? "";
 
             // DateTimePicker: set null/giá trị
             var cell = row.Cells["NAMBAOVE"].Value;
@@ -290,8 +246,16 @@ namespace formQLmain
             txtbox_MaSV.Clear();
             txtbox_GVHD.Clear();
             txtbox_MaTLBC.Clear();
+            txtbox_MaTLBC2.Clear();
             txtbox_TomTat.Clear();
             dtpick_Nambaove.Checked = false;
+            txtbox_MaTLBC.Clear();
+            txtbox_FileBC.Clear();
+            txtbox_Slide.Clear();
+            txtbox_LyLich.Clear();
+            txtbox_MaTK.Clear();
+            txtbox_TK.Clear();
+
             maDoAnCu = "";
         }
 
@@ -324,6 +288,156 @@ namespace formQLmain
         private void grdDoAn_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e) // nút thêm giả 
+        {
+            int i = grdDoAn.Rows.Count - 1; //#########
+            grdDoAn.CurrentCell = grdDoAn[0, i]; // nhảy đến dòng i (tức là dòng cuối  dòng cuối 
+            MessageBox.Show("Bạn hãy nhập thông tin  vào các ô thông tin, sau đó nhấn nút Lưu");
+            txtbox_MaDoAn.Focus();    // chuyển con trỏ đến textbox mã nhóm 
+            ClearInputs();
+            //#########################################################3
+            btnLuu.Visible = true; // hiện nút Lưu lên 
+            // nút lưu ở đây là nút thêm thật 
+            // thêm mới là thêm giả 
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            //
+            string maSV = txtbox_MaSV.Text.Trim();
+
+            // Nếu để trống
+            if (string.IsNullOrEmpty(maSV))
+            {
+                MessageBox.Show("Vui lòng nhập mã sinh viên.", "Cảnh báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var da = new DanhSachDoAn(
+                null,                               // MADOAN -> để null
+                txtbox_TenDeTai.Text.Trim(),        // Tên đề tài
+                txtbox_MaSV.Text.Trim(),            // Mã sinh viên
+                txtbox_GVHD.Text.Trim(),            // GVHD
+                dtpick_Nambaove.Checked ? dtpick_Nambaove.Value.Date : (DateTime?)null,
+
+                null,                               // MATAILIEUBC (1) -> để null
+                txtbox_TomTat.Text.Trim(),          // Tóm tắt
+
+                null,                               // MATAILIEUBC (2) -> bỏ
+                txtbox_FileBC.Text.Trim(),          // FILE BC
+                txtbox_Slide.Text.Trim(),           // Slide
+                txtbox_LyLich.Text.Trim(),          // Lý lịch
+
+                null,                               // MATUKHOA -> để null
+                txtbox_TK.Text.Trim()               // Từ khóa
+            );
+
+            string err;
+            if (repo.insert(da, out err))
+            {
+                MessageBox.Show("Thêm đồ án thành công.", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                grdDoAn.DataSource = repo.getAllDoAn();
+                ClearInputs();
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại.\nLỗi: " + err,
+                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(maDoAnCu) && grdDoAn.CurrentRow != null)
+                maDoAnCu = grdDoAn.CurrentRow.Cells["MADOAN"].Value?.ToString();
+
+            if (string.IsNullOrWhiteSpace(maDoAnCu))
+            {
+                MessageBox.Show("Vui lòng chọn đồ án cần sửa từ bảng.",
+                                "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var da = new DanhSachDoAn(
+                txtbox_MaDoAn.Text.Trim(),
+                txtbox_TenDeTai.Text.Trim(),
+                txtbox_MaSV.Text.Trim(),
+                txtbox_GVHD.Text.Trim(),
+                dtpick_Nambaove.Checked ? dtpick_Nambaove.Value.Date : (DateTime?)null,
+                txtbox_MaTLBC.Text.Trim(),
+                txtbox_TomTat.Text.Trim(),
+                txtbox_MaTLBC2.Text.Trim(),
+                txtbox_FileBC.Text.Trim(),
+                txtbox_Slide.Text.Trim(),
+                txtbox_LyLich.Text.Trim(),
+                txtbox_MaTK.Text.Trim(),
+                txtbox_TK.Text.Trim()
+            );
+
+            string err;
+            if (repo.update(da, maDoAnCu, out err))
+            {
+                MessageBox.Show("Cập nhật đồ án thành công.", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                grdDoAn.DataSource = repo.getAllDoAn();
+                maDoAnCu = da.MaDoAn; // cập nhật lại mã gốc nếu tiếp tục sửa
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại.\n" + err,
+                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtbox_MaDoAn.Text))
+            {
+                MessageBox.Show("Bạn chưa chọn đồ án để xóa!",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var confirm = MessageBox.Show(
+                $"Bạn có chắc muốn xóa đồ án {txtbox_MaDoAn.Text.Trim()} không?",
+                "Xác nhận",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.No)
+                return;
+
+            // Tạo object DanhSachDoAn chỉ chứa thông tin cần thiết cho xóa toàn bộ
+            DanhSachDoAn da = new DanhSachDoAn()
+            {
+                MaDoAn = txtbox_MaDoAn.Text.Trim(),
+                MaTaiLieuBC = txtbox_MaTLBC.Text.Trim(),
+                MaTuKhoa = txtbox_MaTK.Text.Trim()
+            };
+
+            string err;
+            if (repo.delete(da, out err))
+            {
+                MessageBox.Show("Xóa thành công!", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                grdDoAn.DataSource = repo.getAllDoAn();
+                ClearInputs();
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại.\nLỗi: " + err,
+                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
