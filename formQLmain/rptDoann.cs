@@ -13,5 +13,14 @@ namespace formQLmain
             InitializeComponent();
         }
 
+        private void xrLabel6_BeforePrint(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void xrTableCell17_BeforePrint(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
