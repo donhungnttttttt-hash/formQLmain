@@ -16,7 +16,9 @@ namespace formQLmain
 {
     public partial class frmBaocao : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True");
+        //  SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QQ88INT\\SQLEXPRESS;Initial Catalog=DOAN1211;Integrated Security=True;TrustServerCertificate=True;Encrypt=False");
+
         SqlDataAdapter da = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
