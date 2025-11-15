@@ -567,8 +567,12 @@ JOIN TAILIEUBC TLBC ON DA.MATAILIEUBC=TLBC.MATAILIEUBC JOIN  TUKHOA_DOAN TKDA ON
             grdDoAn.DataSource = dt;
             grdDoAn.Refresh();
             NapCT();
-            
-            
+
+            comTruong.SelectedIndex = -1;
+            comGT.SelectedIndex = -1;
+            grdDoAn.DataSource = repo.getAllDoAn(); ;
+
+
 
         }
 
