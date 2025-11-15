@@ -654,9 +654,9 @@
             // 
             this.pnlgrid.Controls.Add(this.panel10);
             this.pnlgrid.Controls.Add(this.grdDoAn);
-            this.pnlgrid.Location = new System.Drawing.Point(1743, 295);
+            this.pnlgrid.Location = new System.Drawing.Point(515, 295);
             this.pnlgrid.Name = "pnlgrid";
-            this.pnlgrid.Size = new System.Drawing.Size(1145, 1261);
+            this.pnlgrid.Size = new System.Drawing.Size(2373, 1261);
             this.pnlgrid.TabIndex = 40;
             this.pnlgrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlgrid_Paint);
             // 
