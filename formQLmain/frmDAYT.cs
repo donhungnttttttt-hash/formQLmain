@@ -1,4 +1,5 @@
 ﻿using DevExpress.CodeParser;
+using DevExpress.DataAccess.Native.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,10 @@ namespace formQLmain
     public partial class frmDAYT : Form
     {
         //private DataTable dtYeuThich;
-        SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True");
+        //  SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True");
+        SqlConnection conn = new SqlConnection("Data Source = DESKTOP - QQ88INT\\SQLEXPRESS;Initial Catalog = DOAN1211; Integrated Security = True; TrustServerCertificate=True;Encrypt=False");
+
+        
         SqlDataAdapter da = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
@@ -210,6 +214,11 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 
                 }
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
 
         private void frmDAYT_Load(object sender, EventArgs e)

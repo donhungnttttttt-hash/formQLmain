@@ -435,4 +435,10 @@
   <ItemGroup>
     <None Include="Resources\menudark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heartdark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timden2.png" />
+  </ItemGroup>
 </Project>

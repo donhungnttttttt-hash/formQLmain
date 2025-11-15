@@ -133,6 +133,16 @@ namespace formQLmain.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap heartdark {
+            get {
+                object obj = ResourceManager.GetObject("heartdark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap help_dark {
             get {
                 object obj = ResourceManager.GetObject("help_dark", resourceCulture);
@@ -506,6 +516,16 @@ namespace formQLmain.Properties {
         internal static System.Drawing.Bitmap Thiết_kế_chưa_có_tên {
             get {
                 object obj = ResourceManager.GetObject("Thiết kế chưa có tên", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap timden2 {
+            get {
+                object obj = ResourceManager.GetObject("timden2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
