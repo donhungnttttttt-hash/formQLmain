@@ -90,7 +90,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.toolTipDeleteDAYT = new System.Windows.Forms.ToolTip(this.components);
             this.panel15.SuspendLayout();
@@ -116,7 +115,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNext
@@ -663,9 +661,9 @@
             this.pnlgrid.Controls.Add(this.frmEnd);
             this.pnlgrid.Controls.Add(this.panel10);
             this.pnlgrid.Controls.Add(this.grdDAYT);
-            this.pnlgrid.Location = new System.Drawing.Point(483, 308);
+            this.pnlgrid.Location = new System.Drawing.Point(483, 303);
             this.pnlgrid.Name = "pnlgrid";
-            this.pnlgrid.Size = new System.Drawing.Size(2366, 1261);
+            this.pnlgrid.Size = new System.Drawing.Size(2366, 1266);
             this.pnlgrid.TabIndex = 46;
             this.pnlgrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlgrid_Paint);
             // 
@@ -682,7 +680,7 @@
             this.GVHD,
             this.NAMBAOVE,
             this.TOMTAT});
-            this.grdDAYT.Location = new System.Drawing.Point(0, 41);
+            this.grdDAYT.Location = new System.Drawing.Point(0, 3);
             this.grdDAYT.Name = "grdDAYT";
             this.grdDAYT.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -696,7 +694,7 @@
             this.grdDAYT.RowHeadersWidth = 82;
             this.grdDAYT.RowTemplate.Height = 33;
             this.grdDAYT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDAYT.Size = new System.Drawing.Size(1736, 1003);
+            this.grdDAYT.Size = new System.Drawing.Size(1736, 1041);
             this.grdDAYT.TabIndex = 0;
             this.grdDAYT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDoAn_CellContentClick);
             // 
@@ -822,30 +820,20 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox13);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Location = new System.Drawing.Point(489, 16);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(3000, 312);
+            this.groupBox1.Size = new System.Drawing.Size(3000, 258);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::formQLmain.Properties.Resources.icons8_man_with_a_notebook_100;
-            this.pictureBox13.Location = new System.Drawing.Point(22, 40);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(216, 194);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 40;
-            this.pictureBox13.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Navy;
-            this.label11.Location = new System.Drawing.Point(559, 196);
+            this.label11.Location = new System.Drawing.Point(724, 27);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(557, 59);
             this.label11.TabIndex = 39;
@@ -888,7 +876,6 @@
             this.panelMenu.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -899,8 +886,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnTLKT;
         private System.Windows.Forms.FlowLayoutPanel dropdown2;
         private System.Windows.Forms.Panel panel8;

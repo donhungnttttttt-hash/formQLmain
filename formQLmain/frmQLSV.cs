@@ -84,7 +84,7 @@ namespace formQLmain
         private void btnTLKT_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmTLKT f = new frmTLKT();
+            frmTracuu f = new frmTracuu();
             f.Show();
         }
 
@@ -173,82 +173,14 @@ namespace formQLmain
         private void btnThem_Click(object sender, EventArgs e)
         {// nút thêm thật 
 
-            string MaSV = txtbox_MaSV.Text;
-            string MaTK = txtbox_MaTK.Text;
-            string HoTen = txtbox_Hovaten.Text;
-            string ChuyenNganh = txtbox_Chuyennganh.Text;
-            string Lop = txtbox_Lop.Text;
-            string Khoa = txtbox_Khoa.Text;
-            sinhVien = new SinhVien(MaSV, MaTK, HoTen, ChuyenNganh, Lop, Khoa);
-            string err;
-            if (modify.insert(sinhVien, out err))
-            {
-                MessageBox.Show("Thêm sinh viên thành công", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnLuu.Visible = false; // ẩn nút Lưu lên 
-                label_Thongbao.Visible = false;
-                grdSinhVien.DataSource = modify.getAllSinhVien();
-            }
-            else
-            {
-                MessageBox.Show("Thêm sinh viên thất bại\nLỗi: " + err, "Lỗi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            // đang bị lỗi rất to là khi thêm sinh viên thì phải thêm mã TK ?? mà mã TK chưa có trong bảng tài khoản thì không thêm được nên bị xung đột
-            // nên là phải thêm tài khoản trước rồi mới thêm sinh viên được
-            // rất là kỳ kì , hoặc nên tạo dạng nhập khác để ko bị nhầm 
+            
         }
 
         private void btnSua_Click(object sender, EventArgs e)
-        {// đây là nút sửa thật 
-            // Kiểm tra có chọn dòng chưa
-            if (string.IsNullOrWhiteSpace(maSVCu))
-            {
-                MessageBox.Show("Vui lòng chọn sinh viên cần sửa từ bảng.",
-                    "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            SinhVien sv = new SinhVien(
-                txtbox_MaSV.Text.Trim(),
-                txtbox_MaTK.Text.Trim(),
-                txtbox_Hovaten.Text.Trim(),
-                txtbox_Chuyennganh.Text.Trim(),
-                txtbox_Lop.Text.Trim(),
-                txtbox_Khoa.Text.Trim()
-            );
-
-            string err;
-            if (modify.update(sv, maSVCu, out err)) // hàm hợp nhất (SET MASV=@maSV WHERE MASV=@maSVCu)
-            {
-                MessageBox.Show("Cập nhật sinh viên thành công.",
-                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                grdSinhVien.DataSource = modify.getAllSinhVien();
-                
-
-                btnCapNhat.Visible = false; // hiện nút cập nhật lên
-                label_CapNhat.Visible = false;
-
-                // Cập nhật lại mã cũ thành mã mới (phục vụ cho lần sửa kế tiếp)
-                //maSVCu = sv.MaSV;
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật thất bại:\n" + err,
-                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void grdSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) SyncFromGrid();
         }
 
-        private void grdSinhVien_SelectionChanged(object sender, EventArgs e)
-        {
-            SyncFromGrid();
-        }
+        
 
         // Hàm đồng bộ TextBox với dòng hiện tại
         private void SyncFromGrid()
@@ -268,51 +200,7 @@ namespace formQLmain
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            // Lấy MaSV từ textbox (hoặc từ dòng đang chọn)
-            string maSV = txtbox_MaSV.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(maSV))
-            {
-                // Nếu người dùng chưa điền textbox, thử lấy từ row đang chọn
-                if (grdSinhVien.CurrentRow != null && grdSinhVien.CurrentRow.Index >= 0)
-                {
-                    maSV = grdSinhVien.CurrentRow.Cells["MASINHVIEN"].Value?.ToString()?.Trim();
-                }
-            }
-
-            if (string.IsNullOrWhiteSpace(maSV))
-            {
-                MessageBox.Show("Vui lòng chọn một sinh viên để xóa.", "Thiếu thông tin",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Hỏi xác nhận
-            var confirm = MessageBox.Show(
-                $"Bạn có chắc muốn xóa sinh viên có mã: {maSV}?",
-                "Xác nhận xóa",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-            if (confirm != DialogResult.Yes) return;
-
-            string err;
-            if (modify.delete(maSV, out err))
-            {
-                MessageBox.Show("Xóa sinh viên thành công.", "Thông báo",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Load lại dữ liệu
-                grdSinhVien.DataSource = modify.getAllSinhVien();
-
-                // Xóa nội dung các ô nhập cho sạch sẽ (tùy chọn)
-                ClearInputs();
-            }
-            else
-            {
-                MessageBox.Show("Xóa sinh viên thất bại.\nLỗi: " + err, "Lỗi",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
         }
 
         // Hàm tiện ích làm sạch textbox (tùy chọn)///////
@@ -371,11 +259,7 @@ namespace formQLmain
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            textbox_TimKiem.Clear();
-            grdSinhVien.DataSource = modify.getAllSinhVien();
-        }
+      
 
         private void label8_Click(object sender, EventArgs e)
         {
@@ -392,29 +276,11 @@ namespace formQLmain
         }
 
         private void btnThemMoi_Click(object sender, EventArgs e)
-        {//####################################################3
-            int i = grdSinhVien.Rows.Count - 1; //#########
-            grdSinhVien.CurrentCell = grdSinhVien[0, i]; // nhảy đến dòng i (tức là dòng cuối  dòng cuối 
-            MessageBox.Show("Bạn hãy nhập thông tin  vào các ô thông tin, sau đó nhấn nút Lưu");
-            txtbox_MaSV.Focus();    // chuyển con trỏ đến textbox mã nhóm 
-            ClearInputs();
-            //#########################################################3
-            btnLuu.Visible = true; // hiện nút Lưu lên 
-            label_Thongbao.Visible = true;
-            // nút lưu ở đây là nút thêm thật 
-            // thêm mới là thêm giả 
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
         {
-            SyncFromGrid();
-            MessageBox.Show("Bạn hãy nhập thông tin cần thay đổi vào các ô thông tin, sau đó nhấn nút Cập nhật");
-            //txtbox_MaSV.Focus();    // chuyển con trỏ đến textbox mã nhóm 
-            btnCapNhat.Visible = true; // hiện nút cập nhật lên
-            label_CapNhat.Visible = true;
 
         }
+
+       
 
         private void comboBox_ChuyenNganh_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -434,15 +300,279 @@ namespace formQLmain
             rpt.ShowPreview();*/
         }
 
-        private void comboBox_ChuyenNganh_SelectedIndexChanged(object sender, EventArgs e)
+        private void menutimer_Tick(object sender, EventArgs e)
+        {
+            // trượt dọc đã làm được 
+            if (Expandmenu == false)
+            {
+                panelMenu.Width += 25;
+                if (panelMenu.Width >= panelMenu.MaximumSize.Width)
+                {
+
+                    menutimer.Stop();
+                    Expandmenu = true;
+                    pictureBox12.Visible = true;
+                    panelALL.Left = 245;
+                }
+            }
+            else
+            {
+                panelMenu.Width -= 25;
+                if (panelMenu.Width <= panelMenu.MinimumSize.Width)
+                {
+                    menutimer.Stop();
+                    Expandmenu = false;
+                    pictureBox12.Visible = false;
+                    panelALL.Left = 73;
+                }
+
+            }
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+        // -================= nút cập nhật thực hiện lệnh update ==========================
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            // đây là nút sửa thật 
+            // Kiểm tra có chọn dòng chưa
+            if (string.IsNullOrWhiteSpace(maSVCu))
+            {
+                MessageBox.Show("Vui lòng chọn sinh viên cần sửa từ bảng.",
+                    "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            SinhVien sv = new SinhVien(
+                txtbox_MaSV.Text.Trim(),
+                txtbox_MaTK.Text.Trim(),
+                txtbox_Hovaten.Text.Trim(),
+                txtbox_Chuyennganh.Text.Trim(),
+                txtbox_Lop.Text.Trim(),
+                txtbox_Khoa.Text.Trim()
+            );
+
+            string err;
+            if (modify.update(sv, maSVCu, out err)) // hàm hợp nhất (SET MASV=@maSV WHERE MASV=@maSVCu)
+            {
+                MessageBox.Show("Cập nhật sinh viên thành công.",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                grdSinhVien.DataSource = modify.getAllSinhVien();
+
+
+                btnCapNhat.Visible = false; // hiện nút cập nhật lên
+                label_CapNhat.Visible = false;
+
+                // Cập nhật lại mã cũ thành mã mới (phục vụ cho lần sửa kế tiếp)
+                //maSVCu = sv.MaSV;
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại:\n" + err,
+                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // Nút lưu thực hiện lệnh insert ================================
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            string MaSV = txtbox_MaSV.Text;
+            string MaTK = txtbox_MaTK.Text;
+            string HoTen = txtbox_Hovaten.Text;
+            string ChuyenNganh = txtbox_Chuyennganh.Text;
+            string Lop = txtbox_Lop.Text;
+            string Khoa = txtbox_Khoa.Text;
+            sinhVien = new SinhVien(MaSV, MaTK, HoTen, ChuyenNganh, Lop, Khoa);
+            string err;
+            if (modify.insert(sinhVien, out err))
+            {
+                MessageBox.Show("Thêm sinh viên thành công", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnLuu.Visible = false; // ẩn nút Lưu lên 
+                label_Thongbao.Visible = false;
+                grdSinhVien.DataSource = modify.getAllSinhVien();
+            }
+            else
+            {
+                MessageBox.Show("Thêm sinh viên thất bại\nLỗi: " + err, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            // đang bị lỗi rất to là khi thêm sinh viên thì phải thêm mã TK ?? mà mã TK chưa có trong bảng tài khoản thì không thêm được nên bị xung đột
+            // nên là phải thêm tài khoản trước rồi mới thêm sinh viên được
+            // rất là kỳ kì , hoặc nên tạo dạng nhập khác để ko bị nhầm 
+        }
+
+        private void btnThemMoi_Click_1(object sender, EventArgs e)
+        {
+            //####################################################3
+            int i = grdSinhVien.Rows.Count - 1; //#########
+            grdSinhVien.CurrentCell = grdSinhVien[0, i]; // nhảy đến dòng i (tức là dòng cuối  dòng cuối 
+            MessageBox.Show("Bạn hãy nhập thông tin  vào các ô thông tin, sau đó nhấn nút Lưu");
+            txtbox_MaSV.Focus();    // chuyển con trỏ đến textbox mã nhóm 
+            ClearInputs();
+            //#########################################################3
+            btnLuu.Visible = true; // hiện nút Lưu lên 
+            label_Thongbao.Visible = true;
+            btn_Thoat.Visible = true;
+
+            // nút lưu ở đây là nút thêm thật 
+            // thêm mới là thêm giả 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            SyncFromGrid();
+            MessageBox.Show("Bạn hãy nhập thông tin cần thay đổi vào các ô thông tin, sau đó nhấn nút Cập nhật");
+            //txtbox_MaSV.Focus();    // chuyển con trỏ đến textbox mã nhóm 
+            btnCapNhat.Visible = true; // hiện nút cập nhật lên
+            label_CapNhat.Visible = true;
+            btn_Thoat2.Visible = true;
+
+        }
+
+        private void grdSinhVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) SyncFromGrid();
+        }
+
+        private void grdSinhVien_SelectionChanged_1(object sender, EventArgs e)
+        {
+            SyncFromGrid();
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            // Lấy MaSV từ textbox (hoặc từ dòng đang chọn)
+            string maSV = txtbox_MaSV.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(maSV))
+            {
+                // Nếu người dùng chưa điền textbox, thử lấy từ row đang chọn
+                if (grdSinhVien.CurrentRow != null && grdSinhVien.CurrentRow.Index >= 0)
+                {
+                    maSV = grdSinhVien.CurrentRow.Cells["MASINHVIEN"].Value?.ToString()?.Trim();
+                }
+            }
+
+            if (string.IsNullOrWhiteSpace(maSV))
+            {
+                MessageBox.Show("Vui lòng chọn một sinh viên để xóa.", "Thiếu thông tin",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Hỏi xác nhận
+            var confirm = MessageBox.Show(
+                $"Bạn có chắc muốn xóa sinh viên có mã: {maSV}?",
+                "Xác nhận xóa",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (confirm != DialogResult.Yes) return;
+
+            string err;
+            if (modify.delete(maSV, out err))
+            {
+                MessageBox.Show("Xóa sinh viên thành công.", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Load lại dữ liệu
+                grdSinhVien.DataSource = modify.getAllSinhVien();
+
+                // Xóa nội dung các ô nhập cho sạch sẽ (tùy chọn)
+                ClearInputs();
+            }
+            else
+            {
+                MessageBox.Show("Xóa sinh viên thất bại.\nLỗi: " + err, "Lỗi",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRefresh_Click_1(object sender, EventArgs e)
+        {
+            textbox_TimKiem.Clear();
+            comboBox_ChuyenNganh.SelectedIndex = -1;
+            comboBox_Khoa.SelectedIndex = -1;
+            comboBox_Lop.SelectedIndex = -1; // làm sạch combobox rồi nhé
+            grdSinhVien.DataSource = modify.getAllSinhVien();
+        }
+
+        private void btn__Click(object sender, EventArgs e)
+        {
+            
+            grdSinhVien.CurrentCell = grdSinhVien[0, 2];
+            SyncFromGrid();
+            btnLuu.Visible = false; // hiện nút Lưu lên 
+            label_Thongbao.Visible = false;
+            btn_Thoat.Visible = false;
+
+        }
+
+        private void btn_Thoat2_Click(object sender, EventArgs e)
+        {
+            
+            grdSinhVien.CurrentCell = grdSinhVien[0, 2];
+           // SyncFromGrid();
+            btnCapNhat.Visible = false; // hiện nút Lưu lên 
+            label_CapNhat.Visible = false;
+            btn_Thoat2.Visible = false;
+        }
+
+        private void panelALL_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
+        //private void comboBox_ChuyenNganh_SelectedIndexChanged(object sender, EventArgs e)
+        // {
 
-        }
+        //  }
         // Cách làm bây giờ là đẩy nút thêm cũ  sang phải và đổi tên thành cập nhật 
         // tạo một nút thêm giả: nút này chỉ để nó trắng xóa và nó nhảy về cuối 
         //Xem hét việc thêm nút hủy thêm, kiểu nhắn vào thêm xong ko muốn thêm nữa thì bấm hủy

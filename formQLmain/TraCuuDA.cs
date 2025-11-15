@@ -1,4 +1,5 @@
 ﻿//using DevExpress.XtraRichEdit.Import.Html;
+using DevExpress.DataAccess.Native.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,9 @@ namespace formQLmain
 
     public partial class frmTracuu : Form
     {
-        SqlConnection conn=new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True");
+        //  SqlConnection conn=new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QQ88INT\\SQLEXPRESS;Initial Catalog=DOAN1211;Integrated Security=True;TrustServerCertificate=True;Encrypt=False");
+
         SqlDataAdapter da = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
@@ -467,7 +470,10 @@ GROUP BY
             string maSinhVien = "SV001"; // có thể truyền từ form đăng nhập
             string maDoAn = grdTracuu.Rows[i].Cells["MADOAN"].Value.ToString();
 
-            using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True"))
+            //  using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-D4IEITM3\\SQLEXPRESS02;Initial Catalog=DOAN;User ID=sa;Password=Sa@12345;TrustServerCertificate=True"))
+            using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QQ88INT\\SQLEXPRESS;Initial Catalog=DOAN1211;Integrated Security=True;TrustServerCertificate=True;Encrypt=False"))
+
+              //  Data Source = DESKTOP - QQ88INT\SQLEXPRESS; Initial Catalog = DOAN1211; Integrated Security = True; TrustServerCertificate = True; Encrypt = False
             {
                 conn.Open();
 
@@ -521,26 +527,7 @@ GROUP BY
 
         private void DSDAdrop_Tick(object sender, EventArgs e)
         {
-            if (Expand == false)
-            {
-                dropdown2.Height += 15;
-                if (dropdown2.Height >= dropdown2.MaximumSize.Height)
-                {
-
-                    DSDAdrop.Stop();
-                    Expand = true;
-                }
-            }
-            else
-            {
-                dropdown2.Height -= 15;
-                if (dropdown2.Height <= dropdown2.MinimumSize.Height)
-                {
-
-                    DSDAdrop.Stop();
-                    Expand = false;
-                }
-            }
+            
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -555,26 +542,6 @@ GROUP BY
         private void TroGiupdrop_Tick(object sender, EventArgs e)
         {
 
-            if (Expand2 == false)
-            {
-                trogiup.Height += 15;
-                if (trogiup.Height >= trogiup.MaximumSize.Height)
-                {
-
-                    TroGiupdrop.Stop();
-                    Expand2 = true;
-                }
-            }
-            else
-            {
-                trogiup.Height -= 15;
-                if (trogiup.Height <= trogiup.MinimumSize.Height)
-                {
-
-                    TroGiupdrop.Stop();
-                    Expand2 = false;
-                }
-            }
         }
 
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -824,6 +791,15 @@ GROUP BY
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+           
+            frmDAYT f = new frmDAYT();
+            f.Show();
+            this.Hide();
 
         }
 

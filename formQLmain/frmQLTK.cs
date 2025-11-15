@@ -29,18 +29,22 @@ namespace formQLmain
 
         private void btnDSDA_Click(object sender, EventArgs e)
         {
+
+            this.Close();
             frmDSDA f = new frmDSDA();
             f.Show();
         }
 
         private void btnTLKT_Click(object sender, EventArgs e)
         {
-            frmTLKT f = new frmTLKT();
+            this.Close();
+            frmTracuu f = new frmTracuu();
             f.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Close();
             frmQLSV f = new frmQLSV();
             f.Show();
         }
@@ -169,102 +173,6 @@ namespace formQLmain
             txtbox_NgayCapNhat.Clear();
             txtbox_VaiTro.Clear();
         }
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            {
-                var tk = new TaiKhoan(
-                    txtbox_MaTK.Text.Trim(),
-                    txtbox_Email.Text.Trim(),
-                    txtbox_MatKhau.Text.Trim(),
-                    ParseNullableDate(txtbox_NgayCap.Text),
-                    ParseNullableDate(txtbox_NgayCapNhat.Text),
-                    txtbox_VaiTro.Text.Trim()
-                );
-
-                string err;
-                if (tkRepo.insert(tk, out err))
-                {
-                    MessageBox.Show("Thêm tài khoản thành công.", "Thông báo",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    grdTaiKhoan.DataSource = tkRepo.getAllTaiKhoan();
-                    ClearInputs();
-                }
-                else
-                {
-                    MessageBox.Show("Thêm tài khoản thất bại.\nLỗi: " + err,
-                        "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(maTKCu) && grdTaiKhoan.CurrentRow != null)
-                maTKCu = grdTaiKhoan.CurrentRow.Cells["MATK"].Value?.ToString();
-
-            if (string.IsNullOrWhiteSpace(maTKCu))
-            {
-                MessageBox.Show("Vui lòng chọn tài khoản cần sửa từ bảng.",
-                    "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var tk = new TaiKhoan(
-                txtbox_MaTK.Text.Trim(),
-                txtbox_Email.Text.Trim(),
-                txtbox_MatKhau.Text.Trim(),
-                ParseNullableDate(txtbox_NgayCap.Text),
-                ParseNullableDate(txtbox_NgayCapNhat.Text),
-                txtbox_VaiTro.Text.Trim()
-            );
-
-            string err;
-            if (tkRepo.update(tk, maTKCu, out err))
-            {
-                MessageBox.Show("Cập nhật tài khoản thành công.", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                grdTaiKhoan.DataSource = tkRepo.getAllTaiKhoan();
-                maTKCu = tk.MaTK; // cập nhật mã gốc nếu tiếp tục sửa
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật thất bại.\n" + err,
-                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            string maTK = txtbox_MaTK.Text.Trim();
-            if (string.IsNullOrWhiteSpace(maTK) && grdTaiKhoan.CurrentRow != null)
-                maTK = grdTaiKhoan.CurrentRow.Cells["MATK"].Value?.ToString();
-
-            if (string.IsNullOrWhiteSpace(maTK))
-            {
-                MessageBox.Show("Vui lòng chọn tài khoản để xóa.",
-                    "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var confirm = MessageBox.Show($"Bạn có chắc muốn xóa tài khoản: {maTK}?",
-                "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confirm != DialogResult.Yes) return;
-
-            string err;
-            if (tkRepo.delete(maTK, out err))
-            {
-                MessageBox.Show("Xóa tài khoản thành công.", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                grdTaiKhoan.DataSource = tkRepo.getAllTaiKhoan();
-                ClearInputs();
-            }
-            else
-            {
-                MessageBox.Show("Xóa thất bại.\nLỗi: " + err,
-                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         private void grdTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) SyncFromGrid();
@@ -320,15 +228,234 @@ namespace formQLmain
 
         private void button5_Click(object sender, EventArgs e)
         {
+           
+            
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void menutimer_Tick(object sender, EventArgs e)
+        {
+            // trượt dọc đã làm được 
+            if (Expandmenu == false)
+            {
+                panelMenu.Width += 25;
+                if (panelMenu.Width >= panelMenu.MaximumSize.Width)
+                {
+
+                    menutimer.Stop();
+                    Expandmenu = true;
+                    pictureBox12.Visible = true;
+                    panelALL.Left = 245;
+                }
+            }
+            else
+            {
+                panelMenu.Width -= 25;
+                if (panelMenu.Width <= panelMenu.MinimumSize.Width)
+                {
+                    menutimer.Stop();
+                    Expandmenu = false;
+                    pictureBox12.Visible = false;
+                    panelALL.Left = 73;
+                }
+
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            menutimer.Start();
+            Console.WriteLine(Expandmenu);
+            pictureBox12.Visible = true;
+            Console.ReadLine();
+        }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnSua_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SyncFromGrid();
+            MessageBox.Show("Bạn hãy nhập thông tin cần thay đổi vào các ô thông tin, sau đó nhấn nút Cập nhật");
+            //txtbox_MaSV.Focus();    // chuyển con trỏ đến textbox mã nhóm 
+            btnCapNhat.Visible = true; // hiện nút cập nhật lên
+            label_CapNhat.Visible = true;
+            btn_Thoat2.Visible = true;
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
             int i = grdTaiKhoan.Rows.Count - 1; //#########
             grdTaiKhoan.CurrentCell = grdTaiKhoan[0, i]; // nhảy đến dòng i (tức là dòng cuối  dòng cuối 
             MessageBox.Show("Bạn hãy nhập thông tin  vào các ô thông tin, sau đó nhấn nút Lưu");
             txtbox_Email.Focus();    // chuyển con trỏ đến textbox mã nhóm 
             ClearInputs();
             //#########################################################3
-            btnThem.Visible = true; // hiện nút Lưu lên 
-            // nút lưu ở đây là nút thêm thật 
-            // thêm mới là thêm giả 
+            btnLuu.Visible = true; // hiện nút Lưu lên 
+            // nút ở đây là thêm giả 
+            label_Thongbao.Visible = true;
+            btn_Thoat.Visible = true;
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            string maTK = txtbox_MaTK.Text.Trim();
+            if (string.IsNullOrWhiteSpace(maTK) && grdTaiKhoan.CurrentRow != null)
+                maTK = grdTaiKhoan.CurrentRow.Cells["MATK"].Value?.ToString();
+
+            if (string.IsNullOrWhiteSpace(maTK))
+            {
+                MessageBox.Show("Vui lòng chọn tài khoản để xóa.",
+                    "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var confirm = MessageBox.Show($"Bạn có chắc muốn xóa tài khoản: {maTK}?",
+                "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirm != DialogResult.Yes) return;
+
+            string err;
+            if (tkRepo.delete(maTK, out err))
+            {
+                MessageBox.Show("Xóa tài khoản thành công.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                grdTaiKhoan.DataSource = tkRepo.getAllTaiKhoan();
+                ClearInputs();
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại.\nLỗi: " + err,
+                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // nút lưu thực hiện insert 
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            {
+                var tk = new TaiKhoan(
+                    txtbox_MaTK.Text.Trim(),
+                    txtbox_Email.Text.Trim(),
+                    txtbox_MatKhau.Text.Trim(),
+                    ParseNullableDate(txtbox_NgayCap.Text),
+                    ParseNullableDate(txtbox_NgayCapNhat.Text),
+                    txtbox_VaiTro.Text.Trim()
+                );
+
+                string err;
+                if (tkRepo.insert(tk, out err))
+                {
+                    MessageBox.Show("Thêm tài khoản thành công.", "Thông báo",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    grdTaiKhoan.DataSource = tkRepo.getAllTaiKhoan();
+                    ClearInputs();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm tài khoản thất bại.\nLỗi: " + err,
+                        "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        // nút cập nhật thực hiện update
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(maTKCu) && grdTaiKhoan.CurrentRow != null)
+                maTKCu = grdTaiKhoan.CurrentRow.Cells["MATK"].Value?.ToString();
+
+            if (string.IsNullOrWhiteSpace(maTKCu))
+            {
+                MessageBox.Show("Vui lòng chọn tài khoản cần sửa từ bảng.",
+                    "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var tk = new TaiKhoan(
+                txtbox_MaTK.Text.Trim(),
+                txtbox_Email.Text.Trim(),
+                txtbox_MatKhau.Text.Trim(),
+                ParseNullableDate(txtbox_NgayCap.Text),
+                ParseNullableDate(txtbox_NgayCapNhat.Text),
+                txtbox_VaiTro.Text.Trim()
+            );
+
+            string err;
+            if (tkRepo.update(tk, maTKCu, out err))
+            {
+                MessageBox.Show("Cập nhật tài khoản thành công.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                grdTaiKhoan.DataSource = tkRepo.getAllTaiKhoan();
+                maTKCu = tk.MaTK; // cập nhật mã gốc nếu tiếp tục sửa
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại.\n" + err,
+                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            grdTaiKhoan.CurrentCell = grdTaiKhoan[0, 2];
+            SyncFromGrid();
+            btnLuu.Visible = false; // hiện nút Lưu lên 
+            label_Thongbao.Visible = false;
+            btn_Thoat.Visible = false;
+        }
+
+        private void btn_Thoat2_Click(object sender, EventArgs e)
+        {
+
+            SyncFromGrid();
+            btnCapNhat.Visible = false; // hiện nút Lưu lên 
+            label_CapNhat.Visible = false;
+            btn_Thoat2.Visible = false;
         }
     }
 }
