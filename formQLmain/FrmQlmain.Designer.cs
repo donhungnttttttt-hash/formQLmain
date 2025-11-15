@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -807,19 +807,19 @@
             // 
             // chartByKhoa
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartByKhoa.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartByKhoa.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chartByKhoa.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartByKhoa.Legends.Add(legend3);
             this.chartByKhoa.Location = new System.Drawing.Point(1001, 328);
             this.chartByKhoa.Name = "chartByKhoa";
             this.chartByKhoa.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartByKhoa.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.IsValueShownAsLabel = true;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartByKhoa.Series.Add(series3);
             this.chartByKhoa.Size = new System.Drawing.Size(504, 456);
             this.chartByKhoa.TabIndex = 18;
             this.chartByKhoa.Text = "chart1";
@@ -836,17 +836,17 @@
             // 
             // chartYearly
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartYearly.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartYearly.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chartYearly.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartYearly.Legends.Add(legend4);
             this.chartYearly.Location = new System.Drawing.Point(15, 27);
             this.chartYearly.Name = "chartYearly";
             this.chartYearly.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartYearly.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartYearly.Series.Add(series4);
             this.chartYearly.Size = new System.Drawing.Size(953, 763);
             this.chartYearly.TabIndex = 18;
             this.chartYearly.Text = "chart1";
@@ -856,17 +856,17 @@
             // 
             this.groupBox3.Controls.Add(this.btnRefreshDash);
             this.groupBox3.Controls.Add(this.grdRecent);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(2127, 748);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(726, 814);
+            this.groupBox3.Size = new System.Drawing.Size(726, 829);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
             // 
             // btnRefreshDash
             // 
             this.btnRefreshDash.Image = global::formQLmain.Properties.Resources.icons8_refreshdark;
-            this.btnRefreshDash.Location = new System.Drawing.Point(653, 42);
+            this.btnRefreshDash.Location = new System.Drawing.Point(653, 26);
             this.btnRefreshDash.Name = "btnRefreshDash";
             this.btnRefreshDash.Size = new System.Drawing.Size(67, 61);
             this.btnRefreshDash.TabIndex = 49;
@@ -876,11 +876,11 @@
             // grdRecent
             // 
             this.grdRecent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdRecent.Location = new System.Drawing.Point(17, 109);
+            this.grdRecent.Location = new System.Drawing.Point(17, 89);
             this.grdRecent.Name = "grdRecent";
             this.grdRecent.RowHeadersWidth = 82;
             this.grdRecent.RowTemplate.Height = 33;
-            this.grdRecent.Size = new System.Drawing.Size(703, 699);
+            this.grdRecent.Size = new System.Drawing.Size(703, 734);
             this.grdRecent.TabIndex = 0;
             // 
             // FrmQLmain

@@ -73,6 +73,12 @@
             this.QLDLdrop = new System.Windows.Forms.Timer(this.components);
             this.pnlgrid = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btnNaplai = new System.Windows.Forms.Button();
+            this.btnFilter = new System.Windows.Forms.Button();
+            this.comGT = new System.Windows.Forms.ComboBox();
+            this.comTruong = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.txtbox_TK = new System.Windows.Forms.TextBox();
             this.txtbox_MaTK = new System.Windows.Forms.TextBox();
@@ -111,12 +117,6 @@
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comTruong = new System.Windows.Forms.ComboBox();
-            this.comGT = new System.Windows.Forms.ComboBox();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.btnNaplai = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -654,9 +654,9 @@
             // 
             this.pnlgrid.Controls.Add(this.panel10);
             this.pnlgrid.Controls.Add(this.grdDoAn);
-            this.pnlgrid.Location = new System.Drawing.Point(522, 295);
+            this.pnlgrid.Location = new System.Drawing.Point(1743, 295);
             this.pnlgrid.Name = "pnlgrid";
-            this.pnlgrid.Size = new System.Drawing.Size(2366, 1261);
+            this.pnlgrid.Size = new System.Drawing.Size(1145, 1261);
             this.pnlgrid.TabIndex = 40;
             this.pnlgrid.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlgrid_Paint);
             // 
@@ -702,6 +702,70 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(2325, 512);
             this.panel10.TabIndex = 2;
+            // 
+            // btnNaplai
+            // 
+            this.btnNaplai.Image = global::formQLmain.Properties.Resources.icons8_refreshdark;
+            this.btnNaplai.Location = new System.Drawing.Point(2116, 309);
+            this.btnNaplai.Name = "btnNaplai";
+            this.btnNaplai.Size = new System.Drawing.Size(76, 70);
+            this.btnNaplai.TabIndex = 49;
+            this.btnNaplai.UseVisualStyleBackColor = true;
+            this.btnNaplai.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.Location = new System.Drawing.Point(1834, 318);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(160, 60);
+            this.btnFilter.TabIndex = 39;
+            this.btnFilter.Text = "Lọc";
+            this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // comGT
+            // 
+            this.comGT.FormattingEnabled = true;
+            this.comGT.Location = new System.Drawing.Point(1834, 256);
+            this.comGT.Name = "comGT";
+            this.comGT.Size = new System.Drawing.Size(325, 33);
+            this.comGT.TabIndex = 38;
+            // 
+            // comTruong
+            // 
+            this.comTruong.FormattingEnabled = true;
+            this.comTruong.Items.AddRange(new object[] {
+            "GVHD",
+            "TUKHOA"});
+            this.comTruong.Location = new System.Drawing.Point(1844, 85);
+            this.comTruong.Name = "comTruong";
+            this.comTruong.Size = new System.Drawing.Size(325, 33);
+            this.comTruong.TabIndex = 37;
+            this.comTruong.SelectedIndexChanged += new System.EventHandler(this.comTruong_SelectedIndexChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label16.Location = new System.Drawing.Point(1827, 203);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 37);
+            this.label16.TabIndex = 36;
+            this.label16.Text = "Gía trị";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label15.Location = new System.Drawing.Point(1827, 41);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(159, 37);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Tên trường";
             // 
             // btnThem
             // 
@@ -1105,70 +1169,6 @@
             this.label11.Size = new System.Drawing.Size(371, 59);
             this.label11.TabIndex = 39;
             this.label11.Text = "Danh sách đồ án ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label15.Location = new System.Drawing.Point(1827, 41);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(159, 37);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "Tên trường";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label16.Location = new System.Drawing.Point(1827, 203);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 37);
-            this.label16.TabIndex = 36;
-            this.label16.Text = "Gía trị";
-            // 
-            // comTruong
-            // 
-            this.comTruong.FormattingEnabled = true;
-            this.comTruong.Items.AddRange(new object[] {
-            "GVHD",
-            "TUKHOA"});
-            this.comTruong.Location = new System.Drawing.Point(1844, 85);
-            this.comTruong.Name = "comTruong";
-            this.comTruong.Size = new System.Drawing.Size(325, 33);
-            this.comTruong.TabIndex = 37;
-            this.comTruong.SelectedIndexChanged += new System.EventHandler(this.comTruong_SelectedIndexChanged);
-            // 
-            // comGT
-            // 
-            this.comGT.FormattingEnabled = true;
-            this.comGT.Location = new System.Drawing.Point(1834, 256);
-            this.comGT.Name = "comGT";
-            this.comGT.Size = new System.Drawing.Size(325, 33);
-            this.comGT.TabIndex = 38;
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.Location = new System.Drawing.Point(1834, 318);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(160, 60);
-            this.btnFilter.TabIndex = 39;
-            this.btnFilter.Text = "Lọc";
-            this.btnFilter.UseVisualStyleBackColor = false;
-            this.btnFilter.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // btnNaplai
-            // 
-            this.btnNaplai.Image = global::formQLmain.Properties.Resources.icons8_refreshdark;
-            this.btnNaplai.Location = new System.Drawing.Point(2116, 309);
-            this.btnNaplai.Name = "btnNaplai";
-            this.btnNaplai.Size = new System.Drawing.Size(76, 70);
-            this.btnNaplai.TabIndex = 49;
-            this.btnNaplai.UseVisualStyleBackColor = true;
-            this.btnNaplai.Click += new System.EventHandler(this.button6_Click);
             // 
             // frmDSDA
             // 
