@@ -139,5 +139,10 @@ namespace formQLmain
         {
 
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            OpenHTML.OpenDefault();
+        }
     }
 }

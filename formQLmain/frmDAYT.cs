@@ -212,6 +212,12 @@ MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             }
         }
 
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+
+            OpenHTML.OpenDefault();
+        }
+
         private void frmDAYT_Load(object sender, EventArgs e)
         {
             sql = @"SELECT

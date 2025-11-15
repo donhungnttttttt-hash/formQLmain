@@ -548,6 +548,8 @@ GROUP BY
             TroGiupdrop.Start();
             Console.WriteLine(Expand2);
             Console.ReadLine();
+
+            OpenHTML.OpenDefault();
         }
 
         private void TroGiupdrop_Tick(object sender, EventArgs e)
