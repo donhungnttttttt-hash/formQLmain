@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -63,22 +67,20 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.button13 = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.QLDLdrop = new System.Windows.Forms.Timer(this.components);
             this.QLDAdrop = new System.Windows.Forms.Timer(this.components);
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.menutimer = new System.Windows.Forms.Timer(this.components);
             this.panelALL = new System.Windows.Forms.Panel();
             this.pnlgrid = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btn_Thoat2 = new System.Windows.Forms.Button();
+            this.btn_Thoat = new System.Windows.Forms.Button();
             this.label_CapNhat = new System.Windows.Forms.Label();
             this.label_Thongbao = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -112,9 +114,10 @@
             this.textbox_TimKiem = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Thoat2 = new System.Windows.Forms.Button();
-            this.btn_Thoat = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -138,14 +141,11 @@
             this.flowLayoutPanel6.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panelALL.SuspendLayout();
             this.pnlgrid.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -174,6 +174,54 @@
             this.panelMenu.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
             this.panelMenu.Size = new System.Drawing.Size(121, 1600);
             this.panelMenu.TabIndex = 37;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel3.Controls.Add(this.panel5);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(16, 16);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(6);
+            this.flowLayoutPanel3.MaximumSize = new System.Drawing.Size(418, 390);
+            this.flowLayoutPanel3.MinimumSize = new System.Drawing.Size(418, 88);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(418, 104);
+            this.flowLayoutPanel3.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pictureBox14);
+            this.panel5.Controls.Add(this.button6);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(418, 113);
+            this.panel5.TabIndex = 1;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.White;
+            this.pictureBox14.BackgroundImage = global::formQLmain.Properties.Resources.menudark;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox14.Location = new System.Drawing.Point(25, 22);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(44, 41);
+            this.pictureBox14.TabIndex = 2;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.DimGray;
+            this.button6.Location = new System.Drawing.Point(-72, -29);
+            this.button6.Margin = new System.Windows.Forms.Padding(6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(503, 142);
+            this.button6.TabIndex = 0;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel2
             // 
@@ -584,6 +632,23 @@
             this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button13.UseVisualStyleBackColor = false;
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.pictureBox12);
+            this.panel11.Location = new System.Drawing.Point(13, 709);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(427, 729);
+            this.panel11.TabIndex = 17;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::formQLmain.Properties.Resources.hinhanhdep;
+            this.pictureBox12.Location = new System.Drawing.Point(28, 381);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(354, 312);
+            this.pictureBox12.TabIndex = 1;
+            this.pictureBox12.TabStop = false;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
@@ -632,23 +697,6 @@
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.pictureBox12);
-            this.panel11.Location = new System.Drawing.Point(13, 709);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(427, 729);
-            this.panel11.TabIndex = 17;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::formQLmain.Properties.Resources.hinhanhdep;
-            this.pictureBox12.Location = new System.Drawing.Point(28, 381);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(354, 312);
-            this.pictureBox12.TabIndex = 1;
-            this.pictureBox12.TabStop = false;
-            // 
             // QLDLdrop
             // 
             this.QLDLdrop.Interval = 1;
@@ -658,54 +706,6 @@
             // 
             this.QLDAdrop.Interval = 1;
             this.QLDAdrop.Tick += new System.EventHandler(this.QLDAdrop_Tick);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Controls.Add(this.panel5);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(16, 16);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(6);
-            this.flowLayoutPanel3.MaximumSize = new System.Drawing.Size(418, 390);
-            this.flowLayoutPanel3.MinimumSize = new System.Drawing.Size(418, 88);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(418, 104);
-            this.flowLayoutPanel3.TabIndex = 5;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pictureBox14);
-            this.panel5.Controls.Add(this.button6);
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(418, 113);
-            this.panel5.TabIndex = 1;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.White;
-            this.pictureBox14.BackgroundImage = global::formQLmain.Properties.Resources.menudark;
-            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox14.Location = new System.Drawing.Point(25, 22);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(44, 41);
-            this.pictureBox14.TabIndex = 2;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.DimGray;
-            this.button6.Location = new System.Drawing.Point(-72, -29);
-            this.button6.Margin = new System.Windows.Forms.Padding(6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(503, 142);
-            this.button6.TabIndex = 0;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // menutimer
             // 
@@ -720,6 +720,7 @@
             this.panelALL.Name = "panelALL";
             this.panelALL.Size = new System.Drawing.Size(2740, 1600);
             this.panelALL.TabIndex = 38;
+            this.panelALL.Paint += new System.Windows.Forms.PaintEventHandler(this.panelALL_Paint);
             // 
             // pnlgrid
             // 
@@ -757,6 +758,34 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(741, 1118);
             this.panel12.TabIndex = 1;
+            // 
+            // btn_Thoat2
+            // 
+            this.btn_Thoat2.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Thoat2.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold);
+            this.btn_Thoat2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Thoat2.Location = new System.Drawing.Point(591, 845);
+            this.btn_Thoat2.Name = "btn_Thoat2";
+            this.btn_Thoat2.Size = new System.Drawing.Size(110, 47);
+            this.btn_Thoat2.TabIndex = 20;
+            this.btn_Thoat2.Text = "Thoát";
+            this.btn_Thoat2.UseVisualStyleBackColor = false;
+            this.btn_Thoat2.Visible = false;
+            this.btn_Thoat2.Click += new System.EventHandler(this.btn_Thoat2_Click);
+            // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Thoat.Location = new System.Drawing.Point(589, 792);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(111, 47);
+            this.btn_Thoat.TabIndex = 19;
+            this.btn_Thoat.Text = "Thoát";
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Visible = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn__Click);
             // 
             // label_CapNhat
             // 
@@ -811,7 +840,7 @@
             this.btnCapNhat.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCapNhat.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold);
             this.btnCapNhat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCapNhat.Location = new System.Drawing.Point(592, 791);
+            this.btnCapNhat.Location = new System.Drawing.Point(462, 792);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(110, 47);
             this.btnCapNhat.TabIndex = 13;
@@ -837,7 +866,7 @@
             this.btnLuu.BackColor = System.Drawing.Color.SteelBlue;
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLuu.Location = new System.Drawing.Point(591, 721);
+            this.btnLuu.Location = new System.Drawing.Point(462, 792);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(111, 47);
             this.btnLuu.TabIndex = 11;
@@ -849,7 +878,7 @@
             // txtbox_Khoa
             // 
             this.txtbox_Khoa.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_Khoa.Location = new System.Drawing.Point(58, 648);
+            this.txtbox_Khoa.Location = new System.Drawing.Point(58, 716);
             this.txtbox_Khoa.Name = "txtbox_Khoa";
             this.txtbox_Khoa.Size = new System.Drawing.Size(643, 43);
             this.txtbox_Khoa.TabIndex = 11;
@@ -857,7 +886,7 @@
             // txtbox_Lop
             // 
             this.txtbox_Lop.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_Lop.Location = new System.Drawing.Point(55, 533);
+            this.txtbox_Lop.Location = new System.Drawing.Point(55, 601);
             this.txtbox_Lop.Name = "txtbox_Lop";
             this.txtbox_Lop.Size = new System.Drawing.Size(646, 43);
             this.txtbox_Lop.TabIndex = 10;
@@ -865,7 +894,7 @@
             // txtbox_Chuyennganh
             // 
             this.txtbox_Chuyennganh.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_Chuyennganh.Location = new System.Drawing.Point(58, 428);
+            this.txtbox_Chuyennganh.Location = new System.Drawing.Point(58, 496);
             this.txtbox_Chuyennganh.Name = "txtbox_Chuyennganh";
             this.txtbox_Chuyennganh.Size = new System.Drawing.Size(643, 43);
             this.txtbox_Chuyennganh.TabIndex = 9;
@@ -873,7 +902,7 @@
             // txtbox_Hovaten
             // 
             this.txtbox_Hovaten.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_Hovaten.Location = new System.Drawing.Point(57, 311);
+            this.txtbox_Hovaten.Location = new System.Drawing.Point(57, 379);
             this.txtbox_Hovaten.Name = "txtbox_Hovaten";
             this.txtbox_Hovaten.Size = new System.Drawing.Size(644, 43);
             this.txtbox_Hovaten.TabIndex = 8;
@@ -881,17 +910,17 @@
             // txtbox_MaTK
             // 
             this.txtbox_MaTK.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_MaTK.Location = new System.Drawing.Point(279, 183);
+            this.txtbox_MaTK.Location = new System.Drawing.Point(512, 259);
             this.txtbox_MaTK.Name = "txtbox_MaTK";
-            this.txtbox_MaTK.Size = new System.Drawing.Size(422, 43);
+            this.txtbox_MaTK.Size = new System.Drawing.Size(189, 43);
             this.txtbox_MaTK.TabIndex = 7;
             // 
             // txtbox_MaSV
             // 
             this.txtbox_MaSV.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
-            this.txtbox_MaSV.Location = new System.Drawing.Point(279, 97);
+            this.txtbox_MaSV.Location = new System.Drawing.Point(512, 150);
             this.txtbox_MaSV.Name = "txtbox_MaSV";
-            this.txtbox_MaSV.Size = new System.Drawing.Size(422, 43);
+            this.txtbox_MaSV.Size = new System.Drawing.Size(189, 43);
             this.txtbox_MaSV.TabIndex = 6;
             // 
             // label7
@@ -899,7 +928,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(50, 595);
+            this.label7.Location = new System.Drawing.Point(50, 663);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 37);
             this.label7.TabIndex = 5;
@@ -910,7 +939,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(48, 481);
+            this.label6.Location = new System.Drawing.Point(48, 549);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 37);
             this.label6.TabIndex = 4;
@@ -921,7 +950,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(48, 376);
+            this.label5.Location = new System.Drawing.Point(48, 444);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(199, 37);
             this.label5.TabIndex = 3;
@@ -932,7 +961,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(48, 255);
+            this.label4.Location = new System.Drawing.Point(48, 323);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 37);
             this.label4.TabIndex = 2;
@@ -943,7 +972,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(46, 180);
+            this.label3.Location = new System.Drawing.Point(509, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 37);
             this.label3.TabIndex = 1;
@@ -954,7 +983,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(46, 100);
+            this.label2.Location = new System.Drawing.Point(509, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 37);
             this.label2.TabIndex = 0;
@@ -968,14 +997,14 @@
             this.grdSinhVien.Location = new System.Drawing.Point(22, 15);
             this.grdSinhVien.Name = "grdSinhVien";
             this.grdSinhVien.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdSinhVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdSinhVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grdSinhVien.RowHeadersVisible = false;
             this.grdSinhVien.RowHeadersWidth = 82;
             this.grdSinhVien.RowTemplate.Height = 33;
@@ -1142,34 +1171,6 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Quản lý sinh viên ";
             // 
-            // btn_Thoat2
-            // 
-            this.btn_Thoat2.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_Thoat2.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold);
-            this.btn_Thoat2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Thoat2.Location = new System.Drawing.Point(384, 791);
-            this.btn_Thoat2.Name = "btn_Thoat2";
-            this.btn_Thoat2.Size = new System.Drawing.Size(110, 47);
-            this.btn_Thoat2.TabIndex = 20;
-            this.btn_Thoat2.Text = "Thoát";
-            this.btn_Thoat2.UseVisualStyleBackColor = false;
-            this.btn_Thoat2.Visible = false;
-            this.btn_Thoat2.Click += new System.EventHandler(this.btn_Thoat2_Click);
-            // 
-            // btn_Thoat
-            // 
-            this.btn_Thoat.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Thoat.Location = new System.Drawing.Point(383, 721);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(111, 47);
-            this.btn_Thoat.TabIndex = 19;
-            this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.UseVisualStyleBackColor = false;
-            this.btn_Thoat.Visible = false;
-            this.btn_Thoat.Click += new System.EventHandler(this.btn__Click);
-            // 
             // frmQLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1183,6 +1184,9 @@
             this.Load += new System.EventHandler(this.frmQLDL_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmQLSV_KeyPress);
             this.panelMenu.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1206,14 +1210,11 @@
             this.flowLayoutPanel6.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panelALL.ResumeLayout(false);
             this.pnlgrid.ResumeLayout(false);
             this.panel12.ResumeLayout(false);

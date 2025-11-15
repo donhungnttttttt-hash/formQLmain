@@ -545,6 +545,8 @@ namespace formQLmain
 
         private void btn__Click(object sender, EventArgs e)
         {
+            
+            grdSinhVien.CurrentCell = grdSinhVien[0, 2];
             SyncFromGrid();
             btnLuu.Visible = false; // hiện nút Lưu lên 
             label_Thongbao.Visible = false;
@@ -554,10 +556,17 @@ namespace formQLmain
 
         private void btn_Thoat2_Click(object sender, EventArgs e)
         {
-            SyncFromGrid();
+            
+            grdSinhVien.CurrentCell = grdSinhVien[0, 2];
+           // SyncFromGrid();
             btnCapNhat.Visible = false; // hiện nút Lưu lên 
             label_CapNhat.Visible = false;
             btn_Thoat2.Visible = false;
+        }
+
+        private void panelALL_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         //private void comboBox_ChuyenNganh_SelectedIndexChanged(object sender, EventArgs e)

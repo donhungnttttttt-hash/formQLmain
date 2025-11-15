@@ -393,6 +393,11 @@ namespace formQLmain
             pictureBox12.Visible = true;
             Console.ReadLine();
         }
+
+        private void panelALL_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     }
 
