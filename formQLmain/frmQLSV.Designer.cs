@@ -582,6 +582,7 @@
             this.button12.Text = "Báo cáo";
             this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // flowLayoutPanel6
             // 
@@ -810,6 +811,18 @@
             this.label_Thongbao.TabIndex = 17;
             this.label_Thongbao.Text = "Bạn đang trong quá trình thêm thông tin sinh viên !";
             this.label_Thongbao.Visible = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(330, 741);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(235, 60);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "In báo cáo";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
