@@ -438,6 +438,11 @@ namespace formQLmain
         {
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
         // Cách làm bây giờ là đẩy nút thêm cũ  sang phải và đổi tên thành cập nhật 
         // tạo một nút thêm giả: nút này chỉ để nó trắng xóa và nó nhảy về cuối 
         //Xem hét việc thêm nút hủy thêm, kiểu nhắn vào thêm xong ko muốn thêm nữa thì bấm hủy

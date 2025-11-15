@@ -309,6 +309,18 @@ namespace formQLmain
         {
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            frmBaocao f=new frmBaocao();
+            f.Show();
+            this.Hide();
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     }
 
